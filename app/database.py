@@ -5,7 +5,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 
 # DATABASE_URL= 'postgresql://{username}:{password}@localhost:{portnothatusedpostgresql}/{databaseName}'
-DATABASE_URL = 'postgresql://postgres:test1234!@localhost:5433/aipolicing'
+DATABASE_URL = 'postgresql+asyncpg://postgres:test1234!@localhost:5433/aipolicing'
 engine = create_async_engine(DATABASE_URL, echo=True)
 
 async_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)

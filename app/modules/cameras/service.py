@@ -7,7 +7,6 @@ from modules.cameras.schemas import DirectionTypeEnum
 
 async def create_camera(db: AsyncSession, name: str, road_no = int,road_name = str, direction_type= DirectionTypeEnum, intersection_id = int,zone_id = int):
     new_camera = Camera(name=name, road_no=road_no, road_name=road_name, direction_type=direction_type, intersection_id=intersection_id, zone_id=zone_id)
-    print("------------------------------------------------------------------------------------------------")
     print({'camera': new_camera})
     db.add(new_camera)
     await db.commit()

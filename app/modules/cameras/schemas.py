@@ -8,12 +8,13 @@ class DirectionTypeEnum(str, Enum):
     exit = "exit"
 
 class CameraCreate(BaseModel):
-    name = str
-    road_no = int
-    road_name = str
+
+    name : str
+    road_no : int
+    road_name : str
     direction_type: DirectionTypeEnum
-    intersection_id = int
-    zone_id = int
+    intersection_id : int
+    zone_id : int
 
 
 
@@ -23,6 +24,8 @@ class CameraCreate(BaseModel):
 
 class CameraResponse(CameraCreate):
     id: int
+    intersection_name: str  # Will store the actual intersection name
+    zone_name: str  # Will store the actual zone name
     class Config:
         orm_mode = True
 

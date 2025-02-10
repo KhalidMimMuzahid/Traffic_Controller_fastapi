@@ -2,7 +2,6 @@ from sqlalchemy import Column, Integer, String, Enum, ForeignKey
 import enum
 from sqlalchemy.orm import relationship
 from database import Base
-# from base import Base
 
 # Define an enumeration for directionType
 class DirectionTypeEnum(enum.Enum):
@@ -18,8 +17,9 @@ class Camera(Base):
     road_name = Column(String, nullable=False)
     direction_type = Column(Enum(DirectionTypeEnum), nullable=False)
     intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)
-    # intersection = relationship("Intersection", back_populates="cameras")
+    intersection = relationship("Intersection", back_populates="cameras")
     zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)
+    zone = relationship("Zone", back_populates="cameras")
 
 
 

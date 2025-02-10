@@ -1,8 +1,7 @@
 
 from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
-
-from modules.zones.schemas2 import ZoneResponse, ZoneCreate
+from modules.zones.schemas import ZoneResponse, ZoneCreate
 from database import get_db 
 from modules.zones.service import create_zone
 zone_router = APIRouter()

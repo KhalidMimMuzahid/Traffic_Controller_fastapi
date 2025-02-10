@@ -1,9 +1,9 @@
 from fastapi import FastAPI 
-from modules.zones.router import zone_router
+from routes.router import router
 
 
 app = FastAPI()
-app.include_router(zone_router, prefix="/zones", tags=["Zones"])
+app.include_router(router, prefix="/api/v1")
 
 
 

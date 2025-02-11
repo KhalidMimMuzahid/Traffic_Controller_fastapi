@@ -16,10 +16,10 @@ async def create_camera(db: AsyncSession, name: str, road_no = int,road_name = s
     if not zone:
          raise HTTPException(status_code=404, detail=f"Zone with ID {zone_id} not found.")
     # checking for existence intersection with the provided intersection_id
-    intersection_result = await db.execute(select(Intersection).where(Intersection.id == intersection_id))
+    intersection_result = await db.execute(select(Intersection).where((Intersection.id == intersection_id) & (Intersection.zone_id == zone_id)))
     intersection = intersection_result.scalar_one_or_none()
     if not intersection:
-         raise HTTPException(status_code=404, detail=f"Intersection with ID {intersection_id} not found.")
+         raise HTTPException(status_code=404, detail=f"There have no Intersection with ID {intersection_id} in zone_id {zone_id}")
     
     #  making an instance of the camera object that inherits from Camera Class (Models class)
     new_camera = Camera(name=name, road_no=road_no, road_name=road_name, direction_type=direction_type, intersection_id=intersection_id, zone_id=zone_id)
@@ -27,9 +27,6 @@ async def create_camera(db: AsyncSession, name: str, road_no = int,road_name = s
     db.add(new_camera)
     await db.commit()
     await db.refresh(new_camera)
-#     return new_camera
-
-    print("done________________________________________________________________")
     return {
           "id" : new_camera.id,
           "name" : new_camera.name,

@@ -9,4 +9,8 @@ class ZoneResponse(ZoneCreate):
     class Config:
         orm_mode = True
 
+class ZoneReferenceResponseForCreateIntersection(BaseModel):
+    id: int
+    name: str
+
 

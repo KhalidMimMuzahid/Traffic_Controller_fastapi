@@ -7,9 +7,9 @@ from fastapi import HTTPException
 
 
 async def create_intersection(db: AsyncSession, name: str, zone_id:int):
-    zoneData = await db.execute(select(Zone).where(Zone.id == zone_id))
-    has_exists_zone = zoneData.scalar_one_or_none()
-    if not has_exists_zone:
+    zone_result = await db.execute(select(Zone).where(Zone.id == zone_id))
+    zone = zone_result.scalar_one_or_none()
+    if not zone:
          raise HTTPException(status_code=404, detail=f"Zone with ID {zone_id} not found.")
     
     #  making an instance of the intersection object that inherits from Intersection Class (Models class)
@@ -18,7 +18,16 @@ async def create_intersection(db: AsyncSession, name: str, zone_id:int):
     await db.commit()
     await db.refresh(intersection)
     
-    return intersection
+    return {
+         "id": intersection.id,
+         "name": intersection.name,
+         "zone": {
+              "id": zone.id,
+              "name": zone.name
+         }
+    #      "zone_id": intersection.zone_id,
+    #      "zone_name": zone.name,  # Use the fetched zone's name.
+    }
 
 # async def get_zones(db: AsyncSession):
 #     result = await db.execute(select(Zone))

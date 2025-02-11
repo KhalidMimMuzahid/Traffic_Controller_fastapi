@@ -14,6 +14,10 @@ async def create_zone(db: AsyncSession, name: str):
     await db.commit()
     await db.refresh(zone)
     return zone
-# async def get_zones(db: AsyncSession):
-#     result = await db.execute(select(Zone))
-#     return result.scalars().all()
+
+async def get_zones(db: AsyncSession):
+    result = await db.execute(select(Zone))
+    return result.scalars().all()
+
+
+

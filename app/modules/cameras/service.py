@@ -38,7 +38,7 @@ async def get_cameras(db: AsyncSession):
 #     return [
 #         CameraResponse(
 #             id=camera.id,
-#             name=camera.name,
+#             name= camera.name,
 #             road_no=camera.road_no,
 #             road_name=camera.road_name,
 #             direction_type=camera.direction_type,

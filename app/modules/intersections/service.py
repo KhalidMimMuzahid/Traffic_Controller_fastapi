@@ -23,12 +23,7 @@ async def create_intersection(db: AsyncSession, name: str, zone_id:int):
     return {
          "id": intersection.id,
          "name": intersection.name,
-         "zone": {
-              "id": zone.id,
-              "name": zone.name
-         }
-    #      "zone_id": intersection.zone_id,
-    #      "zone_name": zone.name,  # Use the fetched zone's name.
+         "zone": zone
     }
 
 async def get_intersections(db: AsyncSession):

@@ -24,3 +24,7 @@ class IntersectionReferenceResponseForCreateCamera(BaseModel):
     id: int
     name: str
 
+class IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateCamera):
+    pass
+
+

@@ -20,4 +20,7 @@ class ZoneReferenceResponseForCreateIntersection(BaseModel):
 class ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):
     pass
 
+class ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):
+    pass
+
 

@@ -32,3 +32,11 @@ class CameraCreateResponse(BaseModel):
 class CameraListResponse(CameraCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass
+
+
+class IntersectionReferenceResponseForCreateVehicle(BaseModel):
+    id: int
+    name : str
+    road_no : int
+    road_name : str
+    direction_type: DirectionTypeEnum

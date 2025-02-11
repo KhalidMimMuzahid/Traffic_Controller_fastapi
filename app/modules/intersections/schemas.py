@@ -15,3 +15,13 @@ class IntersectionCreateResponse(BaseModel):
         orm_mode = True
 
 
+
+# class IntersectionListResponse(IntersectionCreateResponse):
+#     pass
+
+class IntersectionListResponse(BaseModel):
+    id: int
+    name: str
+    zone: ZoneReferenceResponseForCreateIntersection
+    class Config:
+        orm_mode = True

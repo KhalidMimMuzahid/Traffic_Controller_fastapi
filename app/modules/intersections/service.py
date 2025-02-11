@@ -1,7 +1,9 @@
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
+from sqlalchemy.orm import joinedload
 from modules.intersections.models import Intersection
+from modules.intersections.schemas import IntersectionListResponse
 from modules.zones.models import Zone
 from fastapi import HTTPException
 
@@ -29,6 +31,8 @@ async def create_intersection(db: AsyncSession, name: str, zone_id:int):
     #      "zone_name": zone.name,  # Use the fetched zone's name.
     }
 
-# async def get_zones(db: AsyncSession):
-#     result = await db.execute(select(Zone))
-#     return result.scalars().all()
+async def get_intersections(db: AsyncSession):
+    result = await db.execute(select(Intersection).options(joinedload(Intersection.zone)))
+    intersections=  result.scalars().all()
+    return intersections
+

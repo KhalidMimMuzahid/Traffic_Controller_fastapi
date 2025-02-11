@@ -5,9 +5,7 @@ from modules.intersections.schemas import IntersectionCreateResponse, Intersecti
 from database import get_db 
 from modules.intersections.service import create_intersection
 intersection_router = APIRouter()
-@intersection_router.post("/add-intersection"
-                        #   , response_model=IntersectionCreateResponse
-                          )
+@intersection_router.post("/add-intersection", response_model=IntersectionCreateResponse)
 async def add_zone(intersection: IntersectionCreate, db: AsyncSession = Depends(get_db)):
     return await create_intersection(db, intersection.name, intersection.zone_id )
 

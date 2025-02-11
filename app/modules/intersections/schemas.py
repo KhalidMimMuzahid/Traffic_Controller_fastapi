@@ -7,7 +7,7 @@ class IntersectionCreate(BaseModel):
 
 
 
-class IntersectionCreateResponse(IntersectionCreate):
+class IntersectionCreateResponse(BaseModel):
     id: int
     name: str
     zone: ZoneReferenceResponseForCreateIntersection

@@ -1,0 +1,1243 @@
+[
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "sessionmaker",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "init_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "CameraCreateRequest",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraCreateResponse",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraListResponse",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "DirectionTypeEnum",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_camera",
+        "importPath": "modules.cameras.service",
+        "description": "modules.cameras.service",
+        "isExtraImport": true,
+        "detail": "modules.cameras.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_cameras",
+        "importPath": "modules.cameras.service",
+        "description": "modules.cameras.service",
+        "isExtraImport": true,
+        "detail": "modules.cameras.service",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateCamera",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateIntersection",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneCreateRequest",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneCreateResponse",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneListResponse",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateCamera",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionCreateResponse",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionListResponse",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionCreateRequest",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionListResponse",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "Camera",
+        "importPath": "modules.cameras.models",
+        "description": "modules.cameras.models",
+        "isExtraImport": true,
+        "detail": "modules.cameras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
+        "isExtraImport": true,
+        "detail": "modules.zones.models",
+        "documentation": {}
+    },
+    {
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
+        "isExtraImport": true,
+        "detail": "modules.zones.models",
+        "documentation": {}
+    },
+    {
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
+        "isExtraImport": true,
+        "detail": "modules.zones.models",
+        "documentation": {}
+    },
+    {
+        "label": "Intersection",
+        "importPath": "modules.intersections.models",
+        "description": "modules.intersections.models",
+        "isExtraImport": true,
+        "detail": "modules.intersections.models",
+        "documentation": {}
+    },
+    {
+        "label": "Intersection",
+        "importPath": "modules.intersections.models",
+        "description": "modules.intersections.models",
+        "isExtraImport": true,
+        "detail": "modules.intersections.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_intersection",
+        "importPath": "modules.intersections.service",
+        "description": "modules.intersections.service",
+        "isExtraImport": true,
+        "detail": "modules.intersections.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_intersections",
+        "importPath": "modules.intersections.service",
+        "description": "modules.intersections.service",
+        "isExtraImport": true,
+        "detail": "modules.intersections.service",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateRequest",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_user",
+        "importPath": "modules.users.service",
+        "description": "modules.users.service",
+        "isExtraImport": true,
+        "detail": "modules.users.service",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "modules.users.models",
+        "description": "modules.users.models",
+        "isExtraImport": true,
+        "detail": "modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_zone",
+        "importPath": "modules.zones.service",
+        "description": "modules.zones.service",
+        "isExtraImport": true,
+        "detail": "modules.zones.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_zones",
+        "importPath": "modules.zones.service",
+        "description": "modules.zones.service",
+        "isExtraImport": true,
+        "detail": "modules.zones.service",
+        "documentation": {}
+    },
+    {
+        "label": "zone_router",
+        "importPath": "modules.zones.router",
+        "description": "modules.zones.router",
+        "isExtraImport": true,
+        "detail": "modules.zones.router",
+        "documentation": {}
+    },
+    {
+        "label": "intersection_router",
+        "importPath": "modules.intersections.router",
+        "description": "modules.intersections.router",
+        "isExtraImport": true,
+        "detail": "modules.intersections.router",
+        "documentation": {}
+    },
+    {
+        "label": "camera_router",
+        "importPath": "modules.cameras.router",
+        "description": "modules.cameras.router",
+        "isExtraImport": true,
+        "detail": "modules.cameras.router",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_router",
+        "importPath": "modules.vehicles.router",
+        "description": "modules.vehicles.router",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.router",
+        "documentation": {}
+    },
+    {
+        "label": "user_router",
+        "importPath": "modules.users.router",
+        "description": "modules.users.router",
+        "isExtraImport": true,
+        "detail": "modules.users.router",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
+        "importPath": "sqlalchemy.ext.declarative",
+        "description": "sqlalchemy.ext.declarative",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.declarative",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "routes.router",
+        "description": "routes.router",
+        "isExtraImport": true,
+        "detail": "routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "register_all_errors",
+        "importPath": "exceptions.handler",
+        "description": "exceptions.handler",
+        "isExtraImport": true,
+        "detail": "exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_exception_handler",
+        "kind": 2,
+        "importPath": "app.exceptions.handler",
+        "description": "app.exceptions.handler",
+        "peekOfCode": "def create_exception_handler( error_data: CustomError):\n    async def exception_handler(request: Request, exc: CustomError):\n        return JSONResponse(\n             status_code=exc.status_code,\n            content={\n            is_success: False,\n            \"error\": {\n                \"message\": exc.message,\n                \"resolution\": exc.resolution or \"No resolution provided\",\n            }",
+        "detail": "app.exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "register_all_errors",
+        "kind": 2,
+        "importPath": "app.exceptions.handler",
+        "description": "app.exceptions.handler",
+        "peekOfCode": "def register_all_errors(app: FastAPI):\n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        # print(str(exc))\n        return JSONResponse(\n            content={\n                \"message\":exc.message,\n                \"error_code\": \"server_errorxx\",\n            },\n            status_code=exc.status_code,",
+        "detail": "app.exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "AIPolicingException",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class AIPolicingException(Exception):\n    \"\"\"This is the base class for all AIPolicing errors\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        self.status_code = status_code\n        self.message = message\n        self.resolution = resolution\n        super().__init__(message)\nclass CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "DirectionTypeEnum",
+        "kind": 6,
+        "importPath": "app.modules.cameras.models",
+        "description": "app.modules.cameras.models",
+        "peekOfCode": "class DirectionTypeEnum(enum.Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    road_no = Column(Integer, nullable=False)\n    road_name = Column(String, nullable=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)",
+        "detail": "app.modules.cameras.models",
+        "documentation": {}
+    },
+    {
+        "label": "Camera",
+        "kind": 6,
+        "importPath": "app.modules.cameras.models",
+        "description": "app.modules.cameras.models",
+        "peekOfCode": "class Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    road_no = Column(Integer, nullable=False)\n    road_name = Column(String, nullable=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship ",
+        "detail": "app.modules.cameras.models",
+        "documentation": {}
+    },
+    {
+        "label": "camera_router",
+        "kind": 5,
+        "importPath": "app.modules.cameras.router",
+        "description": "app.modules.cameras.router",
+        "peekOfCode": "camera_router = APIRouter()\n@camera_router.post(\"/add-camera\", response_model=CameraCreateResponse)\nasync def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_camera(db=db, name= camera.name, road_no=camera.road_no, road_name=camera.road_name, direction_type= camera.direction_type, intersection_id= camera.intersection_id, zone_id=camera.zone_id  )\n@camera_router.get(\"/get-cameras\", response_model=list[CameraListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_cameras(db)",
+        "detail": "app.modules.cameras.router",
+        "documentation": {}
+    },
+    {
+        "label": "DirectionTypeEnum",
+        "kind": 6,
+        "importPath": "app.modules.cameras.schemas",
+        "description": "app.modules.cameras.schemas",
+        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass CameraCreateRequest(BaseModel):\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    intersection_id : int\n    zone_id : int",
+        "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.cameras.schemas",
+        "description": "app.modules.cameras.schemas",
+        "peekOfCode": "class CameraCreateRequest(BaseModel):\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    intersection_id : int\n    zone_id : int\nclass CameraCreateResponse(BaseModel):\n    id: int\n    name : str",
+        "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.cameras.schemas",
+        "description": "app.modules.cameras.schemas",
+        "peekOfCode": "class CameraCreateResponse(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    zone : ZoneReferenceResponseForCreateCamera\n    intersection : IntersectionReferenceResponseForCreateCamera\n    class Config:\n        orm_mode = True",
+        "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraListResponse",
+        "kind": 6,
+        "importPath": "app.modules.cameras.schemas",
+        "description": "app.modules.cameras.schemas",
+        "peekOfCode": "class CameraListResponse(CameraCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass IntersectionReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum",
+        "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateVehicle",
+        "kind": 6,
+        "importPath": "app.modules.cameras.schemas",
+        "description": "app.modules.cameras.schemas",
+        "peekOfCode": "class IntersectionReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum",
+        "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "Intersection",
+        "kind": 6,
+        "importPath": "app.modules.intersections.models",
+        "description": "app.modules.intersections.models",
+        "peekOfCode": "class Intersection(Base):\n    __tablename__ = \"intersections\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=True)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship \n    # Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_nama_of_targeted_table\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\")\n    zone = relationship(\"Zone\", back_populates=\"intersections\")\n    # Reverse relationship\n     #Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_name_of_another\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\", cascade=\"all, delete\")",
+        "detail": "app.modules.intersections.models",
+        "documentation": {}
+    },
+    {
+        "label": "intersection_router",
+        "kind": 5,
+        "importPath": "app.modules.intersections.router",
+        "description": "app.modules.intersections.router",
+        "peekOfCode": "intersection_router = APIRouter()\n@intersection_router.post(\"/add-intersection\", response_model=IntersectionCreateResponse)\nasync def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_intersection(db, intersection.name, intersection.zone_id )\n@intersection_router.get(\"/get-intersections\", response_model=list[IntersectionListResponse])\nasync def list_intersections(db: AsyncSession = Depends(get_db)):\n    intersections= await get_intersections(db)\n    return intersections",
+        "detail": "app.modules.intersections.router",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.intersections.schemas",
+        "description": "app.modules.intersections.schemas",
+        "peekOfCode": "class IntersectionCreateRequest(BaseModel):\n    name: str\n    zone_id: int\nclass IntersectionCreateResponse(BaseModel):\n    id: int\n    name: str\n    zone: ZoneReferenceResponseForCreateIntersection\n    class Config:\n        orm_mode = True\nclass IntersectionListResponse(IntersectionCreateResponse):",
+        "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.intersections.schemas",
+        "description": "app.modules.intersections.schemas",
+        "peekOfCode": "class IntersectionCreateResponse(BaseModel):\n    id: int\n    name: str\n    zone: ZoneReferenceResponseForCreateIntersection\n    class Config:\n        orm_mode = True\nclass IntersectionListResponse(IntersectionCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass IntersectionReferenceResponseForCreateCamera(BaseModel):",
+        "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionListResponse",
+        "kind": 6,
+        "importPath": "app.modules.intersections.schemas",
+        "description": "app.modules.intersections.schemas",
+        "peekOfCode": "class IntersectionListResponse(IntersectionCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass IntersectionReferenceResponseForCreateCamera(BaseModel):\n    id: int\n    name: str\nclass IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateCamera):\n    pass",
+        "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateCamera",
+        "kind": 6,
+        "importPath": "app.modules.intersections.schemas",
+        "description": "app.modules.intersections.schemas",
+        "peekOfCode": "class IntersectionReferenceResponseForCreateCamera(BaseModel):\n    id: int\n    name: str\nclass IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateCamera):\n    pass",
+        "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateVehicle",
+        "kind": 6,
+        "importPath": "app.modules.intersections.schemas",
+        "description": "app.modules.intersections.schemas",
+        "peekOfCode": "class IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateCamera):\n    pass",
+        "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "kind": 6,
+        "importPath": "app.modules.users.models",
+        "description": "app.modules.users.models",
+        "peekOfCode": "class UserRoleEnum(enum.Enum):\n    admin = \"admin\"\n    super_admin =  \"super_admin\"\nclass User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    role = Column(Enum(UserRoleEnum), nullable=False)\n    name = Column(String,  unique=False, index=True)\n    password = Column(String, nullable=False)",
+        "detail": "app.modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "app.modules.users.models",
+        "description": "app.modules.users.models",
+        "peekOfCode": "class User(Base):\n    __tablename__ = \"users\"\n    id = Column(Integer, primary_key=True, index=True)\n    email = Column(String, unique=True, index=True)\n    role = Column(Enum(UserRoleEnum), nullable=False)\n    name = Column(String,  unique=False, index=True)\n    password = Column(String, nullable=False)\n    secret_key = Column(String, nullable=False)",
+        "detail": "app.modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "user_router",
+        "kind": 5,
+        "importPath": "app.modules.users.router",
+        "description": "app.modules.users.router",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=UserCreateResponse)\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)",
+        "detail": "app.modules.users.router",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UserRoleEnum(str, Enum):\n    admin = \"admin\"\n    super_admin = \"super_admin\"\nclass UserCreateRequest(BaseModel):\n    email :str\n    role : UserRoleEnum\n    name :str\n    password :str\n    secret_key :str\nclass UserCreateResponse(BaseModel):",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UserCreateRequest(BaseModel):\n    email :str\n    role : UserRoleEnum\n    name :str\n    password :str\n    secret_key :str\nclass UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    # password :str\n    # secret_key :str\n    class Config:\n        orm_mode = True",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "vehicle_router",
+        "kind": 5,
+        "importPath": "app.modules.vehicles.router",
+        "description": "app.modules.vehicles.router",
+        "peekOfCode": "vehicle_router = APIRouter()",
+        "detail": "app.modules.vehicles.router",
+        "documentation": {}
+    },
+    {
+        "label": "Zone",
+        "kind": 6,
+        "importPath": "app.modules.zones.models",
+        "description": "app.modules.zones.models",
+        "peekOfCode": "class Zone(Base):\n    __tablename__ = \"zones\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=True)\n     # Reverse relationship\n     #Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_name_of_another\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\", cascade=\"all, delete\")\n    cameras = relationship(\"Camera\", back_populates=\"zone\", cascade=\"all, delete\")\n    intersections = relationship(\"Intersection\", back_populates=\"zone\", cascade=\"all, delete\")",
+        "detail": "app.modules.zones.models",
+        "documentation": {}
+    },
+    {
+        "label": "zone_router",
+        "kind": 5,
+        "importPath": "app.modules.zones.router",
+        "description": "app.modules.zones.router",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=ZoneCreateResponse)\nasync def add_zone(zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_zone(db, zone.name)\n@zone_router.get(\"/get-zones\", response_model=list[ZoneListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_zones(db)",
+        "detail": "app.modules.zones.router",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneCreateRequest(BaseModel):\n    name: str\nclass ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneListResponse",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\nclass ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):\n    pass\nclass ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateIntersection",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\nclass ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):\n    pass\nclass ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateCamera",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):\n    pass\nclass ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateVehicle",
+        "kind": 6,
+        "importPath": "app.modules.zones.schemas",
+        "description": "app.modules.zones.schemas",
+        "peekOfCode": "class ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
+        "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "app.routes.router",
+        "description": "app.routes.router",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"])  \nrouter.include_router(zone_router, prefix=\"/zones\", tags=[\"Zones\"])\nrouter.include_router(intersection_router, prefix=\"/intersections\", tags=[\"Intersections\"])  \nrouter.include_router(camera_router, prefix=\"/cameras\", tags=[\"Cameras\"])  \nrouter.include_router(vehicle_router, prefix=\"/vehicles\", tags=[\"Vehicles\"])",
+        "detail": "app.routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASE_URL",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "DATABASE_URL = 'postgresql+asyncpg://postgres:test1234!@localhost:5433/aipolicing'\nengine = create_async_engine(DATABASE_URL, echo=True)\nasync_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "engine",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "engine = create_async_engine(DATABASE_URL, echo=True)\nasync_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "async_session",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "async_session = sessionmaker(bind=engine, class_=AsyncSession, expire_on_commit=False)\nBase = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:\n        yield session",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 5,
+        "importPath": "app.database",
+        "description": "app.database",
+        "peekOfCode": "Base = declarative_base()\n# Quick setup: create all tables based on your models.\nasync def init_db():\n    async with engine.begin() as conn:\n        # This will create all tables which do not yet exist.\n        await conn.run_sync(Base.metadata.create_all)\nasync def get_db():\n    async with async_session() as session:\n        yield session",
+        "detail": "app.database",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "app.main",
+        "description": "app.main",
+        "peekOfCode": "app = FastAPI()\n# If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")\nasync def on_startup():\n    # This will run when the application starts and use the existing event loop.\n    await init_db()\n# we are redirecting all routes to routes to handle easily\napp.include_router(router, prefix=\"/api/v1\")\nregister_all_errors(app)",
+        "detail": "app.main",
+        "documentation": {}
+    }
+]

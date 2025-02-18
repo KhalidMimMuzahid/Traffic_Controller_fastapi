@@ -1,6 +1,7 @@
 from fastapi import FastAPI 
 from routes.router import router
 from database import init_db
+from exceptions.handler import register_all_errors
 
 app = FastAPI()
 
@@ -14,7 +15,7 @@ async def on_startup():
 # we are redirecting all routes to routes to handle easily
 app.include_router(router, prefix="/api/v1")
 
-
+register_all_errors(app)
 
 
 

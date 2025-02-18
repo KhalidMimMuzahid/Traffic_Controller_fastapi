@@ -1,4 +1,5 @@
-
+from pydantic import BaseModel
+from typing import Optional
 class AIPolicingException(Exception):
     """This is the base class for all AIPolicing errors"""
 
@@ -15,3 +16,13 @@ class CustomError(AIPolicingException):
         super().__init__(status_code, message, resolution)
     def __str__(self):
         return f"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})"
+
+
+
+class ErrorDetail(BaseModel):
+    message: str
+    resolution: Optional[str] = "No resolution provided"
+
+class ExceptionContent(BaseModel):
+    is_success: bool = False
+    error: ErrorDetail

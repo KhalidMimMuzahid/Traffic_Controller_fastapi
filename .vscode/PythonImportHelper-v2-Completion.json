@@ -120,7 +120,23 @@
         "documentation": {}
     },
     {
+        "label": "SQLAlchemyError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
         "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionContent",
         "importPath": "exceptions.models",
         "description": "exceptions.models",
         "isExtraImport": true,
@@ -133,6 +149,102 @@
         "description": "exceptions.models",
         "isExtraImport": true,
         "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -330,6 +442,14 @@
     },
     {
         "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declarative_base",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -553,38 +673,6 @@
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
         "label": "ZoneReferenceResponseForCreateCamera",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
@@ -793,6 +881,30 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.response",
+        "description": "responses.response",
+        "isExtraImport": true,
+        "detail": "responses.response",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.response",
+        "description": "responses.response",
+        "isExtraImport": true,
+        "detail": "responses.response",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "modules.users.models",
         "description": "modules.users.models",
@@ -881,20 +993,11 @@
         "documentation": {}
     },
     {
-        "label": "create_exception_handler",
-        "kind": 2,
-        "importPath": "app.exceptions.handler",
-        "description": "app.exceptions.handler",
-        "peekOfCode": "def create_exception_handler( error_data: CustomError):\n    async def exception_handler(request: Request, exc: CustomError):\n        return JSONResponse(\n             status_code=exc.status_code,\n            content={\n            is_success: False,\n            \"error\": {\n                \"message\": exc.message,\n                \"resolution\": exc.resolution or \"No resolution provided\",\n            }",
-        "detail": "app.exceptions.handler",
-        "documentation": {}
-    },
-    {
         "label": "register_all_errors",
         "kind": 2,
         "importPath": "app.exceptions.handler",
         "description": "app.exceptions.handler",
-        "peekOfCode": "def register_all_errors(app: FastAPI):\n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        # print(str(exc))\n        return JSONResponse(\n            content={\n                \"message\":exc.message,\n                \"error_code\": \"server_errorxx\",\n            },\n            status_code=exc.status_code,",
+        "peekOfCode": "def register_all_errors(app: FastAPI):\n    # Handling CustomError \n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        # print(str(exc))\n        return JSONResponse(\n            content={\n            \"is_success\": False,\n            \"error\": {\n                    \"message\": exc.message,",
         "detail": "app.exceptions.handler",
         "documentation": {}
     },
@@ -912,7 +1015,25 @@
         "kind": 6,
         "importPath": "app.exceptions.models",
         "description": "app.exceptions.models",
-        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"",
+        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"\nclass ErrorDetail(BaseModel):\n    message: str\n    resolution: Optional[str] = \"No resolution provided\"\nclass ExceptionContent(BaseModel):",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ErrorDetail",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class ErrorDetail(BaseModel):\n    message: str\n    resolution: Optional[str] = \"No resolution provided\"\nclass ExceptionContent(BaseModel):\n    is_success: bool = False\n    error: ErrorDetail",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionContent",
+        "kind": 6,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "class ExceptionContent(BaseModel):\n    is_success: bool = False\n    error: ErrorDetail",
         "detail": "app.exceptions.models",
         "documentation": {}
     },
@@ -1074,7 +1195,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=UserCreateResponse)\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\"\n# , response_model=Response[UserCreateResponse]\n)\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n    # result_dict ={key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    # user_response = UserCreateResponse(**result_dict)",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -1101,7 +1222,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    # password :str\n    # secret_key :str\n    class Config:\n        orm_mode = True",
+        "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    # password :str\n    # secret_key :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1184,6 +1305,33 @@
         "description": "app.modules.zones.schemas",
         "peekOfCode": "class ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
         "detail": "app.modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "kind": 2,
+        "importPath": "app.responses.handler",
+        "description": "app.responses.handler",
+        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    # Convert ORM model to dictionary and exclude internal state\n    result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    try:\n        # Convert dictionary to Pydantic model (using the passed pydantic_model)\n        result_response = pydantic_model(**result_dict)\n    except ValidationError as e:\n        # Print the detailed validation errors\n        raise e  # Reraise to catch error at a higher level\n    # Return the formatted Response object",
+        "detail": "app.responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "kind": 6,
+        "importPath": "app.responses.response",
+        "description": "app.responses.response",
+        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
+        "detail": "app.responses.response",
+        "documentation": {}
+    },
+    {
+        "label": "T",
+        "kind": 5,
+        "importPath": "app.responses.response",
+        "description": "app.responses.response",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
+        "detail": "app.responses.response",
         "documentation": {}
     },
     {

@@ -25,4 +25,5 @@ class UserCreateResponse(BaseModel):
     # secret_key :str
     class Config:
         orm_mode = True
+        extra = "ignore"  # This will ignore any extra fields (like "password")
 

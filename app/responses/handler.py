@@ -1,7 +1,8 @@
-from responses.response import Response
+
 from typing import Type
 from sqlalchemy.orm import declarative_base
 from pydantic import ValidationError
+from responses.models import Response
 
 def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:
 

@@ -9,7 +9,7 @@ from exceptions.models import CustomError
 
 async def create_user(db: AsyncSession, email :str,role : UserRoleEnum,name :str,password :str,secret_key :str):
     
-    # raise CustomError(status_code=401, message="xInvalid tokenx", resolution="Please refresh your token.")
+    raise CustomError(status_code=401, message="xInvalid tokenx", resolution="Please refresh your token.")
     
     new_user = User(email =email,role =role,name =name,password =password,secret_key =secret_key)
     db.add(new_user)

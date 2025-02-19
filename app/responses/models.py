@@ -7,3 +7,5 @@ class Response(BaseModel, Generic[T]):
     is_success: bool = True
     message: str
     data: T
+
+

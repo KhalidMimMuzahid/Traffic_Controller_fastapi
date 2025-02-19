@@ -1,5 +1,8 @@
 from pydantic import BaseModel
-from typing import Optional
+from typing import Optional, Any, Generic, TypeVar
+
+T = TypeVar("T")
+
 class AIPolicingException(Exception):
     """This is the base class for all AIPolicing errors"""
 
@@ -19,10 +22,25 @@ class CustomError(AIPolicingException):
 
 
 
-class ErrorDetail(BaseModel):
-    message: str
-    resolution: Optional[str] = "No resolution provided"
 
-class ExceptionContent(BaseModel):
+
+class ExceptionContent():
     is_success: bool = False
-    error: ErrorDetail
+    error: Any = None
+    def __init__(self, message: str, resolution: Optional[str]= "No resolution provided"):
+        self.error = {
+            "message": message,
+            "resolution": resolution,
+        }
+    def to_dict(self):
+        return {"is_success": self.is_success, "error": self.error}
+
+    
+
+
+
+
+# class Response(BaseModel, Generic[T]):
+#     is_success: bool = True
+#     message: str
+#     data: T

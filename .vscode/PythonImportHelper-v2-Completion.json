@@ -216,6 +216,30 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Type",
         "importPath": "typing",
         "description": "typing",
@@ -881,22 +905,6 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "responses.response",
-        "description": "responses.response",
-        "isExtraImport": true,
-        "detail": "responses.response",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.response",
-        "description": "responses.response",
-        "isExtraImport": true,
-        "detail": "responses.response",
-        "documentation": {}
-    },
-    {
         "label": "create_response",
         "importPath": "responses.handler",
         "description": "responses.handler",
@@ -926,6 +934,14 @@
         "description": "modules.zones.service",
         "isExtraImport": true,
         "detail": "modules.zones.service",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
         "documentation": {}
     },
     {
@@ -997,7 +1013,7 @@
         "kind": 2,
         "importPath": "app.exceptions.handler",
         "description": "app.exceptions.handler",
-        "peekOfCode": "def register_all_errors(app: FastAPI):\n    # Handling CustomError \n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        # print(str(exc))\n        return JSONResponse(\n            content={\n            \"is_success\": False,\n            \"error\": {\n                    \"message\": exc.message,",
+        "peekOfCode": "def register_all_errors(app: FastAPI):\n    # Handling CustomError \n    @app.exception_handler(CustomError)\n    async def database__error(request, exc):\n        content = ExceptionContent(message= exc.message, resolution= exc.resolution or \"No resolution provided\",).to_dict()\n        return JSONResponse(\n            content=content,\n            status_code=exc.status_code,\n        )\n    # # Handling SQLAlchemyError",
         "detail": "app.exceptions.handler",
         "documentation": {}
     },
@@ -1015,16 +1031,7 @@
         "kind": 6,
         "importPath": "app.exceptions.models",
         "description": "app.exceptions.models",
-        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"\nclass ErrorDetail(BaseModel):\n    message: str\n    resolution: Optional[str] = \"No resolution provided\"\nclass ExceptionContent(BaseModel):",
-        "detail": "app.exceptions.models",
-        "documentation": {}
-    },
-    {
-        "label": "ErrorDetail",
-        "kind": 6,
-        "importPath": "app.exceptions.models",
-        "description": "app.exceptions.models",
-        "peekOfCode": "class ErrorDetail(BaseModel):\n    message: str\n    resolution: Optional[str] = \"No resolution provided\"\nclass ExceptionContent(BaseModel):\n    is_success: bool = False\n    error: ErrorDetail",
+        "peekOfCode": "class CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        super().__init__(status_code, message, resolution)\n    def __str__(self):\n        return f\"CustomError(status_code={self.status_code}, message={self.message}, resolution={self.resolution})\"\nclass ExceptionContent():\n    is_success: bool = False\n    error: Any = None\n    def __init__(self, message: str, resolution: Optional[str]= \"No resolution provided\"):",
         "detail": "app.exceptions.models",
         "documentation": {}
     },
@@ -1033,7 +1040,16 @@
         "kind": 6,
         "importPath": "app.exceptions.models",
         "description": "app.exceptions.models",
-        "peekOfCode": "class ExceptionContent(BaseModel):\n    is_success: bool = False\n    error: ErrorDetail",
+        "peekOfCode": "class ExceptionContent():\n    is_success: bool = False\n    error: Any = None\n    def __init__(self, message: str, resolution: Optional[str]= \"No resolution provided\"):\n        self.error = {\n            \"message\": message,\n            \"resolution\": resolution,\n        }\n    def to_dict(self):\n        return {\"is_success\": self.is_success, \"error\": self.error}",
+        "detail": "app.exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "T",
+        "kind": 5,
+        "importPath": "app.exceptions.models",
+        "description": "app.exceptions.models",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass AIPolicingException(Exception):\n    \"\"\"This is the base class for all AIPolicing errors\"\"\"\n    def __init__(self, status_code: int, message: str, resolution: str = None):\n        self.status_code = status_code\n        self.message = message\n        self.resolution = resolution\n        super().__init__(message)\nclass CustomError(AIPolicingException):\n    \"\"\"User has provided an invalid or expired token\"\"\"",
         "detail": "app.exceptions.models",
         "documentation": {}
     },
@@ -1319,19 +1335,19 @@
     {
         "label": "Response",
         "kind": 6,
-        "importPath": "app.responses.response",
-        "description": "app.responses.response",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
-        "detail": "app.responses.response",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
         "label": "T",
         "kind": 5,
-        "importPath": "app.responses.response",
-        "description": "app.responses.response",
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
         "peekOfCode": "T = TypeVar(\"T\")\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
-        "detail": "app.responses.response",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {

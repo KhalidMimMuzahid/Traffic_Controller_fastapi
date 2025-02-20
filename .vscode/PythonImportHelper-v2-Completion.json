@@ -16,6 +16,22 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -149,6 +165,23 @@
         "description": "exceptions.models",
         "isExtraImport": true,
         "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -481,6 +514,14 @@
         "documentation": {}
     },
     {
+        "label": "DeclarativeMeta",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -554,6 +595,14 @@
     },
     {
         "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -889,6 +938,14 @@
         "documentation": {}
     },
     {
+        "label": "UserLogInResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
         "label": "UserRoleEnum",
         "importPath": "modules.users.schemas",
         "description": "modules.users.schemas",
@@ -905,6 +962,14 @@
         "documentation": {}
     },
     {
+        "label": "login_user_service",
+        "importPath": "modules.users.service",
+        "description": "modules.users.service",
+        "isExtraImport": true,
+        "detail": "modules.users.service",
+        "documentation": {}
+    },
+    {
         "label": "create_response",
         "importPath": "responses.handler",
         "description": "responses.handler",
@@ -913,11 +978,109 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "modules.users.models",
         "description": "modules.users.models",
         "isExtraImport": true,
         "detail": "modules.users.models",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "isExtraImport": true,
+        "detail": "modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "isExtraImport": true,
+        "detail": "modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "isExtraImport": true,
+        "detail": "modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "isExtraImport": true,
+        "detail": "modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_dict",
+        "importPath": "utils.model_to_dict",
+        "description": "utils.model_to_dict",
+        "isExtraImport": true,
+        "detail": "utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
         "documentation": {}
     },
     {
@@ -934,14 +1097,6 @@
         "description": "modules.zones.service",
         "isExtraImport": true,
         "detail": "modules.zones.service",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
         "documentation": {}
     },
     {
@@ -982,6 +1137,22 @@
         "description": "modules.users.router",
         "isExtraImport": true,
         "detail": "modules.users.router",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
         "documentation": {}
     },
     {
@@ -1211,7 +1382,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\"\n# , response_model=Response[UserCreateResponse]\n)\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n    # result_dict ={key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    # user_response = UserCreateResponse(**result_dict)",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n@user_router.get(\"/login\"\n, response_model=Response[UserLogInResponse]\n)\nasync def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -1240,6 +1411,69 @@
         "description": "app.modules.users.schemas",
         "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    # password :str\n    # secret_key :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")",
         "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserLogInResponse",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "kind": 2,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data",
+        "detail": "app.modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "def verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(",
+        "detail": "app.modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=\"Config.JWT_SECRET\", algorithm= \"HS256\"\n    )",
+        "detail": "app.modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "kind": 2,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=\"Config.JWT_SECRET\", algorithms=[\"HS256\"]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        return \"Token has expired\"\n    except jwt.InvalidTokenError:\n        return \"Invalid token\"",
+        "detail": "app.modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "passwd_context",
+        "kind": 5,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):",
+        "detail": "app.modules.users.utils",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRY",
+        "kind": 5,
+        "importPath": "app.modules.users.utils",
+        "description": "app.modules.users.utils",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}",
+        "detail": "app.modules.users.utils",
         "documentation": {}
     },
     {
@@ -1328,7 +1562,7 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    # Convert ORM model to dictionary and exclude internal state\n    result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    try:\n        # Convert dictionary to Pydantic model (using the passed pydantic_model)\n        result_response = pydantic_model(**result_dict)\n    except ValidationError as e:\n        # Print the detailed validation errors\n        raise e  # Reraise to catch error at a higher level\n    # Return the formatted Response object",
+        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    result_dict= {}\n    print(\"type________________________________________________________________\\n\", type( result))\n    # # Convert ORM model to dictionary and exclude internal state\n    # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    if isinstance(result, Base):\n         # Convert ORM model to dictionary and exclude internal state\n        print(\"inside converting________________________________________________________________\")\n        result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    else:",
         "detail": "app.responses.handler",
         "documentation": {}
     },
@@ -1357,6 +1591,60 @@
         "description": "app.routes.router",
         "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"])  \nrouter.include_router(zone_router, prefix=\"/zones\", tags=[\"Zones\"])\nrouter.include_router(intersection_router, prefix=\"/intersections\", tags=[\"Intersections\"])  \nrouter.include_router(camera_router, prefix=\"/cameras\", tags=[\"Cameras\"])  \nrouter.include_router(vehicle_router, prefix=\"/vehicles\", tags=[\"Vehicles\"])",
         "detail": "app.routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "model_to_dict",
+        "kind": 2,
+        "importPath": "app.utils.model_to_dict",
+        "description": "app.utils.model_to_dict",
+        "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
+        "detail": "app.utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "Settings",
+        "kind": 6,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "class Settings(BaseSettings):\n    DATABASE_URL: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    REDIS_URL: str = \"redis://localhost:6379/0\"\n    MAIL_USERNAME: str\n    MAIL_PASSWORD: str\n    MAIL_FROM: str\n    MAIL_PORT: int\n    MAIL_SERVER: str",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "Config = Settings()\nbroker_url = Config.REDIS_URL\nresult_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "broker_url",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "broker_url = Config.REDIS_URL\nresult_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "result_backend",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "result_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
+        "detail": "app.config",
+        "documentation": {}
+    },
+    {
+        "label": "broker_connection_retry_on_startup",
+        "kind": 5,
+        "importPath": "app.config",
+        "description": "app.config",
+        "peekOfCode": "broker_connection_retry_on_startup = True",
+        "detail": "app.config",
         "documentation": {}
     },
     {

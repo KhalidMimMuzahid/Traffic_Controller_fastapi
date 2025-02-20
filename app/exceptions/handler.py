@@ -1,8 +1,8 @@
 from fastapi.responses import JSONResponse
-from fastapi import FastAPI
+from fastapi import FastAPI, Request, status
 from sqlalchemy.exc import SQLAlchemyError
 from exceptions.models import CustomError, ExceptionContent
-
+import re
 def register_all_errors(app: FastAPI):
     # Handling CustomError 
     @app.exception_handler(CustomError)
@@ -15,16 +15,24 @@ def register_all_errors(app: FastAPI):
 
     # # Handling SQLAlchemyError
     @app.exception_handler(SQLAlchemyError)
-    async def database__error(request, exc):
-        print("SQLAlchemyError________________________________________________________________")
+    async def database__error(request: Request, exc:SQLAlchemyError):
+        print("SQLAlchemyError________________________________________________________________\n")
+        
         # print(str(exc))
+        message = exc.args[0] if exc.args else "something went wrong"
+        if "DETAIL:" in message:
+            # Use regular expression to capture the text after 'DETAIL:' and remove unnecessary parts
+            match = re.search(r"DETAIL: (.*)", message)
+            if match:
+                message = match.group(1).strip()
         return JSONResponse(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             content={
             "is_success": False,
             "error": {
-                    "message": exc.message,
-                    "resolution": exc.resolution or "No resolution provided",
+                    "message": message,
+                    "resolution": "No resolution provided",
+                    # "stack": str(exc)
                 }
             }
         )
@@ -32,7 +40,7 @@ def register_all_errors(app: FastAPI):
         # Handling Remaining All Error
     @app.exception_handler(500)
     async def internal_server_error(request, exc):
-        # print("Remaining All Error________________________________________________________________")
+        print("Remaining All Error________________________________________________________________\n", exc)
         return JSONResponse(
             content={
             "is_success": False,

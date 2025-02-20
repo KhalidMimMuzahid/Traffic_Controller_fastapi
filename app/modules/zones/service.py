@@ -6,10 +6,7 @@ from modules.zones.models import Zone
 
 
 async def create_zone(db: AsyncSession, name: str):
-    # print("start------------------------------------------------------------------------------------------------")
     zone = Zone(name=name)
-    # print("end------------------------------------------------------------------------------------------------")
-    print({'zone': zone})
     db.add(zone)
     await db.commit()
     await db.refresh(zone)

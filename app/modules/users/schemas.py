@@ -27,3 +27,12 @@ class UserCreateResponse(BaseModel):
         orm_mode = True
         extra = "ignore"  # This will ignore any extra fields (like "password")
 
+class UserLogInResponse(BaseModel):
+    id: int
+    email :str
+    role : UserRoleEnum
+    name :str
+    access_token:str
+    class Config:
+        orm_mode = True
+        extra = "ignore"

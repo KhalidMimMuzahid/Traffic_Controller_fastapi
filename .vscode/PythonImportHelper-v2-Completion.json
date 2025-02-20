@@ -1562,7 +1562,7 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    result_dict= {}\n    print(\"type________________________________________________________________\\n\", type( result))\n    # # Convert ORM model to dictionary and exclude internal state\n    # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    if isinstance(result, Base):\n         # Convert ORM model to dictionary and exclude internal state\n        print(\"inside converting________________________________________________________________\")\n        result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    else:",
+        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    result_dict= {}\n    print(\"type___________________________________________________  _____________\\n\", type( result))\n    # # Convert ORM model to dictionary and exclude internal state\n    # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    if isinstance(result, Base):\n         # Convert ORM model to dictionary and exclude internal state\n        print(\"inside converting________________________________________________________________\")\n        result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    else:",
         "detail": "app.responses.handler",
         "documentation": {}
     },

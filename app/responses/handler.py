@@ -8,7 +8,7 @@ from database import Base
 def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:
 
     result_dict= {}
-    print("type________________________________________________________________\n", type( result))
+    print("type___________________________________________________  _____________\n", type( result))
     # # Convert ORM model to dictionary and exclude internal state
     # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}
     if isinstance(result, Base):

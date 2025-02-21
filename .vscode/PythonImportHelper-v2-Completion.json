@@ -1084,6 +1084,14 @@
         "documentation": {}
     },
     {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
+        "documentation": {}
+    },
+    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -1445,7 +1453,7 @@
         "kind": 2,
         "importPath": "app.modules.users.utils",
         "description": "app.modules.users.utils",
-        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=\"Config.JWT_SECRET\", algorithm= \"HS256\"\n    )",
+        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=\"Config.JWT_SECRET\", algorithm= Config.JWT_ALGORITHM\n    )",
         "detail": "app.modules.users.utils",
         "documentation": {}
     },
@@ -1454,7 +1462,7 @@
         "kind": 2,
         "importPath": "app.modules.users.utils",
         "description": "app.modules.users.utils",
-        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=\"Config.JWT_SECRET\", algorithms=[\"HS256\"]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        return \"Token has expired\"\n    except jwt.InvalidTokenError:\n        return \"Invalid token\"",
+        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=\"Config.JWT_SECRET\", algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        return \"Token has expired\"\n    except jwt.InvalidTokenError:\n        return \"Invalid token\"",
         "detail": "app.modules.users.utils",
         "documentation": {}
     },
@@ -1607,7 +1615,7 @@
         "kind": 6,
         "importPath": "app.config",
         "description": "app.config",
-        "peekOfCode": "class Settings(BaseSettings):\n    DATABASE_URL: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    REDIS_URL: str = \"redis://localhost:6379/0\"\n    MAIL_USERNAME: str\n    MAIL_PASSWORD: str\n    MAIL_FROM: str\n    MAIL_PORT: int\n    MAIL_SERVER: str",
+        "peekOfCode": "class Settings(BaseSettings):\n    DATABASE_URL: str\n    JWT_SECRET: str\n    JWT_ALGORITHM: str\n    model_config = SettingsConfigDict(env_file=\".env\", env_file_encoding=\"utf-8\")\nConfig = Settings()",
         "detail": "app.config",
         "documentation": {}
     },
@@ -1616,34 +1624,7 @@
         "kind": 5,
         "importPath": "app.config",
         "description": "app.config",
-        "peekOfCode": "Config = Settings()\nbroker_url = Config.REDIS_URL\nresult_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
-        "detail": "app.config",
-        "documentation": {}
-    },
-    {
-        "label": "broker_url",
-        "kind": 5,
-        "importPath": "app.config",
-        "description": "app.config",
-        "peekOfCode": "broker_url = Config.REDIS_URL\nresult_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
-        "detail": "app.config",
-        "documentation": {}
-    },
-    {
-        "label": "result_backend",
-        "kind": 5,
-        "importPath": "app.config",
-        "description": "app.config",
-        "peekOfCode": "result_backend = Config.REDIS_URL\nbroker_connection_retry_on_startup = True",
-        "detail": "app.config",
-        "documentation": {}
-    },
-    {
-        "label": "broker_connection_retry_on_startup",
-        "kind": 5,
-        "importPath": "app.config",
-        "description": "app.config",
-        "peekOfCode": "broker_connection_retry_on_startup = True",
+        "peekOfCode": "Config = Settings()",
         "detail": "app.config",
         "documentation": {}
     },

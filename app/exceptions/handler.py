@@ -37,7 +37,21 @@ def register_all_errors(app: FastAPI):
             }
         )
 
-        # Handling Remaining All Error
+    # Handling Remaining All Error
+    @app.exception_handler(422)
+    async def internal_server_error(request, exc):
+        print("Remaining All Error________________________________________________________________\n", exc)
+        return JSONResponse(
+            content={
+            "is_success": False,
+            "error": {
+                    "message": "Try to make defination of this error",
+                    "resolution":  "No resolution provided",
+                }
+            },
+            status_code= 404,
+        )
+        
     @app.exception_handler(500)
     async def internal_server_error(request, exc):
         print("Remaining All Error________________________________________________________________\n", exc)

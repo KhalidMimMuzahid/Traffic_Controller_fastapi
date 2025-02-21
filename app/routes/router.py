@@ -4,7 +4,7 @@ from modules.intersections.router import intersection_router
 from modules.cameras.router import camera_router
 from modules.vehicles.router import vehicle_router
 from modules.users.router import user_router
-
+# middlewares
 # creating a router 
 router = APIRouter()
 

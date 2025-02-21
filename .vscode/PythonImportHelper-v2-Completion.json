@@ -1,10 +1,34 @@
 [
     {
-        "label": "JSONResponse",
-        "importPath": "fastapi.responses",
-        "description": "fastapi.responses",
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "fastapi.responses",
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Security",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
         "documentation": {}
     },
     {
@@ -120,6 +144,14 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -136,108 +168,92 @@
         "documentation": {}
     },
     {
-        "label": "SQLAlchemyError",
-        "importPath": "sqlalchemy.exc",
-        "description": "sqlalchemy.exc",
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
         "isExtraImport": true,
-        "detail": "sqlalchemy.exc",
+        "detail": "fastapi",
         "documentation": {}
     },
     {
-        "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "label": "HTTPBearer",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
-        "label": "ExceptionContent",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
+        "label": "HTTPAuthorizationCredentials",
+        "importPath": "fastapi.security",
+        "description": "fastapi.security",
         "isExtraImport": true,
-        "detail": "exceptions.models",
+        "detail": "fastapi.security",
         "documentation": {}
     },
     {
-        "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
-        "isExtraImport": true,
-        "detail": "exceptions.models",
-        "documentation": {}
-    },
-    {
-        "label": "CustomError",
-        "importPath": "exceptions.models",
-        "description": "exceptions.models",
-        "isExtraImport": true,
-        "detail": "exceptions.models",
-        "documentation": {}
-    },
-    {
-        "label": "re",
+        "label": "modules.users.utils",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "re",
-        "description": "re",
-        "detail": "re",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "decode_access_token",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "generate_passwd_hash",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "verify_password",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "create_access_token",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "decode_access_token",
+        "importPath": "modules.users.utils",
+        "description": "modules.users.utils",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "modules.users.utils",
         "documentation": {}
     },
     {
-        "label": "ValidationError",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "typing",
         "documentation": {}
     },
     {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
         "isExtraImport": true,
-        "detail": "pydantic",
+        "detail": "typing",
         "documentation": {}
     },
     {
@@ -302,6 +318,152 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "ExceptionContent",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "re",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "re",
+        "description": "re",
+        "detail": "re",
         "documentation": {}
     },
     {
@@ -1002,38 +1164,6 @@
         "documentation": {}
     },
     {
-        "label": "generate_passwd_hash",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "verify_password",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "create_access_token",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "decode_access_token",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
         "label": "model_to_dict",
         "importPath": "utils.model_to_dict",
         "description": "utils.model_to_dict",
@@ -1185,6 +1315,41 @@
         "description": "exceptions.handler",
         "isExtraImport": true,
         "detail": "exceptions.handler",
+        "documentation": {}
+    },
+    {
+        "label": "authenticate_user",
+        "importPath": "dependencies.authenticate_user",
+        "description": "dependencies.authenticate_user",
+        "isExtraImport": true,
+        "detail": "dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "TokenData",
+        "kind": 6,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "class TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(\n    request: Request, credentials: HTTPAuthorizationCredentials = Security(security)\n):\n    \"\"\"Middleware-style function for authenticating users before hitting the router.\"\"\"\n    path = request.url.path \n    # Skip authentication for public routes",
+        "detail": "app.dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "security",
+        "kind": 5,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str",
+        "detail": "app.dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "PUBLIC_ROUTES",
+        "kind": 5,
+        "importPath": "app.dependencies.authenticate_user",
+        "description": "app.dependencies.authenticate_user",
+        "peekOfCode": "PUBLIC_ROUTES = {\n    \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(",
+        "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
     {
@@ -1453,7 +1618,7 @@
         "kind": 2,
         "importPath": "app.modules.users.utils",
         "description": "app.modules.users.utils",
-        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=\"Config.JWT_SECRET\", algorithm= Config.JWT_ALGORITHM\n    )",
+        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=Config.JWT_SECRET, algorithm= Config.JWT_ALGORITHM\n    )",
         "detail": "app.modules.users.utils",
         "documentation": {}
     },
@@ -1462,7 +1627,7 @@
         "kind": 2,
         "importPath": "app.modules.users.utils",
         "description": "app.modules.users.utils",
-        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=\"Config.JWT_SECRET\", algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        return \"Token has expired\"\n    except jwt.InvalidTokenError:\n        return \"Invalid token\"",
+        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=Config.JWT_SECRET, algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        raise CustomError(message= \"your access token has been expired\", status_code=401, resolution=\"please sign in again.\")\n    except jwt.InvalidTokenError:\n        raise CustomError(message= \"your access token is invalid\", status_code=401, resolution=\"please provide a valid token.\")",
         "detail": "app.modules.users.utils",
         "documentation": {}
     },
@@ -1507,7 +1672,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=ZoneCreateResponse)\nasync def add_zone(zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_zone(db, zone.name)\n@zone_router.get(\"/get-zones\", response_model=list[ZoneListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_zones(db)",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=ZoneCreateResponse)\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_zone(db, zone.name)\n@zone_router.get(\"/get-zones\", response_model=list[ZoneListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_zones(db)",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },
@@ -1669,7 +1834,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")\nasync def on_startup():\n    # This will run when the application starts and use the existing event loop.\n    await init_db()\n# we are redirecting all routes to routes to handle easily\napp.include_router(router, prefix=\"/api/v1\")\nregister_all_errors(app)",
+        "peekOfCode": "app = FastAPI()\n# If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")\nasync def on_startup():\n    # This will run when the application starts and use the existing event loop.\n    await init_db()\n# we are redirecting all routes to routes to handle easily\napp.include_router(router, prefix=\"/api/v1\", dependencies=[Depends(authenticate_user)])\nregister_all_errors(app)",
         "detail": "app.main",
         "documentation": {}
     }

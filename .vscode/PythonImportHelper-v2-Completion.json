@@ -120,6 +120,14 @@
         "documentation": {}
     },
     {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "APIRouter",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -153,6 +161,22 @@
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -265,6 +289,30 @@
     },
     {
         "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -402,6 +450,14 @@
     },
     {
         "label": "ExceptionContent",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
         "importPath": "exceptions.models",
         "description": "exceptions.models",
         "isExtraImport": true,
@@ -591,6 +647,14 @@
         "isExtraImport": true,
         "importPath": "enum",
         "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
         "detail": "enum",
         "documentation": {}
     },
@@ -1147,6 +1211,14 @@
         "documentation": {}
     },
     {
+        "label": "validate_user_access_api",
+        "importPath": "utils.validate_user_access_api",
+        "description": "utils.validate_user_access_api",
+        "isExtraImport": true,
+        "detail": "utils.validate_user_access_api",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "modules.users.models",
         "description": "modules.users.models",
@@ -1330,7 +1402,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -1339,7 +1411,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "PUBLIC_ROUTES = {\n    \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(",
+        "peekOfCode": "PUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -1546,7 +1618,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n@user_router.get(\"/login\"\n, response_model=Response[UserLogInResponse]\n)\nasync def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n@user_router.get(\"/login\"",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -1764,6 +1836,33 @@
         "description": "app.utils.model_to_dict",
         "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
         "detail": "app.utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "kind": 6,
+        "importPath": "app.utils.validate_user_access_api",
+        "description": "app.utils.validate_user_access_api",
+        "peekOfCode": "class UserRoleEnum(str, Enum):\n    admin = \"admin\"\n    super_admin = \"super_admin\"\n# Define the authentication dictionary type\nTAuth = Dict[str, Union[str, UserRoleEnum]]\ndef validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access",
+        "detail": "app.utils.validate_user_access_api",
+        "documentation": {}
+    },
+    {
+        "label": "validate_user_access_api",
+        "kind": 2,
+        "importPath": "app.utils.validate_user_access_api",
+        "description": "app.utils.validate_user_access_api",
+        "peekOfCode": "def validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access\n    else:\n        raise CustomError(message= \"You have no right to access this API\", status_code=401)",
+        "detail": "app.utils.validate_user_access_api",
+        "documentation": {}
+    },
+    {
+        "label": "TAuth",
+        "kind": 5,
+        "importPath": "app.utils.validate_user_access_api",
+        "description": "app.utils.validate_user_access_api",
+        "peekOfCode": "TAuth = Dict[str, Union[str, UserRoleEnum]]\ndef validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access\n    else:\n        raise CustomError(message= \"You have no right to access this API\", status_code=401)",
+        "detail": "app.utils.validate_user_access_api",
         "documentation": {}
     },
     {

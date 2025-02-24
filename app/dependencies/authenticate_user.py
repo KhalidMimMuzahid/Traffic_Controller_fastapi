@@ -11,7 +11,7 @@ security = HTTPBearer(auto_error=False)
 
 # Define excluded routes that don't require authentication
 PUBLIC_ROUTES = {
-    "/api/v1/users/add-user",
+    # "/api/v1/users/add-user",
     "/api/v1/users/login"  
 }
 

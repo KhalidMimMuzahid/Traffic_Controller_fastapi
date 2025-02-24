@@ -192,55 +192,6 @@
         "documentation": {}
     },
     {
-        "label": "modules.users.utils",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "decode_access_token",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "generate_passwd_hash",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "verify_password",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "create_access_token",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "decode_access_token",
-        "importPath": "modules.users.utils",
-        "description": "modules.users.utils",
-        "isExtraImport": true,
-        "detail": "modules.users.utils",
-        "documentation": {}
-    },
-    {
         "label": "Dict",
         "importPath": "typing",
         "description": "typing",
@@ -391,6 +342,46 @@
         "importPath": "os",
         "description": "os",
         "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "importPath": "utils.manage_auth",
+        "description": "utils.manage_auth",
+        "isExtraImport": true,
+        "detail": "utils.manage_auth",
         "documentation": {}
     },
     {
@@ -1172,56 +1163,6 @@
         "documentation": {}
     },
     {
-        "label": "uuid",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "jwt",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "jwt",
-        "description": "jwt",
-        "detail": "jwt",
-        "documentation": {}
-    },
-    {
-        "label": "CryptContext",
-        "importPath": "passlib.context",
-        "description": "passlib.context",
-        "isExtraImport": true,
-        "detail": "passlib.context",
-        "documentation": {}
-    },
-    {
-        "label": "Config",
-        "importPath": "config",
-        "description": "config",
-        "isExtraImport": true,
-        "detail": "config",
-        "documentation": {}
-    },
-    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -1275,6 +1216,56 @@
         "description": "modules.users.router",
         "isExtraImport": true,
         "detail": "modules.users.router",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "CryptContext",
+        "importPath": "passlib.context",
+        "description": "passlib.context",
+        "isExtraImport": true,
+        "detail": "passlib.context",
+        "documentation": {}
+    },
+    {
+        "label": "Config",
+        "importPath": "config",
+        "description": "config",
+        "isExtraImport": true,
+        "detail": "config",
         "documentation": {}
     },
     {
@@ -1596,60 +1587,6 @@
         "documentation": {}
     },
     {
-        "label": "generate_passwd_hash",
-        "kind": 2,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "verify_password",
-        "kind": 2,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "def verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "create_access_token",
-        "kind": 2,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=Config.JWT_SECRET, algorithm= Config.JWT_ALGORITHM\n    )",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "decode_access_token",
-        "kind": 2,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=Config.JWT_SECRET, algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        raise CustomError(message= \"your access token has been expired\", status_code=401, resolution=\"please sign in again.\")\n    except jwt.InvalidTokenError:\n        raise CustomError(message= \"your access token is invalid\", status_code=401, resolution=\"please provide a valid token.\")",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "passwd_context",
-        "kind": 5,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
-        "label": "ACCESS_TOKEN_EXPIRY",
-        "kind": 5,
-        "importPath": "app.modules.users.utils",
-        "description": "app.modules.users.utils",
-        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}",
-        "detail": "app.modules.users.utils",
-        "documentation": {}
-    },
-    {
         "label": "vehicle_router",
         "kind": 5,
         "importPath": "app.modules.vehicles.router",
@@ -1764,6 +1701,60 @@
         "description": "app.routes.router",
         "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"])  \nrouter.include_router(zone_router, prefix=\"/zones\", tags=[\"Zones\"])\nrouter.include_router(intersection_router, prefix=\"/intersections\", tags=[\"Intersections\"])  \nrouter.include_router(camera_router, prefix=\"/cameras\", tags=[\"Cameras\"])  \nrouter.include_router(vehicle_router, prefix=\"/vehicles\", tags=[\"Vehicles\"])",
         "detail": "app.routes.router",
+        "documentation": {}
+    },
+    {
+        "label": "generate_passwd_hash",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "verify_password",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}\n    payload[\"auth\"] = user_data\n    payload[\"exp\"] = datetime.utcnow() + timedelta(seconds=ACCESS_TOKEN_EXPIRY)\n    payload[\"refresh\"] = refresh\n    token = jwt.encode(\n        payload=payload, key=Config.JWT_SECRET, algorithm= Config.JWT_ALGORITHM\n    )",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "decode_access_token",
+        "kind": 2,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "def decode_access_token(token: str) -> dict:\n    try:\n        token_data = jwt.decode(\n            jwt=token, key=Config.JWT_SECRET, algorithms=[Config.JWT_ALGORITHM]\n        )\n        return token_data\n    except jwt.ExpiredSignatureError:\n        raise CustomError(message= \"your access token has been expired\", status_code=401, resolution=\"please sign in again.\")\n    except jwt.InvalidTokenError:\n        raise CustomError(message= \"your access token is invalid\", status_code=401, resolution=\"please provide a valid token.\")",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "passwd_context",
+        "kind": 5,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "passwd_context = CryptContext(schemes=[\"bcrypt\"])\nACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):",
+        "detail": "app.utils.manage_auth",
+        "documentation": {}
+    },
+    {
+        "label": "ACCESS_TOKEN_EXPIRY",
+        "kind": 5,
+        "importPath": "app.utils.manage_auth",
+        "description": "app.utils.manage_auth",
+        "peekOfCode": "ACCESS_TOKEN_EXPIRY = 7*24*60*60   # in second\ndef generate_passwd_hash(password: str) -> str:\n    hash = passwd_context.hash(password)\n    return hash\ndef verify_password(password: str, hash: str) -> bool:\n    return passwd_context.verify(password, hash)\ndef create_access_token(\n    user_data: dict, expiry: timedelta = None, refresh: bool = False\n):\n    payload = {}",
+        "detail": "app.utils.manage_auth",
         "documentation": {}
     },
     {

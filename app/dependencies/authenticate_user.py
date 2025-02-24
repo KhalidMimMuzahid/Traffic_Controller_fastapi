@@ -1,10 +1,9 @@
 from fastapi import Request, HTTPException, Security, Depends
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
-import modules.users.utils
 from typing import Dict, Any
 from pydantic import BaseModel
 import os
-from modules.users.utils import decode_access_token
+from utils.manage_auth import decode_access_token
 from exceptions.models import CustomError
 
 # Define security scheme
@@ -41,7 +40,6 @@ async def authenticate_user(
     token_data = decode_access_token(token)
 
     auth=token_data["auth"]
-    print(auth)
     if not auth:
         raise CustomError(message= "no enough data has provided in this token", status_code=401)
     # Validate required claims

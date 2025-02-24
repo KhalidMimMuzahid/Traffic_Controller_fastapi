@@ -4,8 +4,8 @@ from sqlalchemy.future import select
 from modules.users.schemas import UserRoleEnum 
 from modules.users.models import User
 from exceptions.models import CustomError
-from modules.users.utils import generate_passwd_hash, verify_password, create_access_token, decode_access_token
 from exceptions.models import CustomError
+from utils.manage_auth import generate_passwd_hash, verify_password, create_access_token, decode_access_token
 from utils.model_to_dict import model_to_dict
 
 

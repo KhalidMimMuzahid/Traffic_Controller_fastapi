@@ -1,29 +1,37 @@
 
-from typing import Type
+from typing import Type, Union, List
 from sqlalchemy.orm import declarative_base, DeclarativeMeta
 from pydantic import ValidationError
 from responses.models import Response
 from database import Base
+from exceptions.models import CustomError
 
-def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:
 
-    result_dict= {}
-    # print("type___________________________________________________  _____________\n", type( result))
-    # # Convert ORM model to dictionary and exclude internal state
-    # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}
-    if isinstance(result, Base):
-         # Convert ORM model to dictionary and exclude internal state
-        # print("inside converting________________________________________________________________")
+def create_response(result: Union[Base, List[Base], dict, List[dict]], 
+                    pydantic_model: Type[declarative_base], 
+                    message: str) -> Response:
+    result_dict = None  # Placeholder
+
+    if isinstance(result, list):
+        # Check if list contains ORM objects
+        if all(isinstance(item, Base) for item in result):
+            result_dict = [{key: value for key, value in item.__dict__.items() if key != '_sa_instance_state'} for item in result]
+        else:
+            result_dict = result  # Assume already in dictionary format
+    elif isinstance(result, Base):
         result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}
     else:
-        result_dict= result
-    
-    try:
-        # Convert dictionary to Pydantic model (using the passed pydantic_model)
-        result_response = pydantic_model(**result_dict)
-    except ValidationError as e:
-        # Print the detailed validation errors
-        raise e  # Reraise to catch error at a higher level
+        result_dict = result  # Assume it's a valid dict
 
-    # Return the formatted Response object
+    try:
+        if isinstance(result_dict, list):
+            # Convert list of dictionaries to list of Pydantic models
+            result_response = [pydantic_model(**item) for item in result_dict]
+        else:
+            # Convert single dictionary to Pydantic model
+            result_response = pydantic_model(**result_dict)
+    except ValidationError as e:
+        raise CustomError(message= "internal server error:ValidationError", status_code=500)
+    except TypeError as e:
+        raise CustomError(message= "internal server error:TypeError", status_code=500)
     return Response(message=message, data=result_response)

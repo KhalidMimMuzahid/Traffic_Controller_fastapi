@@ -20,11 +20,11 @@ async def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = D
     result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)
 
     # Call the helper function to create the response and return it, passing UserCreateResponse model
-    return create_response(result, UserCreateResponse, "User created successfully")
+    return create_response(result, UserCreateResponse, "User has created successfully")
 
 @user_router.get("/login"
 , response_model=Response[UserLogInResponse]
 )
 async def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)):
     result= await login_user_service(db, email, password)
-    return create_response(result, UserLogInResponse, "User logged in successfully")
+    return create_response(result, UserLogInResponse, "User has logged in successfully")

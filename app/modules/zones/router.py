@@ -4,13 +4,23 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from modules.zones.schemas import ZoneCreateRequest, ZoneCreateResponse, ZoneListResponse
 from database import get_db 
 from modules.zones.service import create_zone, get_zones
+from responses.handler import create_response
+from responses.models import Response
 zone_router = APIRouter()
-@zone_router.post("/add-zone", response_model=ZoneCreateResponse)
+@zone_router.post("/add-zone", response_model=Response[ZoneCreateResponse])
 async def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):
-    return await create_zone(db, zone.name)
+    result= await create_zone(db, zone.name)
+    # Call the helper function to create the response and return it, passing UserCreateResponse model
+    return create_response(result, ZoneCreateResponse, "Zone has created successfully")
 
-@zone_router.get("/get-zones", response_model=list[ZoneListResponse])
+@zone_router.get("/get-zones"
+# , response_model=Response[list[ZoneListResponse]]
+)
 async def list_zones(db: AsyncSession = Depends(get_db)):
-    return await get_zones(db)
+    result= await get_zones(db)
+    # return result
+    # Call the helper function to create the response and return it, passing UserCreateResponse model
+    return create_response(result, ZoneListResponse, "Zone has created successfully")
+
 
 

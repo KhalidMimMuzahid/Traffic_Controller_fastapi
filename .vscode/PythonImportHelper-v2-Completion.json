@@ -272,6 +272,22 @@
         "documentation": {}
     },
     {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -450,6 +466,14 @@
     },
     {
         "label": "ExceptionContent",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
         "importPath": "exceptions.models",
         "description": "exceptions.models",
         "isExtraImport": true,
@@ -1195,6 +1219,22 @@
         "documentation": {}
     },
     {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "responses.models",
         "description": "responses.models",
@@ -1618,7 +1658,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User created successfully\")\n@user_router.get(\"/login\"",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User has created successfully\")\n@user_router.get(\"/login\"",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -1681,7 +1721,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=ZoneCreateResponse)\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_zone(db, zone.name)\n@zone_router.get(\"/get-zones\", response_model=list[ZoneListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_zones(db)",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },
@@ -1744,7 +1784,7 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(result, pydantic_model: Type[declarative_base], message: str) -> Response:\n    result_dict= {}\n    # print(\"type___________________________________________________  _____________\\n\", type( result))\n    # # Convert ORM model to dictionary and exclude internal state\n    # result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    if isinstance(result, Base):\n         # Convert ORM model to dictionary and exclude internal state\n        # print(\"inside converting________________________________________________________________\")\n        result_dict = {key: value for key, value in result.__dict__.items() if key != '_sa_instance_state'}\n    else:",
+        "peekOfCode": "def create_response(result: Union[Base, List[Base], dict, List[dict]], \n                    pydantic_model: Type[declarative_base], \n                    message: str) -> Response:\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects\n        if all(isinstance(item, Base) for item in result):\n            result_dict = [{key: value for key, value in item.__dict__.items() if key != '_sa_instance_state'} for item in result]\n        else:\n            result_dict = result  # Assume already in dictionary format",
         "detail": "app.responses.handler",
         "documentation": {}
     },

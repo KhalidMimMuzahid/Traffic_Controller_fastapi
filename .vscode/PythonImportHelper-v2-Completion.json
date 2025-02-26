@@ -1405,6 +1405,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "router",
         "importPath": "routes.router",
         "description": "routes.router",
@@ -1964,7 +1972,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\n# If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")\nasync def on_startup():\n    # This will run when the application starts and use the existing event loop.\n    await init_db()\n# we are redirecting all routes to routes to handle easily\napp.include_router(router, prefix=\"/api/v1\", dependencies=[Depends(authenticate_user)])\nregister_all_errors(app)",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

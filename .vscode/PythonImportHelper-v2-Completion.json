@@ -521,6 +521,14 @@
         "documentation": {}
     },
     {
+        "label": "ResponseValidationError",
+        "importPath": "fastapi.exceptions",
+        "description": "fastapi.exceptions",
+        "isExtraImport": true,
+        "detail": "fastapi.exceptions",
+        "documentation": {}
+    },
+    {
         "label": "SQLAlchemyError",
         "importPath": "sqlalchemy.exc",
         "description": "sqlalchemy.exc",
@@ -1187,6 +1195,14 @@
         "documentation": {}
     },
     {
+        "label": "UsersListResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
         "label": "UserRoleEnum",
         "importPath": "modules.users.schemas",
         "description": "modules.users.schemas",
@@ -1204,6 +1220,14 @@
     },
     {
         "label": "login_user_service",
+        "importPath": "modules.users.service",
+        "description": "modules.users.service",
+        "isExtraImport": true,
+        "detail": "modules.users.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_users_service",
         "importPath": "modules.users.service",
         "description": "modules.users.service",
         "isExtraImport": true,
@@ -1666,7 +1690,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User has created successfully\")\n@user_router.get(\"/login\"",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User has created successfully\")\n@user_router.get(\"/login\", response_model=Response[UserLogInResponse]",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -1702,7 +1726,16 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
+        "peekOfCode": "class UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass UsersListResponse(BaseModel):",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UsersListResponse",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UsersListResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -1729,7 +1762,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n, response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },

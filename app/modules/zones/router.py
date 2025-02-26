@@ -14,13 +14,13 @@ async def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = 
     return create_response(result, ZoneCreateResponse, "Zone has created successfully")
 
 @zone_router.get("/get-zones"
-# , response_model=Response[list[ZoneListResponse]]
+, response_model=Response[list[ZoneListResponse]]
 )
 async def list_zones(db: AsyncSession = Depends(get_db)):
     result= await get_zones(db)
     # return result
     # Call the helper function to create the response and return it, passing UserCreateResponse model
-    return create_response(result, ZoneListResponse, "Zone has created successfully")
+    return create_response(result, ZoneListResponse, "Zones have retrieved successfully")
 
 
 

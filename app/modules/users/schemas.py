@@ -36,3 +36,13 @@ class UserLogInResponse(BaseModel):
     class Config:
         orm_mode = True
         extra = "ignore"
+
+
+class UsersListResponse(BaseModel):
+    id: int
+    email :str
+    role : UserRoleEnum
+    name :str
+    class Config:
+        orm_mode = True
+        extra = "ignore"

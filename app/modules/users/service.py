@@ -44,6 +44,11 @@ async def login_user_service(db: AsyncSession, email:str, password:str):
     return login_data
 
 
-
+async def get_users_service(db: AsyncSession):
+    result = await db.execute(select(User))
+    return result.scalars().all()
+    # users= result.scalars().all()
+    # users_dict = model_to_dict(users)
+    # return users_dict
 
 

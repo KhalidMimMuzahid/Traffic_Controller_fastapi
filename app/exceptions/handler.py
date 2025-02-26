@@ -1,4 +1,5 @@
 from fastapi.responses import JSONResponse
+from fastapi.exceptions import ResponseValidationError
 from fastapi import FastAPI, Request, status
 from sqlalchemy.exc import SQLAlchemyError
 from exceptions.models import CustomError, ExceptionContent
@@ -37,6 +38,30 @@ def register_all_errors(app: FastAPI):
             }
         )
 
+       # # Handling ResponseValidationError
+    @app.exception_handler(ResponseValidationError)
+    async def response_validation_error(request: Request, exc:ResponseValidationError):
+        print("ResponseValidationError________________________________________________________________\n")
+        
+        # print(str(exc))
+        # message = exc.args[0] if exc.args else "something went wrong"
+        # if "DETAIL:" in message:
+        #     # Use regular expression to capture the text after 'DETAIL:' and remove unnecessary parts
+        #     match = re.search(r"DETAIL: (.*)", message)
+        #     if match:
+        #         message = match.group(1).strip()
+        return JSONResponse(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            content={
+            "is_success": False,
+            "error": {
+                    "message": "ResponseValidationError",
+                    "resolution": "No resolution provided 01",
+                    # "stack": str(exc)
+                }
+            }
+        )
+
     # Handling Remaining All Error
     @app.exception_handler(422)
     async def internal_server_error(request, exc):
@@ -45,7 +70,7 @@ def register_all_errors(app: FastAPI):
             content={
             "is_success": False,
             "error": {
-                    "message": "Try to make defination of this error",
+                    "message": "Try to make defination of this error1",
                     "resolution":  "No resolution provided",
                 }
             },
@@ -59,7 +84,7 @@ def register_all_errors(app: FastAPI):
             content={
             "is_success": False,
             "error": {
-                    "message": "Try to make defination of this error",
+                    "message": "Try to make defination of this error2",
                     "resolution":  "No resolution provided",
                 }
             },

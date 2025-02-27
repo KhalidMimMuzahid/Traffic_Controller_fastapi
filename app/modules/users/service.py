@@ -8,14 +8,13 @@ from exceptions.models import CustomError
 from exceptions.models import CustomError
 from utils.manage_auth import generate_passwd_hash, verify_password, create_access_token, decode_access_token
 from utils.model_to_dict import model_to_dict
+from utils.send_mail import send_email, EmailSchema
 import math
 from responses.models import MetaData
 
 
+
 async def create_user(db: AsyncSession, email :str, role : UserRoleEnum, name :str, password :str, secret_key :str):
-    
-    # raise CustomError(status_code=401, message="xInvalid token", resolution="Please refresh your token.")
-    
     password_hash= generate_passwd_hash(password)
     new_user = User(email =email,role =role,name =name,password =password_hash,secret_key =secret_key)
     db.add(new_user)
@@ -23,6 +22,16 @@ async def create_user(db: AsyncSession, email :str, role : UserRoleEnum, name :s
     await db.refresh(new_user)
     if not new_user:
         raise CustomError(status_code=401, message="Something Went Wrong")
+    await send_email(EmailSchema(
+        receiver_email=email,
+        subject="This email registered on AI Policing System",
+        html_body=f"""
+        <div>
+            You have been created <br>
+            Email: {email} <br>
+            Password: {password}
+        </div>"""
+    )) 
     return new_user
 
 
@@ -61,9 +70,4 @@ async def get_users_service(page, limit, db: AsyncSession):
     result = await db.execute(select(User).order_by(asc(User.id)).offset(skip).limit(limit))
     # .order_by(asc(User.id)).offset(skip).limit(limit)  )
     return {"data":result.scalars().all(), "meta_data" : meta_data}
-    # return result.scalars().all()
-    # users= result.scalars().all()
-    # users_dict = model_to_dict(users)
-    # return users_dict
-
 

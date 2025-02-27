@@ -328,6 +328,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -401,6 +409,14 @@
     },
     {
         "label": "ValidationError",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
         "importPath": "pydantic",
         "description": "pydantic",
         "isExtraImport": true,
@@ -1355,6 +1371,22 @@
         "documentation": {}
     },
     {
+        "label": "send_email",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "EmailSchema",
+        "importPath": "utils.send_mail",
+        "description": "utils.send_mail",
+        "isExtraImport": true,
+        "detail": "utils.send_mail",
+        "documentation": {}
+    },
+    {
         "label": "math",
         "kind": 6,
         "isExtraImport": true,
@@ -1467,6 +1499,23 @@
         "description": "config",
         "isExtraImport": true,
         "detail": "config",
+        "documentation": {}
+    },
+    {
+        "label": "aiosmtplib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "aiosmtplib",
+        "description": "aiosmtplib",
+        "detail": "aiosmtplib",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
         "documentation": {}
     },
     {
@@ -1991,6 +2040,51 @@
         "description": "app.utils.model_to_dict",
         "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
         "detail": "app.utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "EmailSchema",
+        "kind": 6,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "class EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()\n        message[\"From\"] = f\"AI Policing <{SENDER_EMAIL}>\"\n        message[\"To\"] = email_data.receiver_email",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_HOST",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SMTP_HOST = \"smtp.gmail.com\"\nSMTP_PORT = 465\nSENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = \"cxuo yccn lzwn nxhq\"  # Use environment variables for security!\nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SMTP_PORT",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SMTP_PORT = 465\nSENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = \"cxuo yccn lzwn nxhq\"  # Use environment variables for security!\nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SENDER_EMAIL",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SENDER_EMAIL = \"khalidmimm@gmail.com\"\nSENDER_PASSWORD = \"cxuo yccn lzwn nxhq\"  # Use environment variables for security!\nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()",
+        "detail": "app.utils.send_mail",
+        "documentation": {}
+    },
+    {
+        "label": "SENDER_PASSWORD",
+        "kind": 5,
+        "importPath": "app.utils.send_mail",
+        "description": "app.utils.send_mail",
+        "peekOfCode": "SENDER_PASSWORD = \"cxuo yccn lzwn nxhq\"  # Use environment variables for security!\nclass EmailSchema(BaseModel):\n    receiver_email: str\n    subject: str\n    html_body: str\nasync def send_email(email_data: EmailSchema) -> Optional[bool]:\n    \"\"\"Send an email using an asynchronous SMTP client.\"\"\"\n    try:\n        message = EmailMessage()\n        message[\"From\"] = f\"AI Policing <{SENDER_EMAIL}>\"",
+        "detail": "app.utils.send_mail",
         "documentation": {}
     },
     {

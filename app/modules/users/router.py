@@ -31,6 +31,6 @@ async def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)
 @user_router.get("/get-users"
 , response_model=Response[list[UsersListResponse]]
 )
-async def get_users(page:int=0, limit:int=10, db: AsyncSession = Depends(get_db)):
+async def get_users(page:int=1, limit:int=10, db: AsyncSession = Depends(get_db)):
     result= await get_users_service(page, limit, db)
     return create_response(result["data"], UsersListResponse, "Users have retrieved successfully", result["meta_data"] )

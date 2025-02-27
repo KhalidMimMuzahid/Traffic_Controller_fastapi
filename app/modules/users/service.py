@@ -60,14 +60,14 @@ async def get_users_service(page, limit, db: AsyncSession):
     print(type(limit))
     total_count_result = await db.execute(select(func.count()).select_from(User))
     total_count=total_count_result.scalar()
-    skip= page*limit
+    skip= (page-1)*limit
     total_page = math.ceil(total_count / limit)
     prev= page - 1 if page > 1 else None
     next = page + 1 if page < total_page else None
     current= page
     total= total_page
     meta_data = MetaData(prev=prev, next=next, current=current, total=total)
-    result = await db.execute(select(User).order_by(asc(User.id)).offset(skip).limit(limit))
+    result = await db.execute(select(User).order_by(desc(User.id)).offset(skip).limit(limit))
     # .order_by(asc(User.id)).offset(skip).limit(limit)  )
     return {"data":result.scalars().all(), "meta_data" : meta_data}
 

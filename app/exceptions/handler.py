@@ -65,7 +65,7 @@ def register_all_errors(app: FastAPI):
     # Handling Remaining All Error
     @app.exception_handler(422)
     async def internal_server_error(request, exc):
-        print("Remaining All Error________________________________________________________________\n", exc)
+        print("Remaining All Error for 422________________________________________________________________\n", exc)
         return JSONResponse(
             content={
             "is_success": False,
@@ -79,7 +79,7 @@ def register_all_errors(app: FastAPI):
         
     @app.exception_handler(500)
     async def internal_server_error(request, exc):
-        print("Remaining All Error________________________________________________________________\n", exc)
+        print("Remaining All Error for 500________________________________________________________________\n", exc)
         return JSONResponse(
             content={
             "is_success": False,

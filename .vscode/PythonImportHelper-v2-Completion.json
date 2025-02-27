@@ -288,6 +288,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Any",
         "importPath": "typing",
         "description": "typing",
@@ -305,6 +313,14 @@
     },
     {
         "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -643,6 +659,30 @@
     },
     {
         "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "desc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "asc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -1259,6 +1299,14 @@
         "documentation": {}
     },
     {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "responses.models",
         "description": "responses.models",
@@ -1268,6 +1316,14 @@
     },
     {
         "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
         "importPath": "responses.models",
         "description": "responses.models",
         "isExtraImport": true,
@@ -1296,6 +1352,15 @@
         "description": "utils.model_to_dict",
         "isExtraImport": true,
         "detail": "utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "math",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "math",
+        "description": "math",
+        "detail": "math",
         "documentation": {}
     },
     {
@@ -1762,7 +1827,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n, response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },
@@ -1825,8 +1890,17 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(result: Union[Base, List[Base], dict, List[dict]], \n                    pydantic_model: Type[declarative_base], \n                    message: str) -> Response:\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects\n        if all(isinstance(item, Base) for item in result):\n            result_dict = [{key: value for key, value in item.__dict__.items() if key != '_sa_instance_state'} for item in result]\n        else:\n            result_dict = result  # Assume already in dictionary format",
+        "peekOfCode": "def create_response(result: Union[Base, List[Base], dict, List[dict]], \n                    pydantic_model: Type[declarative_base], \n                    message: str,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects\n        if all(isinstance(item, Base) for item in result):\n            result_dict = [{key: value for key, value in item.__dict__.items() if key != '_sa_instance_state'} for item in result]",
         "detail": "app.responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "kind": 6,
+        "importPath": "app.responses.models",
+        "description": "app.responses.models",
+        "peekOfCode": "class MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str",
+        "detail": "app.responses.models",
         "documentation": {}
     },
     {
@@ -1834,7 +1908,7 @@
         "kind": 6,
         "importPath": "app.responses.models",
         "description": "app.responses.models",
-        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
+        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T\n    meta_data: Optional[MetaData]",
         "detail": "app.responses.models",
         "documentation": {}
     },
@@ -1843,7 +1917,7 @@
         "kind": 5,
         "importPath": "app.responses.models",
         "description": "app.responses.models",
-        "peekOfCode": "T = TypeVar(\"T\")\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T",
+        "peekOfCode": "T = TypeVar(\"T\")\nclass MetaData(BaseModel):\n    prev: Optional[int]  # Can be int or None\n    next: Optional[int]  # Can be int or None\n    current: int\n    total: int # total number of pages depending on page limit\n    class Config:\n        orm_mode = True\nclass Response(BaseModel, Generic[T]):\n    is_success: bool = True",
         "detail": "app.responses.models",
         "documentation": {}
     },

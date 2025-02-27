@@ -1,15 +1,17 @@
 
-from typing import Type, Union, List
+from typing import Type, Union, List, Optional
 from sqlalchemy.orm import declarative_base, DeclarativeMeta
 from pydantic import ValidationError
-from responses.models import Response
+from responses.models import Response, MetaData
 from database import Base
 from exceptions.models import CustomError
 
 
 def create_response(result: Union[Base, List[Base], dict, List[dict]], 
                     pydantic_model: Type[declarative_base], 
-                    message: str) -> Response:
+                    message: str,
+                    meta_data: Optional[MetaData] = None
+                    ) -> Response:
     result_dict = None  # Placeholder
 
     if isinstance(result, list):
@@ -34,4 +36,4 @@ def create_response(result: Union[Base, List[Base], dict, List[dict]],
         raise CustomError(message= "internal server error:ValidationError", status_code=500)
     except TypeError as e:
         raise CustomError(message= "internal server error:TypeError", status_code=500)
-    return Response(message=message, data=result_response)
+    return Response(message=message, data=result_response, meta_data=meta_data)

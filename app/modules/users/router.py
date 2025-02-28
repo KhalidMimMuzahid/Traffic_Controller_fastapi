@@ -28,12 +28,12 @@ async def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)
     result= await login_user_service(db, email, password)
     return create_response(result, UserLogInResponse, "User has logged in successfully")
 
-@user_router.get("/check_logged_in_status"
-, response_model=Response[UserLoggedInStatusResponse]
+@user_router.get("/check_logged_in_status", response_model=Response[UserLoggedInStatusResponse]
 )
-async def check_logged_in_status():
-    result= await check_logged_in_status_service()
-    return create_response(result, UserLoggedInStatusResponse, "User has logged in successfully")
+async def check_logged_in_status(request: Request, db: AsyncSession = Depends(get_db)):
+    auth=request.state.user
+    result= await check_logged_in_status_service(db, auth)
+    return create_response(result, UserLoggedInStatusResponse, "User authenticate successfully")
 
 @user_router.get("/get-users"
 , response_model=Response[list[UsersListResponse]]

@@ -1,5 +1,206 @@
 [
     {
+        "label": "enum",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "enum",
+        "description": "enum",
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "Enum",
+        "importPath": "enum",
+        "description": "enum",
+        "isExtraImport": true,
+        "detail": "enum",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Type",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Generic",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TypeVar",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -213,150 +414,6 @@
         "description": "fastapi.security",
         "isExtraImport": true,
         "detail": "fastapi.security",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Generic",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "TypeVar",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Type",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Any",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Generic",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "TypeVar",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Optional",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "List",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Dict",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
         "documentation": {}
     },
     {
@@ -727,39 +784,6 @@
         "description": "sqlalchemy",
         "isExtraImport": true,
         "detail": "sqlalchemy",
-        "documentation": {}
-    },
-    {
-        "label": "enum",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "enum",
-        "description": "enum",
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
         "documentation": {}
     },
     {
@@ -1420,6 +1444,30 @@
         "documentation": {}
     },
     {
+        "label": "TAuth",
+        "importPath": "common.types",
+        "description": "common.types",
+        "isExtraImport": true,
+        "detail": "common.types",
+        "documentation": {}
+    },
+    {
+        "label": "TAuth",
+        "importPath": "common.types",
+        "description": "common.types",
+        "isExtraImport": true,
+        "detail": "common.types",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "importPath": "common.types",
+        "description": "common.types",
+        "isExtraImport": true,
+        "detail": "common.types",
+        "documentation": {}
+    },
+    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -1596,6 +1644,24 @@
         "description": "dependencies.authenticate_user",
         "isExtraImport": true,
         "detail": "dependencies.authenticate_user",
+        "documentation": {}
+    },
+    {
+        "label": "UserRoleEnum",
+        "kind": 6,
+        "importPath": "app.common.types",
+        "description": "app.common.types",
+        "peekOfCode": "class UserRoleEnum(str, Enum):\n    admin = \"admin\"\n    super_admin = \"super_admin\"\n# Define the authentication dictionary type\nTAuth = Dict[str, Union[str, UserRoleEnum]]",
+        "detail": "app.common.types",
+        "documentation": {}
+    },
+    {
+        "label": "TAuth",
+        "kind": 5,
+        "importPath": "app.common.types",
+        "description": "app.common.types",
+        "peekOfCode": "TAuth = Dict[str, Union[str, UserRoleEnum]]",
+        "detail": "app.common.types",
         "documentation": {}
     },
     {
@@ -1864,7 +1930,7 @@
         "kind": 6,
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
-        "peekOfCode": "class UserLoggedInStatusResponse(BaseModel):\n    is_logged_in: bool = True\n    class Config:\n        orm_mode = True\nclass UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str",
+        "peekOfCode": "class UserLoggedInStatusResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass UserLogInResponse(BaseModel):\n    id: int",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },
@@ -2121,29 +2187,11 @@
         "documentation": {}
     },
     {
-        "label": "UserRoleEnum",
-        "kind": 6,
-        "importPath": "app.utils.validate_user_access_api",
-        "description": "app.utils.validate_user_access_api",
-        "peekOfCode": "class UserRoleEnum(str, Enum):\n    admin = \"admin\"\n    super_admin = \"super_admin\"\n# Define the authentication dictionary type\nTAuth = Dict[str, Union[str, UserRoleEnum]]\ndef validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access",
-        "detail": "app.utils.validate_user_access_api",
-        "documentation": {}
-    },
-    {
         "label": "validate_user_access_api",
         "kind": 2,
         "importPath": "app.utils.validate_user_access_api",
         "description": "app.utils.validate_user_access_api",
         "peekOfCode": "def validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access\n    else:\n        raise CustomError(message= \"You have no right to access this API\", status_code=401)",
-        "detail": "app.utils.validate_user_access_api",
-        "documentation": {}
-    },
-    {
-        "label": "TAuth",
-        "kind": 5,
-        "importPath": "app.utils.validate_user_access_api",
-        "description": "app.utils.validate_user_access_api",
-        "peekOfCode": "TAuth = Dict[str, Union[str, UserRoleEnum]]\ndef validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):\n    if access_users == \"all\":\n        return  # Allow access\n    elif auth[\"role\"] in access_users:\n        return  # Allow access\n    else:\n        raise CustomError(message= \"You have no right to access this API\", status_code=401)",
         "detail": "app.utils.validate_user_access_api",
         "documentation": {}
     },

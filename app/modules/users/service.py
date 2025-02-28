@@ -12,6 +12,7 @@ from utils.send_mail import send_email, EmailSchema
 import math
 from responses.models import MetaData
 from modules.users.schemas import UserLoggedInStatusResponse
+from common.types import TAuth
 
 
 
@@ -35,9 +36,14 @@ async def create_user(db: AsyncSession, email :str, role : UserRoleEnum, name :s
     )) 
     return new_user
 
-async def check_logged_in_status_service():
-    status_data = UserLoggedInStatusResponse() ## if token has expired, this api wil throw error in manage_auth utils
-    return status_data.dict()
+async def check_logged_in_status_service(db: AsyncSession, auth: TAuth):
+    email= auth["email"]
+    result = await db.execute(select(User).where(User.email== email))
+    user_data = result.scalars().first()
+    if user_data is None:
+        raise CustomError(status_code=401, message="something went wrong")
+    login_data = model_to_dict(user_data)
+    return login_data
 async def login_user_service(db: AsyncSession, email:str, password:str):
     result = await db.execute(select(User).where(User.email== email))
     user_data = result.scalars().first()

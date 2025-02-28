@@ -1,15 +1,9 @@
 from fastapi import HTTPException, status
 from enum import Enum
-from typing import List, Dict, Union
+from typing import List, Union
 from exceptions.models import CustomError
+from common.types import TAuth, UserRoleEnum
 
-# Define an enumeration for Role
-class UserRoleEnum(str, Enum):
-    admin = "admin"
-    super_admin = "super_admin"
-
-# Define the authentication dictionary type
-TAuth = Dict[str, Union[str, UserRoleEnum]]
 
 def validate_user_access_api(auth: TAuth, access_users: Union[List[UserRoleEnum], str]):
     if access_users == "all":

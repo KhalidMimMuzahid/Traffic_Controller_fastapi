@@ -1,8 +1,8 @@
 
 from fastapi import APIRouter, Depends, Request
 from sqlalchemy.ext.asyncio import AsyncSession
-from modules.users.schemas import UserCreateRequest,  UserCreateResponse, UserLogInResponse, UsersListResponse
-from modules.users.service import create_user, login_user_service, get_users_service
+from modules.users.schemas import UserCreateRequest,  UserCreateResponse,UserLoggedInStatusResponse, UserLogInResponse, UsersListResponse
+from modules.users.service import create_user, login_user_service,check_logged_in_status_service, get_users_service
 from database import get_db 
 from responses.handler import create_response
 from responses.models import Response
@@ -28,9 +28,17 @@ async def login_user(email:str, password:str, db: AsyncSession = Depends(get_db)
     result= await login_user_service(db, email, password)
     return create_response(result, UserLogInResponse, "User has logged in successfully")
 
+@user_router.get("/check_logged_in_status"
+, response_model=Response[UserLoggedInStatusResponse]
+)
+async def check_logged_in_status():
+    result= await check_logged_in_status_service()
+    return create_response(result, UserLoggedInStatusResponse, "User has logged in successfully")
+
 @user_router.get("/get-users"
 , response_model=Response[list[UsersListResponse]]
 )
+
 async def get_users(page:int=1, limit:int=10, db: AsyncSession = Depends(get_db)):
     result= await get_users_service(page, limit, db)
     return create_response(result["data"], UsersListResponse, "Users have retrieved successfully", result["meta_data"] )

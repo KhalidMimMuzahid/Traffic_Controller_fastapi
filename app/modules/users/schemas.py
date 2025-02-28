@@ -27,6 +27,11 @@ class UserCreateResponse(BaseModel):
         orm_mode = True
         extra = "ignore"  # This will ignore any extra fields (like "password")
 
+class UserLoggedInStatusResponse(BaseModel):
+    is_logged_in: bool = True
+    class Config:
+        orm_mode = True
+
 class UserLogInResponse(BaseModel):
     id: int
     email :str

@@ -1243,6 +1243,14 @@
         "documentation": {}
     },
     {
+        "label": "UserLoggedInStatusResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
         "label": "UserLogInResponse",
         "importPath": "modules.users.schemas",
         "description": "modules.users.schemas",
@@ -1267,6 +1275,14 @@
         "documentation": {}
     },
     {
+        "label": "UserLoggedInStatusResponse",
+        "importPath": "modules.users.schemas",
+        "description": "modules.users.schemas",
+        "isExtraImport": true,
+        "detail": "modules.users.schemas",
+        "documentation": {}
+    },
+    {
         "label": "create_user",
         "importPath": "modules.users.service",
         "description": "modules.users.service",
@@ -1276,6 +1292,14 @@
     },
     {
         "label": "login_user_service",
+        "importPath": "modules.users.service",
+        "description": "modules.users.service",
+        "isExtraImport": true,
+        "detail": "modules.users.service",
+        "documentation": {}
+    },
+    {
+        "label": "check_logged_in_status_service",
         "importPath": "modules.users.service",
         "description": "modules.users.service",
         "isExtraImport": true,
@@ -1832,6 +1856,15 @@
         "importPath": "app.modules.users.schemas",
         "description": "app.modules.users.schemas",
         "peekOfCode": "class UserCreateResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    # password :str\n    # secret_key :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"  # This will ignore any extra fields (like \"password\")",
+        "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoggedInStatusResponse",
+        "kind": 6,
+        "importPath": "app.modules.users.schemas",
+        "description": "app.modules.users.schemas",
+        "peekOfCode": "class UserLoggedInStatusResponse(BaseModel):\n    is_logged_in: bool = True\n    class Config:\n        orm_mode = True\nclass UserLogInResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    access_token:str",
         "detail": "app.modules.users.schemas",
         "documentation": {}
     },

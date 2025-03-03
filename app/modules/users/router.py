@@ -39,6 +39,6 @@ async def check_logged_in_status(request: Request, db: AsyncSession = Depends(ge
 , response_model=Response[list[UsersListResponse]]
 )
 
-async def get_users(page:int=1, limit:int=10, db: AsyncSession = Depends(get_db)):
-    result= await get_users_service(page, limit, db)
+async def get_users(page:int=1, limit:int=10,email:str= None, db: AsyncSession = Depends(get_db)):
+    result= await get_users_service(db, page, limit, email)
     return create_response(result["data"], UsersListResponse, "Users have retrieved successfully", result["meta_data"] )

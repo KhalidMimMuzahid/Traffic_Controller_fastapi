@@ -177,6 +177,22 @@
         "documentation": {}
     },
     {
+        "label": "Dict",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -787,6 +803,54 @@
         "documentation": {}
     },
     {
+        "label": "desc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "asc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "desc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "asc",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "relationship",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -836,6 +900,14 @@
     },
     {
         "label": "declarative_base",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeMeta",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -944,6 +1016,14 @@
         "description": "database",
         "isExtraImport": true,
         "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
         "documentation": {}
     },
     {
@@ -1187,6 +1267,14 @@
         "documentation": {}
     },
     {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
         "label": "Camera",
         "importPath": "modules.cameras.models",
         "description": "modules.cameras.models",
@@ -1379,7 +1467,23 @@
         "documentation": {}
     },
     {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
         "importPath": "responses.models",
         "description": "responses.models",
         "isExtraImport": true,
@@ -1416,6 +1520,22 @@
         "description": "utils.model_to_dict",
         "isExtraImport": true,
         "detail": "utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -1975,7 +2095,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(page:int=1, limit:int=10, name:str=None, db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },
@@ -2056,7 +2176,7 @@
         "kind": 6,
         "importPath": "app.responses.models",
         "description": "app.responses.models",
-        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T\n    meta_data: Optional[MetaData]",
+        "peekOfCode": "class Response(BaseModel, Generic[T]):\n    is_success: bool = True\n    message: str\n    data: T\n    meta_data: Optional[MetaData]\n# class MetaData:\n#     def __init__(self, prev, next, current, total):\n#         self.prev = prev\n#         self.next = next\n#         self.current = current",
         "detail": "app.responses.models",
         "documentation": {}
     },
@@ -2139,6 +2259,15 @@
         "description": "app.utils.model_to_dict",
         "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
         "detail": "app.utils.model_to_dict",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder1",
+        "kind": 2,
+        "importPath": "app.utils.query_builder",
+        "description": "app.utils.query_builder",
+        "peekOfCode": "def query_builder1(model: DeclarativeMeta, filters: dict, order_by: str = \"id\", desc_order: bool = True):\n    \"\"\"\n    Build a dynamic query for a given SQLAlchemy model.\n    :param model: SQLAlchemy model class\n    :param filters: Dictionary of filter conditions (field_name: value)\n    :param order_by: Column name to sort by (default: \"id\")\n    :param desc_order: Whether to sort in descending order (default: True)\n    :return: SQLAlchemy select query\n    \"\"\"\n    query = select(model)",
+        "detail": "app.utils.query_builder",
         "documentation": {}
     },
     {

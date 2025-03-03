@@ -13,7 +13,7 @@ def create_response(message: str,
                     meta_data: Optional[MetaData] = None
                     ) -> Response:
     if not result:
-        return Response(message=message, data=None, meta_data=meta_data)
+        return Response(message=message, data=result, meta_data=meta_data)
 
     result_dict = None  # Placeholder
 

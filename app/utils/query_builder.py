@@ -65,4 +65,4 @@ async def query_builder(
     # Use your MetaData class for structured metadata response
     meta_data = MetaData(prev=prev_page, next=next_page, current=page, total=total_page)
 
-    return {"data": result.scalars().all(), "meta_data": meta_data}
+    return {"data": result.scalars().all() if result.scalars().all() else [], "meta_data": meta_data}

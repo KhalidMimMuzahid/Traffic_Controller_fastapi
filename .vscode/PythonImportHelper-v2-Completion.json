@@ -2174,7 +2174,7 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(message: str,\n                    result: Union[Base, List[Base], dict, List[dict], None], \n                    pydantic_model: Optional[Type[declarative_base]] = None,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    if not result:\n        return Response(message=message, data=None, meta_data=meta_data)\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects",
+        "peekOfCode": "def create_response(message: str,\n                    result: Union[Base, List[Base], dict, List[dict], None], \n                    pydantic_model: Optional[Type[declarative_base]] = None,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    if not result:\n        return Response(message=message, data=result, meta_data=meta_data)\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects",
         "detail": "app.responses.handler",
         "documentation": {}
     },

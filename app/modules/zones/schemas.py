@@ -12,6 +12,10 @@ class ZoneCreateResponse(ZoneCreateRequest):
 class ZoneListResponse(ZoneCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass
+# class ZoneDeleteResponse(BaseModel):
+#     data = None
+#     class Config:
+#         orm_mode = True
 
 class ZoneReferenceResponseForCreateIntersection(BaseModel):
     id: int

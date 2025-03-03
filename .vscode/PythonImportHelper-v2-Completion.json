@@ -618,6 +618,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -1604,6 +1612,14 @@
         "documentation": {}
     },
     {
+        "label": "delete_zone_service",
+        "importPath": "modules.zones.service",
+        "description": "modules.zones.service",
+        "isExtraImport": true,
+        "detail": "modules.zones.service",
+        "documentation": {}
+    },
+    {
         "label": "zone_router",
         "importPath": "modules.zones.router",
         "description": "modules.zones.router",
@@ -2014,7 +2030,7 @@
         "kind": 5,
         "importPath": "app.modules.users.router",
         "description": "app.modules.users.router",
-        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, UserCreateResponse, \"User has created successfully\")\n@user_router.get(\"/login\", response_model=Response[UserLogInResponse]",
+        "peekOfCode": "user_router = APIRouter()\n@user_router.post(\"/add-user\", response_model=Response[UserCreateResponse])\nasync def add_user(request: Request,user:UserCreateRequest, db: AsyncSession = Depends(get_db)):\n    # validating user to access this api \n    auth=request.state.user\n    validate_user_access_api(auth=auth, access_users=[\"super_admin\", \"admin\"])\n    result =  await create_user(db= db, email= user.email, role=user.role, name=user.name, password=user.password, secret_key=user.secret_key)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result=result, pydantic_model=UserCreateResponse, message=\"User has created successfully\")\n@user_router.get(\"/login\", response_model=Response[UserLogInResponse]",
         "detail": "app.modules.users.router",
         "documentation": {}
     },
@@ -2095,7 +2111,7 @@
         "kind": 5,
         "importPath": "app.modules.zones.router",
         "description": "app.modules.zones.router",
-        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result, ZoneCreateResponse, \"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(page:int=1, limit:int=10, name:str=None, db: AsyncSession = Depends(get_db)):",
+        "peekOfCode": "zone_router = APIRouter()\n@zone_router.post(\"/add-zone\", response_model=Response[ZoneCreateResponse])\nasync def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_zone(db, zone.name)\n    # Call the helper function to create the response and return it, passing UserCreateResponse model\n    return create_response(result=result, pydantic_model=ZoneCreateResponse, message=\"Zone has created successfully\")\n@zone_router.get(\"/get-zones\"\n# , response_model=Response[list[ZoneListResponse]]\n)\nasync def list_zones(page:int=1, limit:int=10, name:str=None, db: AsyncSession = Depends(get_db)):",
         "detail": "app.modules.zones.router",
         "documentation": {}
     },
@@ -2104,7 +2120,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneCreateRequest(BaseModel):\n    name: str\nclass ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):",
+        "peekOfCode": "class ZoneCreateRequest(BaseModel):\n    name: str\nclass ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },
@@ -2113,7 +2129,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str",
+        "peekOfCode": "class ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):\n#     data = None\n#     class Config:",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },
@@ -2122,7 +2138,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\nclass ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):\n    pass\nclass ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):\n    pass",
+        "peekOfCode": "class ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):\n#     data = None\n#     class Config:\n#         orm_mode = True\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },
@@ -2158,7 +2174,7 @@
         "kind": 2,
         "importPath": "app.responses.handler",
         "description": "app.responses.handler",
-        "peekOfCode": "def create_response(result: Union[Base, List[Base], dict, List[dict]], \n                    pydantic_model: Type[declarative_base], \n                    message: str,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects\n        if all(isinstance(item, Base) for item in result):\n            result_dict = [{key: value for key, value in item.__dict__.items() if key != '_sa_instance_state'} for item in result]",
+        "peekOfCode": "def create_response(message: str,\n                    result: Union[Base, List[Base], dict, List[dict], None], \n                    pydantic_model: Optional[Type[declarative_base]] = None,\n                    meta_data: Optional[MetaData] = None\n                    ) -> Response:\n    if not result:\n        return Response(message=message, data=None, meta_data=meta_data)\n    result_dict = None  # Placeholder\n    if isinstance(result, list):\n        # Check if list contains ORM objects",
         "detail": "app.responses.handler",
         "documentation": {}
     },
@@ -2259,15 +2275,6 @@
         "description": "app.utils.model_to_dict",
         "peekOfCode": "def model_to_dict(model):\n    \"\"\"Convert a SQLAlchemy model instance to a dictionary.\"\"\"\n    if model is None:\n        return None\n    model_dict = {**model.__dict__}\n    model_dict.pop(\"_sa_instance_state\", None)  # Remove SQLAlchemy internal attribute\n    # Convert Enum fields to their values\n    for key, value in model_dict.items():\n        if isinstance(value, enum.Enum):\n            model_dict[key] = value.value  # Convert Enum to string",
         "detail": "app.utils.model_to_dict",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder1",
-        "kind": 2,
-        "importPath": "app.utils.query_builder",
-        "description": "app.utils.query_builder",
-        "peekOfCode": "def query_builder1(model: DeclarativeMeta, filters: dict, order_by: str = \"id\", desc_order: bool = True):\n    \"\"\"\n    Build a dynamic query for a given SQLAlchemy model.\n    :param model: SQLAlchemy model class\n    :param filters: Dictionary of filter conditions (field_name: value)\n    :param order_by: Column name to sort by (default: \"id\")\n    :param desc_order: Whether to sort in descending order (default: True)\n    :return: SQLAlchemy select query\n    \"\"\"\n    query = select(model)",
-        "detail": "app.utils.query_builder",
         "documentation": {}
     },
     {

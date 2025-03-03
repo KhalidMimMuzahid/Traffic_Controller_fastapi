@@ -7,11 +7,14 @@ from database import Base
 from exceptions.models import CustomError
 
 
-def create_response(result: Union[Base, List[Base], dict, List[dict]], 
-                    pydantic_model: Type[declarative_base], 
-                    message: str,
+def create_response(message: str,
+                    result: Union[Base, List[Base], dict, List[dict], None], 
+                    pydantic_model: Optional[Type[declarative_base]] = None,
                     meta_data: Optional[MetaData] = None
                     ) -> Response:
+    if not result:
+        return Response(message=message, data=None, meta_data=meta_data)
+
     result_dict = None  # Placeholder
 
     if isinstance(result, list):
@@ -37,3 +40,5 @@ def create_response(result: Union[Base, List[Base], dict, List[dict]],
     except TypeError as e:
         raise CustomError(message= "internal server error:TypeError", status_code=500)
     return Response(message=message, data=result_response, meta_data=meta_data)
+
+

@@ -7,32 +7,6 @@ from typing import Dict, Optional
 import math
 
 
-def query_builder1(model: DeclarativeMeta, filters: dict, order_by: str = "id", desc_order: bool = True):
-    """
-    Build a dynamic query for a given SQLAlchemy model.
-    
-    :param model: SQLAlchemy model class
-    :param filters: Dictionary of filter conditions (field_name: value)
-    :param order_by: Column name to sort by (default: "id")
-    :param desc_order: Whether to sort in descending order (default: True)
-    :return: SQLAlchemy select query
-    """
-    query = select(model)
-
-    # Apply filtering dynamically
-    for field, value in filters.items():
-        if value is not None and hasattr(model, field):  # Ensure field exists in model
-            query = query.filter(getattr(model, field).ilike(f"%{value}%"))
-
-    # Apply ordering
-    order_column = getattr(model, order_by, None)
-    if order_column:
-        query = query.order_by(desc(order_column) if desc_order else order_column)
-
-    return query
-
-
-
 
 
 async def query_builder(

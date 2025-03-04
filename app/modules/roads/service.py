@@ -33,6 +33,6 @@ async def create_road(db: AsyncSession, name: str, road_no = int, intersection_i
 
 # async def get_cameras(db: AsyncSession):
 #     result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
-#     cameras=    result.scalars().all() 
+#     cameras= result.scalars().all() 
 #     return cameras
 

@@ -20,11 +20,17 @@ class IntersectionListResponse(IntersectionCreateResponse):
     # extra_field: str  # Add extra fields if needed
     pass
 
-class IntersectionReferenceResponseForCreateCamera(BaseModel):
+class IntersectionReferenceResponseForCreateRoad(BaseModel):
     id: int
     name: str
+    class Config:
+        orm_mode = True
+        extra = "ignore"
 
-class IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateCamera):
+class IntersectionReferenceResponseForCreateCamera(IntersectionReferenceResponseForCreateRoad):
+    pass
+
+class IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateRoad):
     pass
 
 

@@ -17,7 +17,7 @@ def register_all_errors(app: FastAPI):
     # # Handling SQLAlchemyError
     @app.exception_handler(SQLAlchemyError)
     async def database__error(request: Request, exc:SQLAlchemyError):
-        print("SQLAlchemyError________________________________________________________________\n")
+        print("SQLAlchemyError________________________________________________________________\n", exc)
         
         # print(str(exc))
         message = exc.args[0] if exc.args else "something went wrong"
@@ -32,7 +32,7 @@ def register_all_errors(app: FastAPI):
             "is_success": False,
             "error": {
                     "message": message,
-                    "resolution": "No resolution provided",
+                    "resolution": "No resolution provided5",
                     # "stack": str(exc)
                 }
             }

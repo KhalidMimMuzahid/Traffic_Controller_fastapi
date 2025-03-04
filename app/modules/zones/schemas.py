@@ -20,11 +20,18 @@ class ZoneListResponse(ZoneCreateResponse):
 class ZoneReferenceResponseForCreateIntersection(BaseModel):
     id: int
     name: str
+    class Config:
+        orm_mode = True
+
+class ZoneReferenceResponseForCreateRoad(ZoneReferenceResponseForCreateIntersection):
+    class Config:
+        orm_mode = True
+        extra = "ignore"
+    # pass
 
 class ZoneReferenceResponseForCreateCamera(ZoneReferenceResponseForCreateIntersection):
     pass
 
 class ZoneReferenceResponseForCreateVehicle(ZoneReferenceResponseForCreateIntersection):
     pass
-
 

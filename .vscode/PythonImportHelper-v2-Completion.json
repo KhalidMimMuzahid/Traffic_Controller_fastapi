@@ -201,6 +201,22 @@
         "documentation": {}
     },
     {
+        "label": "Any",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Optional",
         "importPath": "typing",
         "description": "typing",
@@ -1027,6 +1043,14 @@
         "documentation": {}
     },
     {
+        "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "sessionmaker",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -1323,6 +1347,14 @@
         "documentation": {}
     },
     {
+        "label": "ZoneReferenceResponseForCreateRoad",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
         "label": "ZoneCreateRequest",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
@@ -1380,6 +1412,14 @@
     },
     {
         "label": "IntersectionListResponse",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateRoad",
         "importPath": "modules.intersections.schemas",
         "description": "modules.intersections.schemas",
         "isExtraImport": true,
@@ -1555,7 +1595,7 @@
         "documentation": {}
     },
     {
-        "label": "RoadCreateResponse",
+        "label": "RoadListResponse",
         "importPath": "modules.roads.schemas",
         "description": "modules.roads.schemas",
         "isExtraImport": true,
@@ -1564,6 +1604,14 @@
     },
     {
         "label": "create_road",
+        "importPath": "modules.roads.service",
+        "description": "modules.roads.service",
+        "isExtraImport": true,
+        "detail": "modules.roads.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_roads",
         "importPath": "modules.roads.service",
         "description": "modules.roads.service",
         "isExtraImport": true,
@@ -1664,6 +1712,38 @@
         "description": "modules.roads.models",
         "isExtraImport": true,
         "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "transform_road_data",
+        "importPath": "modules.roads.utils",
+        "description": "modules.roads.utils",
+        "isExtraImport": true,
+        "detail": "modules.roads.utils",
         "documentation": {}
     },
     {
@@ -1776,22 +1856,6 @@
         "description": "utils.model_to_dict",
         "isExtraImport": true,
         "detail": "utils.model_to_dict",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -2286,7 +2350,7 @@
         "kind": 5,
         "importPath": "app.modules.roads.router",
         "description": "app.modules.roads.router",
-        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Rod haas created successfully\")\n    # return result\n    # , zone_id=road.zone_id \n# @camera_router.get(\"/get-cameras\", response_model=list[CameraListResponse])",
+        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Rod haas created successfully\")\n@road_router.get(\"/get-roads\"\n# ,response_model=list[RoadListResponse]\n)",
         "detail": "app.modules.roads.router",
         "documentation": {}
     },
@@ -2304,7 +2368,16 @@
         "kind": 6,
         "importPath": "app.modules.roads.schemas",
         "description": "app.modules.roads.schemas",
-        "peekOfCode": "class RoadCreateResponse(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    zone : ZoneReferenceResponseForCreateRoad\n    intersection : IntersectionReferenceResponseForCreateRoad\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n# class CameraListResponse(CameraCreateResponse):",
+        "peekOfCode": "class RoadCreateResponse(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    zone : ZoneReferenceResponseForCreateRoad\n    intersection : IntersectionReferenceResponseForCreateRoad\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass RoadListResponse(RoadCreateResponse):",
+        "detail": "app.modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadListResponse",
+        "kind": 6,
+        "importPath": "app.modules.roads.schemas",
+        "description": "app.modules.roads.schemas",
+        "peekOfCode": "class RoadListResponse(RoadCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class IntersectionReferenceResponseForCreateVehicle(BaseModel):\n#     id: int\n#     name : str\n#     road_no : int\n#     road_name : str\n#     direction_type: DirectionTypeEnum\nclass RoadReferenceResponseForCreateCamera(BaseModel):",
         "detail": "app.modules.roads.schemas",
         "documentation": {}
     },
@@ -2324,6 +2397,15 @@
         "description": "app.modules.roads.schemas",
         "peekOfCode": "class RoadReferenceResponseForCreateVehicle(RoadReferenceResponseForCreateCamera):\n    pass",
         "detail": "app.modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "transform_road_data",
+        "kind": 2,
+        "importPath": "app.modules.roads.utils",
+        "description": "app.modules.roads.utils",
+        "peekOfCode": "def transform_road_data(road):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": road.id,\n        \"name\": road.name,\n        \"road_no\": road.road_no,\n        \"zone\": ZoneReferenceResponseForCreateRoad(**road.intersection.zone.__dict__) if road.intersection and road.intersection.zone else None,\n        \"intersection\": IntersectionReferenceResponseForCreateRoad(**road.intersection.__dict__) if road.intersection else None\n    }",
+        "detail": "app.modules.roads.utils",
         "documentation": {}
     },
     {

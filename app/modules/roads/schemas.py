@@ -21,9 +21,9 @@ class RoadCreateResponse(BaseModel):
         extra = "ignore"
 
 
-# class CameraListResponse(CameraCreateResponse):
-#     # extra_field: str  # Add extra fields if needed
-#     pass
+class RoadListResponse(RoadCreateResponse):
+    # extra_field: str  # Add extra fields if needed
+    pass
 
 
 # class IntersectionReferenceResponseForCreateVehicle(BaseModel):

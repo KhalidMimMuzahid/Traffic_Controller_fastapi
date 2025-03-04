@@ -9,6 +9,8 @@ from fastapi import HTTPException
 from modules.roads.models import Road
 from modules.zones.schemas import ZoneReferenceResponseForCreateRoad
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateRoad
+from utils.query_builder import query_builder
+from modules.roads.utils import transform_road_data
 
 
 async def create_road(db: AsyncSession, name: str, road_no = int, intersection_id = int):
@@ -31,8 +33,32 @@ async def create_road(db: AsyncSession, name: str, road_no = int, intersection_i
     }
 
 
-# async def get_cameras(db: AsyncSession):
-#     result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
-#     cameras= result.scalars().all() 
-#     return cameras
+async def get_roads(db: AsyncSession, page:int, limit:int, id:int):
+    filters= {"id": id} # Dynamic filters
+    # return await query_builder(db=db, model=Road, filters=filters, page=page, limit=limit)
+    # return await query_builder(
+    #     db=db,
+    #     model=Road,
+    #     filters=filters,
+    #     page=page,
+    #     limit=limit,
+    #     relationships=[Road.intersection, Road.zone]  # ✅ Joined load applied
+    # )
+    return await query_builder(
+        db=db,
+        model=Road,
+        filters=filters,
+        page=page,
+        limit=limit,
+        relationships=[Road.intersection, Road.zone],  # ✅ Joined load applied
+        transform_fn=transform_road_data  # ✅ Transform function applied
+    )
+
+
+    # result = await db.execute(select(Road))
+    # cameras=  result.scalars().all() 
+    # return cameras
+    # # result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
+    # # cameras= result.scalars().all() 
+    # # return cameras
 

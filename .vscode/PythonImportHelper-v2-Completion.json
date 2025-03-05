@@ -1339,6 +1339,14 @@
         "documentation": {}
     },
     {
+        "label": "delete_camera_service",
+        "importPath": "modules.cameras.service",
+        "description": "modules.cameras.service",
+        "isExtraImport": true,
+        "detail": "modules.cameras.service",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "responses.models",
         "description": "responses.models",

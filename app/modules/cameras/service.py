@@ -41,30 +41,6 @@ async def create_camera(db: AsyncSession, name: str, direction_type= DirectionTy
 
 
 
-
-#     # checking for existence intersection with the provided intersection_id
-#     intersection_result = await db.execute(select(Intersection).where((Intersection.id == intersection_id) & (Intersection.zone_id == zone_id)))
-#     intersection = intersection_result.scalar_one_or_none()
-#     if not intersection:
-#          raise HTTPException(status_code=404, detail=f"There have no Intersection with ID {intersection_id} in zone_id {zone_id}")
-    
-#     #  making an instance of the camera object that inherits from Camera Class (Models class)
-#     new_camera = Camera(name=name, road_no=road_no, road_name=road_name, direction_type=direction_type, road_id=road_id, intersection_id=intersection_id, zone_id=zone_id)
-
-#     db.add(new_camera)
-#     await db.commit()
-#     await db.refresh(new_camera)
-#     return {
-#           "id" : new_camera.id,
-#           "name" : new_camera.name,
-#           "road_no" : new_camera.road_no,
-#           "road_name" : new_camera.road_name,
-#           "direction_type" : new_camera.direction_type,
-#           "zone": zone,
-#           "intersection" : intersection,
-#     }
-
-
 async def get_cameras(db: AsyncSession, page:int, limit:int, road_id:int):
     filters= {"road_id": road_id} # Dynamic filters
     return await query_builder(
@@ -76,7 +52,19 @@ async def get_cameras(db: AsyncSession, page:int, limit:int, road_id:int):
         relationships=[Camera.road, Camera.intersection, Camera.zone],  # ✅ Joined load applied
         transform_fn=transform_camera_data  # ✅ Transform function applied
     )
-    # result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
-    # cameras=  result.scalars().all() 
-    # return cameras
 
+
+async def delete_camera_service(db: AsyncSession, id: str):
+    # Use `select()` instead of `db.query()`
+    result = await db.execute(select(Camera).filter(Camera.id == id))
+    camera = result.scalars().first()  # Extract the first matching result
+    if not camera:
+        raise CustomError(
+            status_code=404, 
+            message="No camera found with this ID", 
+            resolution="Please provide a valid camera ID"
+        )
+    # Delete the intersection itself
+    await db.delete(camera)
+    await db.commit()
+    return None

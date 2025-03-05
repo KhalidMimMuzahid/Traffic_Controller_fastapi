@@ -3,7 +3,7 @@ from fastapi import APIRouter, Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from modules.cameras.schemas import CameraCreateRequest, CameraCreateResponse,CameraListResponse
 from database import get_db 
-from modules.cameras.service import create_camera, get_cameras
+from modules.cameras.service import create_camera, get_cameras, delete_camera_service
 from responses.models import Response
 from responses.handler import create_response
 camera_router = APIRouter()
@@ -24,4 +24,11 @@ async def list_cameras(page:int=1, limit:int=10, road_id:int= None, db: AsyncSes
     result= await get_cameras(db, page=page, limit=limit, road_id=road_id)
     # return result
     return create_response(result=result["data"], pydantic_model=CameraListResponse, message="cameras have retrieved successfully", meta_data=result["meta_data"] )
+    
+
+@camera_router.delete("/delete-camera")
+async def delete_camera(id:int, db: AsyncSession = Depends(get_db)):
+    result= await delete_camera_service(db, id)
+    # Call the helper function to create the response and return it, passing UserCreateResponse  model 
+    return create_response(result=result,  message="camera has deleted successfully successfully" )
     

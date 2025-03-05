@@ -8,6 +8,9 @@ from modules.zones.models import Zone
 from fastapi import HTTPException
 from modules.intersections.utils import transform_intersection_data
 from utils.query_builder import query_builder
+from exceptions.models import CustomError
+from modules.cameras.models import Camera
+from modules.roads.models import Road
 
 
 async def create_intersection(db: AsyncSession, name: str, zone_id:int):
@@ -43,3 +46,31 @@ async def get_intersections(db: AsyncSession, page:int, limit:int, zone_id:int):
         transform_fn=transform_intersection_data  # ✅ Transform function applied
     )
 
+
+async def delete_intersection_service(db: AsyncSession, id: str):
+    # Use `select()` instead of `db.query()`
+    result = await db.execute(select(Intersection).filter(Intersection.id == id))
+    intersection = result.scalars().first()  # Extract the first matching result
+    if not intersection:
+        raise CustomError(
+            status_code=404, 
+            message="No intersection found with this ID", 
+            resolution="Please provide a valid intersection ID"
+        )
+    # Fetch related entity
+    cameras = await db.execute(select(Camera).filter(Camera.intersection_id == id))
+    roads = await db.execute(select(Road).filter(Road.intersection_id == id))
+
+    # Convert scalars to lists
+
+    cameras = cameras.scalars().all()
+    roads = roads.scalars().all()
+
+    # Delete all related entities
+    for entity in cameras + roads:
+        await db.delete(entity)
+
+    # Delete the intersection itself
+    await db.delete(intersection)
+    await db.commit()
+    return None

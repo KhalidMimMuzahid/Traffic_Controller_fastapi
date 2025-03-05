@@ -682,6 +682,14 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -1515,6 +1523,14 @@
         "documentation": {}
     },
     {
+        "label": "Camera",
+        "importPath": "modules.cameras.models",
+        "description": "modules.cameras.models",
+        "isExtraImport": true,
+        "detail": "modules.cameras.models",
+        "documentation": {}
+    },
+    {
         "label": "Zone",
         "importPath": "modules.zones.models",
         "description": "modules.zones.models",
@@ -1588,6 +1604,14 @@
     },
     {
         "label": "get_intersections",
+        "importPath": "modules.intersections.service",
+        "description": "modules.intersections.service",
+        "isExtraImport": true,
+        "detail": "modules.intersections.service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_intersection_service",
         "importPath": "modules.intersections.service",
         "description": "modules.intersections.service",
         "isExtraImport": true,
@@ -1739,6 +1763,30 @@
         "documentation": {}
     },
     {
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
+        "isExtraImport": true,
+        "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
+        "isExtraImport": true,
+        "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
+        "isExtraImport": true,
+        "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
         "label": "RoadCreateRequest",
         "importPath": "modules.roads.schemas",
         "description": "modules.roads.schemas",
@@ -1776,22 +1824,6 @@
         "description": "modules.roads.service",
         "isExtraImport": true,
         "detail": "modules.roads.service",
-        "documentation": {}
-    },
-    {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
-        "isExtraImport": true,
-        "detail": "modules.roads.models",
-        "documentation": {}
-    },
-    {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
-        "isExtraImport": true,
-        "detail": "modules.roads.models",
         "documentation": {}
     },
     {

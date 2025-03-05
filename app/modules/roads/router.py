@@ -14,7 +14,7 @@ road_router = APIRouter()
 )
 async def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):
     result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )
-    return create_response(result=result, pydantic_model=RoadCreateResponse, message="Rod haas created successfully")
+    return create_response(result=result, pydantic_model=RoadCreateResponse, message="Road has created successfully")
 
 @road_router.get("/get-roads"
 # ,response_model=list[RoadListResponse]

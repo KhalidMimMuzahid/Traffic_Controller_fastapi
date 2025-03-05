@@ -690,6 +690,22 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -1323,7 +1339,143 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
         "label": "ZoneReferenceResponseForCreateCamera",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateCamera",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateIntersection",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
         "isExtraImport": true,
@@ -1403,6 +1555,14 @@
         "documentation": {}
     },
     {
+        "label": "IntersectionReferenceResponseForCreateCamera",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
         "label": "IntersectionCreateResponse",
         "importPath": "modules.intersections.schemas",
         "description": "modules.intersections.schemas",
@@ -1459,6 +1619,46 @@
         "documentation": {}
     },
     {
+        "label": "RoadReferenceResponseForCreateCamera",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadReferenceResponseForCreateCamera",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadCreateRequest",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadCreateResponse",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadListResponse",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
         "label": "select",
         "importPath": "sqlalchemy.future",
         "description": "sqlalchemy.future",
@@ -1531,67 +1731,35 @@
         "documentation": {}
     },
     {
-        "label": "Zone",
-        "importPath": "modules.zones.models",
-        "description": "modules.zones.models",
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
         "isExtraImport": true,
-        "detail": "modules.zones.models",
+        "detail": "modules.roads.models",
         "documentation": {}
     },
     {
-        "label": "Zone",
-        "importPath": "modules.zones.models",
-        "description": "modules.zones.models",
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
         "isExtraImport": true,
-        "detail": "modules.zones.models",
+        "detail": "modules.roads.models",
         "documentation": {}
     },
     {
-        "label": "Zone",
-        "importPath": "modules.zones.models",
-        "description": "modules.zones.models",
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
         "isExtraImport": true,
-        "detail": "modules.zones.models",
+        "detail": "modules.roads.models",
         "documentation": {}
     },
     {
-        "label": "Zone",
-        "importPath": "modules.zones.models",
-        "description": "modules.zones.models",
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
         "isExtraImport": true,
-        "detail": "modules.zones.models",
-        "documentation": {}
-    },
-    {
-        "label": "Intersection",
-        "importPath": "modules.intersections.models",
-        "description": "modules.intersections.models",
-        "isExtraImport": true,
-        "detail": "modules.intersections.models",
-        "documentation": {}
-    },
-    {
-        "label": "Intersection",
-        "importPath": "modules.intersections.models",
-        "description": "modules.intersections.models",
-        "isExtraImport": true,
-        "detail": "modules.intersections.models",
-        "documentation": {}
-    },
-    {
-        "label": "Intersection",
-        "importPath": "modules.intersections.models",
-        "description": "modules.intersections.models",
-        "isExtraImport": true,
-        "detail": "modules.intersections.models",
-        "documentation": {}
-    },
-    {
-        "label": "Intersection",
-        "importPath": "modules.intersections.models",
-        "description": "modules.intersections.models",
-        "isExtraImport": true,
-        "detail": "modules.intersections.models",
+        "detail": "modules.roads.models",
         "documentation": {}
     },
     {
@@ -1619,107 +1787,51 @@
         "documentation": {}
     },
     {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "label": "Intersection",
+        "importPath": "modules.intersections.models",
+        "description": "modules.intersections.models",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "modules.intersections.models",
         "documentation": {}
     },
     {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "label": "Intersection",
+        "importPath": "modules.intersections.models",
+        "description": "modules.intersections.models",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "modules.intersections.models",
         "documentation": {}
     },
     {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "label": "Intersection",
+        "importPath": "modules.intersections.models",
+        "description": "modules.intersections.models",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "modules.intersections.models",
         "documentation": {}
     },
     {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
         "isExtraImport": true,
-        "detail": "responses.handler",
+        "detail": "modules.zones.models",
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
         "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "modules.zones.models",
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
+        "label": "Zone",
+        "importPath": "modules.zones.models",
+        "description": "modules.zones.models",
         "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
+        "detail": "modules.zones.models",
         "documentation": {}
     },
     {
@@ -1760,54 +1872,6 @@
         "description": "utils.query_builder",
         "isExtraImport": true,
         "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
-        "isExtraImport": true,
-        "detail": "modules.roads.models",
-        "documentation": {}
-    },
-    {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
-        "isExtraImport": true,
-        "detail": "modules.roads.models",
-        "documentation": {}
-    },
-    {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
-        "isExtraImport": true,
-        "detail": "modules.roads.models",
-        "documentation": {}
-    },
-    {
-        "label": "RoadCreateRequest",
-        "importPath": "modules.roads.schemas",
-        "description": "modules.roads.schemas",
-        "isExtraImport": true,
-        "detail": "modules.roads.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "RoadCreateResponse",
-        "importPath": "modules.roads.schemas",
-        "description": "modules.roads.schemas",
-        "isExtraImport": true,
-        "detail": "modules.roads.schemas",
-        "documentation": {}
-    },
-    {
-        "label": "RoadListResponse",
-        "importPath": "modules.roads.schemas",
-        "description": "modules.roads.schemas",
-        "isExtraImport": true,
-        "detail": "modules.roads.schemas",
         "documentation": {}
     },
     {
@@ -2285,7 +2349,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.models",
         "description": "app.modules.cameras.models",
-        "peekOfCode": "class DirectionTypeEnum(enum.Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    road_no = Column(Integer, nullable=False)\n    road_name = Column(String, nullable=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)",
+        "peekOfCode": "class DirectionTypeEnum(enum.Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    road_id= Column(Integer, ForeignKey('roads.id'), nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)",
         "detail": "app.modules.cameras.models",
         "documentation": {}
     },
@@ -2294,7 +2358,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.models",
         "description": "app.modules.cameras.models",
-        "peekOfCode": "class Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    road_no = Column(Integer, nullable=False)\n    road_name = Column(String, nullable=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship ",
+        "peekOfCode": "class Camera(Base):\n    __tablename__ = \"cameras\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    road_id= Column(Integer, ForeignKey('roads.id'), nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship \n    # Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_nama_of_targeted_table\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\")",
         "detail": "app.modules.cameras.models",
         "documentation": {}
     },
@@ -2303,7 +2367,7 @@
         "kind": 5,
         "importPath": "app.modules.cameras.router",
         "description": "app.modules.cameras.router",
-        "peekOfCode": "camera_router = APIRouter()\n@camera_router.post(\"/add-camera\", response_model=CameraCreateResponse)\nasync def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_camera(db=db, name= camera.name, road_no=camera.road_no, road_name=camera.road_name, direction_type= camera.direction_type, intersection_id= camera.intersection_id, zone_id=camera.zone_id  )\n@camera_router.get(\"/get-cameras\", response_model=list[CameraListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_cameras(db)",
+        "peekOfCode": "camera_router = APIRouter()\n@camera_router.post(\"/add-camera\"\n, response_model=  Response[CameraCreateResponse]\n)\nasync def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_camera(db=db, name= camera.name,direction_type= camera.direction_type, road_id=camera.road_id )\n    return create_response(result=result, pydantic_model=CameraCreateResponse, message=\"Camera has created successfully\")\n@camera_router.get(\"/get-cameras\", response_model=list[CameraListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_cameras(db)",
         "detail": "app.modules.cameras.router",
         "documentation": {}
     },
@@ -2312,7 +2376,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass CameraCreateRequest(BaseModel):\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    intersection_id : int\n    zone_id : int",
+        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass CameraCreateRequest(BaseModel):\n    name : str\n    direction_type: DirectionTypeEnum\n    road_id : int\nclass CameraCreateResponse(BaseModel):\n    id: int\n    name : str",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
@@ -2321,7 +2385,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class CameraCreateRequest(BaseModel):\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    intersection_id : int\n    zone_id : int\nclass CameraCreateResponse(BaseModel):\n    id: int\n    name : str",
+        "peekOfCode": "class CameraCreateRequest(BaseModel):\n    name : str\n    direction_type: DirectionTypeEnum\n    road_id : int\nclass CameraCreateResponse(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    road : RoadReferenceResponseForCreateCamera\n    intersection : IntersectionReferenceResponseForCreateCamera",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
@@ -2330,7 +2394,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class CameraCreateResponse(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum\n    zone : ZoneReferenceResponseForCreateCamera\n    intersection : IntersectionReferenceResponseForCreateCamera\n    class Config:\n        orm_mode = True",
+        "peekOfCode": "class CameraCreateResponse(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    road : RoadReferenceResponseForCreateCamera\n    intersection : IntersectionReferenceResponseForCreateCamera\n    zone : ZoneReferenceResponseForCreateCamera\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
@@ -2366,7 +2430,7 @@
         "kind": 5,
         "importPath": "app.modules.intersections.router",
         "description": "app.modules.intersections.router",
-        "peekOfCode": "intersection_router = APIRouter()\n@intersection_router.post(\"/add-intersection\", response_model=IntersectionCreateResponse)\nasync def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_intersection(db, intersection.name, intersection.zone_id )\n@intersection_router.get(\"/get-intersections\"\n, response_model=Response[list[IntersectionListResponse]]\n)\nasync def list_intersections(page:int=1, limit:int=10, zone_id:int= None,db: AsyncSession = Depends(get_db)):\n    result= await get_intersections(db, page=page, limit=limit, zone_id=zone_id)\n    # return intersections",
+        "peekOfCode": "intersection_router = APIRouter()\n@intersection_router.post(\"/add-intersection\", response_model=Response[IntersectionCreateResponse])\nasync def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_intersection(db, intersection.name, intersection.zone_id )\n    return create_response(result=result, pydantic_model=IntersectionCreateResponse, message=\"intersections has created successfully\")\n@intersection_router.get(\"/get-intersections\"\n, response_model=Response[list[IntersectionListResponse]]\n)\nasync def list_intersections(page:int=1, limit:int=10, zone_id:int= None,db: AsyncSession = Depends(get_db)):\n    result= await get_intersections(db, page=page, limit=limit, zone_id=zone_id)",
         "detail": "app.modules.intersections.router",
         "documentation": {}
     },
@@ -2447,7 +2511,7 @@
         "kind": 5,
         "importPath": "app.modules.roads.router",
         "description": "app.modules.roads.router",
-        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Rod haas created successfully\")\n@road_router.get(\"/get-roads\"\n# ,response_model=list[RoadListResponse]\n)",
+        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Road has created successfully\")\n@road_router.get(\"/get-roads\"\n# ,response_model=list[RoadListResponse]\n)",
         "detail": "app.modules.roads.router",
         "documentation": {}
     },
@@ -2483,7 +2547,7 @@
         "kind": 6,
         "importPath": "app.modules.roads.schemas",
         "description": "app.modules.roads.schemas",
-        "peekOfCode": "class RoadReferenceResponseForCreateCamera(BaseModel):\n    id: int\n    name: str\nclass RoadReferenceResponseForCreateVehicle(RoadReferenceResponseForCreateCamera):\n    pass",
+        "peekOfCode": "class RoadReferenceResponseForCreateCamera(BaseModel):\n    id: int\n    name: str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass RoadReferenceResponseForCreateVehicle(RoadReferenceResponseForCreateCamera):\n    pass",
         "detail": "app.modules.roads.schemas",
         "documentation": {}
     },
@@ -2618,7 +2682,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneCreateRequest(BaseModel):\n    name: str\nclass ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):",
+        "peekOfCode": "class ZoneCreateRequest(BaseModel):\n    name: str\nclass ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },
@@ -2627,7 +2691,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):\n#     data = None\n#     class Config:",
+        "peekOfCode": "class ZoneCreateResponse(ZoneCreateRequest):\n    id: int\n    class Config:\n        orm_mode = True\nclass ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },
@@ -2636,7 +2700,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\n# class ZoneDeleteResponse(BaseModel):\n#     data = None\n#     class Config:\n#         orm_mode = True\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str",
+        "peekOfCode": "class ZoneListResponse(ZoneCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass ZoneReferenceResponseForCreateRoad(ZoneReferenceResponseForCreateIntersection):",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },

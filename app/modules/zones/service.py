@@ -24,16 +24,6 @@ async def get_zones(db: AsyncSession,page, limit, name):
     filters = {"name": name}  # Dynamic filters
     return await query_builder(db, Zone, filters, page, limit)
 
-# async def delete_zone_service(db: AsyncSession, id:str):
-#     zone = await db.query(Zone).filter(Zone.id == id).first()
-#     if zone:
-#         db.delete(zone)
-#         await db.commit()
-#         # if zone deleted the also delete intersection, camera, road etc 
-#         return None
-#     else:
-#         raise CustomError(status_code=404, message= "no zone found with this it", resolution="please provide a valid zone id")
-
 
 async def delete_zone_service(db: AsyncSession, id: str):
     # Use `select()` instead of `db.query()`

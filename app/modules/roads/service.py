@@ -11,13 +11,15 @@ from modules.zones.schemas import ZoneReferenceResponseForCreateRoad
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateRoad
 from utils.query_builder import query_builder
 from modules.roads.utils import transform_road_data
+from exceptions.models import CustomError
 
 
 async def create_road(db: AsyncSession, name: str, road_no = int, intersection_id = int):
     intersection_result = await db.execute(select(Intersection).where(Intersection.id == intersection_id).options(joinedload(Intersection.zone)))
     intersection = intersection_result.scalar_one_or_none()
     if not intersection:
-         raise HTTPException(status_code=404, detail=f"There have no Intersection with ID {intersection_id}")
+        raise CustomError(message= "No intersection found with this id", status_code=404, resolution="please provide valid intersection_id")
+
     zone_id = intersection.zone.id
     #  making an instance of the zone object that inherits from zone Class (Models class)
     new_road = Road(name=name,  road_no=road_no, intersection_id=intersection_id, zone_id=zone_id)

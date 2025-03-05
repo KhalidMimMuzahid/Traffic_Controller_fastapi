@@ -11,13 +11,18 @@ from utils.query_builder import query_builder
 from exceptions.models import CustomError
 from modules.cameras.models import Camera
 from modules.roads.models import Road
+from modules.zones.schemas import ZoneReferenceResponseForCreateIntersection
 
 
 async def create_intersection(db: AsyncSession, name: str, zone_id:int):
     zone_result = await db.execute(select(Zone).where(Zone.id == zone_id))
     zone = zone_result.scalar_one_or_none()
     if not zone:
-         raise HTTPException(status_code=404, detail=f"Zone with ID {zone_id} not found.")
+        raise CustomError(
+            status_code=404, 
+            message="No Zone found with this zone_id", 
+            resolution="Please provide a valid intersection ID"
+        )
     
     #  making an instance of the intersection object that inherits from Intersection Class (Models class)
     intersection = Intersection(name=name, zone_id=zone_id)
@@ -28,13 +33,10 @@ async def create_intersection(db: AsyncSession, name: str, zone_id:int):
     return {
          "id": intersection.id,
          "name": intersection.name,
-         "zone": zone
+         "zone": ZoneReferenceResponseForCreateIntersection(**zone.__dict__),
     }
 
 async def get_intersections(db: AsyncSession, page:int, limit:int, zone_id:int):
-#     result = await db.execute(select(Intersection).options(joinedload(Intersection.zone)))
-#     intersections=  result.scalars().all()
-#     return intersections
     filters= {"zone_id": zone_id} # Dynamic filters
     return await query_builder(
         db=db,

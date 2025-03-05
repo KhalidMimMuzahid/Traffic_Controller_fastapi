@@ -38,6 +38,9 @@ class RoadListResponse(RoadCreateResponse):
 class RoadReferenceResponseForCreateCamera(BaseModel):
     id: int
     name: str
+    class Config:
+        orm_mode = True
+        extra = "ignore"
 
 class RoadReferenceResponseForCreateVehicle(RoadReferenceResponseForCreateCamera):
     pass

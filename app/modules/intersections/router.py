@@ -7,9 +7,14 @@ from modules.intersections.service import create_intersection, get_intersections
 from responses.handler import create_response
 from responses.models import Response
 intersection_router = APIRouter()
-@intersection_router.post("/add-intersection", response_model=IntersectionCreateResponse)
+
+
+@intersection_router.post("/add-intersection", response_model=Response[IntersectionCreateResponse])
 async def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):
-    return await create_intersection(db, intersection.name, intersection.zone_id )
+    result= await create_intersection(db, intersection.name, intersection.zone_id )
+    return create_response(result=result, pydantic_model=IntersectionCreateResponse, message="intersections has created successfully")
+
+
 
 @intersection_router.get("/get-intersections"
 , response_model=Response[list[IntersectionListResponse]]
@@ -18,6 +23,8 @@ async def list_intersections(page:int=1, limit:int=10, zone_id:int= None,db: Asy
     result= await get_intersections(db, page=page, limit=limit, zone_id=zone_id)
     # return intersections
     return create_response(result=result["data"], pydantic_model=IntersectionListResponse, message="intersections have retrieved successfully", meta_data=result["meta_data"])
+
+
 
 @intersection_router.delete("/delete-intersection"
 # , response_model=Response[list[ZoneListResponse]]

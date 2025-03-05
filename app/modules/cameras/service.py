@@ -3,15 +3,18 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
 from modules.cameras.schemas import DirectionTypeEnum
-# from modules.intersections.models import Intersection
 from modules.cameras.models import Camera
-
 from fastapi import HTTPException
 from modules.roads.models import Road
 from modules.roads.schemas import RoadReferenceResponseForCreateCamera
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateCamera
 from modules.zones.schemas import ZoneReferenceResponseForCreateCamera
 from exceptions.models import CustomError
+from utils.query_builder import query_builder
+from modules.cameras.utils import transform_camera_data
+
+
+
 async def create_camera(db: AsyncSession, name: str, direction_type= DirectionTypeEnum ,road_id = int):
      # checking for existence road with the provided road_id
     road_result = await db.execute(select(Road).where(Road.id == road_id).options(joinedload(Road.intersection), joinedload(Road.zone)))
@@ -31,7 +34,7 @@ async def create_camera(db: AsyncSession, name: str, direction_type= DirectionTy
           "id" : new_camera.id,
           "name" :new_camera.name,
           "direction_type" : new_camera.direction_type,
-          "road":RoadReferenceResponseForCreateCamera(**road.__dict__),
+          "road": RoadReferenceResponseForCreateCamera(**road.__dict__),
           "intersection" : IntersectionReferenceResponseForCreateCamera(**road.intersection.__dict__),
           "zone": ZoneReferenceResponseForCreateCamera(**road.zone.__dict__),
     }
@@ -62,8 +65,18 @@ async def create_camera(db: AsyncSession, name: str, direction_type= DirectionTy
 #     }
 
 
-async def get_cameras(db: AsyncSession):
-    result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
-    cameras=  result.scalars().all() 
-    return cameras
+async def get_cameras(db: AsyncSession, page:int, limit:int, id:int):
+    filters= {"id": id} # Dynamic filters
+    return await query_builder(
+        db=db,
+        model=Camera,
+        filters=filters,
+        page=page,
+        limit=limit,
+        relationships=[Camera.road, Camera.intersection, Camera.zone],  # ✅ Joined load applied
+        transform_fn=transform_camera_data  # ✅ Transform function applied
+    )
+    # result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
+    # cameras=  result.scalars().all() 
+    # return cameras
 

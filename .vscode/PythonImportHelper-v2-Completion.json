@@ -1475,6 +1475,14 @@
         "documentation": {}
     },
     {
+        "label": "ZoneReferenceResponseForCreateCamera",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
         "label": "ZoneReferenceResponseForCreateIntersection",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
@@ -1563,6 +1571,14 @@
         "documentation": {}
     },
     {
+        "label": "IntersectionReferenceResponseForCreateCamera",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
         "label": "IntersectionCreateResponse",
         "importPath": "modules.intersections.schemas",
         "description": "modules.intersections.schemas",
@@ -1616,6 +1632,14 @@
         "description": "modules.intersections.schemas",
         "isExtraImport": true,
         "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadReferenceResponseForCreateCamera",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
         "documentation": {}
     },
     {
@@ -1763,6 +1787,54 @@
         "documentation": {}
     },
     {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "transform_camera_data",
+        "importPath": "modules.cameras.utils",
+        "description": "modules.cameras.utils",
+        "isExtraImport": true,
+        "detail": "modules.cameras.utils",
+        "documentation": {}
+    },
+    {
         "label": "create_intersection",
         "importPath": "modules.intersections.service",
         "description": "modules.intersections.service",
@@ -1840,38 +1912,6 @@
         "description": "modules.intersections.utils",
         "isExtraImport": true,
         "detail": "modules.intersections.utils",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -2367,7 +2407,7 @@
         "kind": 5,
         "importPath": "app.modules.cameras.router",
         "description": "app.modules.cameras.router",
-        "peekOfCode": "camera_router = APIRouter()\n@camera_router.post(\"/add-camera\"\n, response_model=  Response[CameraCreateResponse]\n)\nasync def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_camera(db=db, name= camera.name,direction_type= camera.direction_type, road_id=camera.road_id )\n    return create_response(result=result, pydantic_model=CameraCreateResponse, message=\"Camera has created successfully\")\n@camera_router.get(\"/get-cameras\", response_model=list[CameraListResponse])\nasync def list_zones(db: AsyncSession = Depends(get_db)):\n    return await get_cameras(db)",
+        "peekOfCode": "camera_router = APIRouter()\n@camera_router.post(\"/add-camera\"\n, response_model=  Response[CameraCreateResponse]\n)\nasync def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_camera(db=db, name= camera.name,direction_type= camera.direction_type, road_id=camera.road_id )\n    return create_response(result=result, pydantic_model=CameraCreateResponse, message=\"Camera has created successfully\")\n@camera_router.get(\"/get-cameras\",\n response_model= Response[list[CameraListResponse]]\n )",
         "detail": "app.modules.cameras.router",
         "documentation": {}
     },
@@ -2414,6 +2454,15 @@
         "description": "app.modules.cameras.schemas",
         "peekOfCode": "class IntersectionReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum",
         "detail": "app.modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "transform_camera_data",
+        "kind": 2,
+        "importPath": "app.modules.cameras.utils",
+        "description": "app.modules.cameras.utils",
+        "peekOfCode": "def transform_camera_data(camera):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": camera.id,\n        \"name\": camera.name,\n        \"direction_type\": camera.direction_type,\n        \"road\": RoadReferenceResponseForCreateCamera(**camera.road.__dict__)if camera.road else None,\n        \"zone\": ZoneReferenceResponseForCreateCamera(**camera.zone.__dict__) if camera.zone else None,\n        \"intersection\": IntersectionReferenceResponseForCreateCamera(**camera.intersection.__dict__) if camera.intersection else None\n    }",
+        "detail": "app.modules.cameras.utils",
         "documentation": {}
     },
     {

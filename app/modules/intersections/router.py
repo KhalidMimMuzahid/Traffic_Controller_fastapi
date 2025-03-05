@@ -31,6 +31,6 @@ async def list_intersections(page:int=1, limit:int=10, zone_id:int= None,db: Asy
 )
 async def delete_intersection(id:int, db: AsyncSession = Depends(get_db)):
     result= await delete_intersection_service(db, id)
-    # Call the helper function to create the response and return it, passing UserCreateResponse model
+    # Call the helper function to create the response and return it, passing UserCreateResponse  model 
     return create_response(result=result,  message="Intersection has deleted successfully successfully" )
     

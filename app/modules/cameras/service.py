@@ -65,8 +65,8 @@ async def create_camera(db: AsyncSession, name: str, direction_type= DirectionTy
 #     }
 
 
-async def get_cameras(db: AsyncSession, page:int, limit:int, id:int):
-    filters= {"id": id} # Dynamic filters
+async def get_cameras(db: AsyncSession, page:int, limit:int, road_id:int):
+    filters= {"road_id": road_id} # Dynamic filters
     return await query_builder(
         db=db,
         model=Camera,

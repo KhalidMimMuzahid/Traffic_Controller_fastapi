@@ -20,8 +20,8 @@ async def add_camera(camera: CameraCreateRequest, db: AsyncSession = Depends(get
 @camera_router.get("/get-cameras",
  response_model= Response[list[CameraListResponse]]
  )
-async def list_zones(page:int=1, limit:int=10, id:int= None, db: AsyncSession = Depends(get_db)):
-    result= await get_cameras(db, page=page, limit=limit, id=id)
+async def list_cameras(page:int=1, limit:int=10, road_id:int= None, db: AsyncSession = Depends(get_db)):
+    result= await get_cameras(db, page=page, limit=limit, road_id=road_id)
     # return result
     return create_response(result=result["data"], pydantic_model=CameraListResponse, message="cameras have retrieved successfully", meta_data=result["meta_data"] )
     

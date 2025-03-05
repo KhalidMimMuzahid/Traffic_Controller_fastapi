@@ -8,11 +8,15 @@ from modules.zones.service import create_zone, get_zones, delete_zone_service
 from responses.handler import create_response
 from responses.models import Response
 zone_router = APIRouter()
+
+
+
 @zone_router.post("/add-zone", response_model=Response[ZoneCreateResponse])
 async def add_zone(request: Request,zone: ZoneCreateRequest, db: AsyncSession = Depends(get_db)):
     result= await create_zone(db, zone.name)
     # Call the helper function to create the response and return it, passing UserCreateResponse model
     return create_response(result=result, pydantic_model=ZoneCreateResponse, message="Zone has created successfully")
+
 
 @zone_router.get("/get-zones"
 # , response_model=Response[list[ZoneListResponse]]

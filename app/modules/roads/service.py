@@ -35,15 +35,6 @@ async def create_road(db: AsyncSession, name: str, road_no = int, intersection_i
 
 async def get_roads(db: AsyncSession, page:int, limit:int, id:int):
     filters= {"id": id} # Dynamic filters
-    # return await query_builder(db=db, model=Road, filters=filters, page=page, limit=limit)
-    # return await query_builder(
-    #     db=db,
-    #     model=Road,
-    #     filters=filters,
-    #     page=page,
-    #     limit=limit,
-    #     relationships=[Road.intersection, Road.zone]  # ✅ Joined load applied
-    # )
     return await query_builder(
         db=db,
         model=Road,

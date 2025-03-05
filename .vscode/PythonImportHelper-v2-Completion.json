@@ -1331,6 +1331,14 @@
         "documentation": {}
     },
     {
+        "label": "ZoneReferenceResponseForCreateIntersection",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
         "label": "ZoneReferenceResponseForCreateRoad",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
@@ -1587,6 +1595,150 @@
         "documentation": {}
     },
     {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "MetaData",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
+        "label": "transform_intersection_data",
+        "importPath": "modules.intersections.utils",
+        "description": "modules.intersections.utils",
+        "isExtraImport": true,
+        "detail": "modules.intersections.utils",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
+        "documentation": {}
+    },
+    {
         "label": "RoadCreateRequest",
         "importPath": "modules.roads.schemas",
         "description": "modules.roads.schemas",
@@ -1627,94 +1779,6 @@
         "documentation": {}
     },
     {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "Response",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "MetaData",
-        "importPath": "responses.models",
-        "description": "responses.models",
-        "isExtraImport": true,
-        "detail": "responses.models",
-        "documentation": {}
-    },
-    {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
-        "isExtraImport": true,
-        "detail": "responses.handler",
-        "documentation": {}
-    },
-    {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
-        "isExtraImport": true,
-        "detail": "responses.handler",
-        "documentation": {}
-    },
-    {
-        "label": "create_response",
-        "importPath": "responses.handler",
-        "description": "responses.handler",
-        "isExtraImport": true,
-        "detail": "responses.handler",
-        "documentation": {}
-    },
-    {
         "label": "Road",
         "importPath": "modules.roads.models",
         "description": "modules.roads.models",
@@ -1728,30 +1792,6 @@
         "description": "modules.roads.models",
         "isExtraImport": true,
         "detail": "modules.roads.models",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
-        "documentation": {}
-    },
-    {
-        "label": "query_builder",
-        "importPath": "utils.query_builder",
-        "description": "utils.query_builder",
-        "isExtraImport": true,
-        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -2294,7 +2334,7 @@
         "kind": 5,
         "importPath": "app.modules.intersections.router",
         "description": "app.modules.intersections.router",
-        "peekOfCode": "intersection_router = APIRouter()\n@intersection_router.post(\"/add-intersection\", response_model=IntersectionCreateResponse)\nasync def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_intersection(db, intersection.name, intersection.zone_id )\n@intersection_router.get(\"/get-intersections\", response_model=list[IntersectionListResponse])\nasync def list_intersections(db: AsyncSession = Depends(get_db)):\n    intersections= await get_intersections(db)\n    return intersections",
+        "peekOfCode": "intersection_router = APIRouter()\n@intersection_router.post(\"/add-intersection\", response_model=IntersectionCreateResponse)\nasync def add_zone(intersection: IntersectionCreateRequest, db: AsyncSession = Depends(get_db)):\n    return await create_intersection(db, intersection.name, intersection.zone_id )\n@intersection_router.get(\"/get-intersections\"\n, response_model=Response[list[IntersectionListResponse]]\n)\nasync def list_intersections(page:int=1, limit:int=10, zone_id:int= None,db: AsyncSession = Depends(get_db)):\n    result= await get_intersections(db, page=page, limit=limit, zone_id=zone_id)\n    # return intersections",
         "detail": "app.modules.intersections.router",
         "documentation": {}
     },
@@ -2350,6 +2390,15 @@
         "description": "app.modules.intersections.schemas",
         "peekOfCode": "class IntersectionReferenceResponseForCreateVehicle(IntersectionReferenceResponseForCreateRoad):\n    pass",
         "detail": "app.modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "transform_intersection_data",
+        "kind": 2,
+        "importPath": "app.modules.intersections.utils",
+        "description": "app.modules.intersections.utils",
+        "peekOfCode": "def transform_intersection_data(intersection):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": intersection.id,\n        \"name\": intersection.name,\n        \"zone\": ZoneReferenceResponseForCreateIntersection(**intersection.zone.__dict__) if intersection.zone else None,\n    }",
+        "detail": "app.modules.intersections.utils",
         "documentation": {}
     },
     {
@@ -2564,7 +2613,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.schemas",
         "description": "app.modules.zones.schemas",
-        "peekOfCode": "class ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\n    class Config:\n        orm_mode = True\nclass ZoneReferenceResponseForCreateRoad(ZoneReferenceResponseForCreateIntersection):\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n    # pass",
+        "peekOfCode": "class ZoneReferenceResponseForCreateIntersection(BaseModel):\n    id: int\n    name: str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass ZoneReferenceResponseForCreateRoad(ZoneReferenceResponseForCreateIntersection):\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.zones.schemas",
         "documentation": {}
     },

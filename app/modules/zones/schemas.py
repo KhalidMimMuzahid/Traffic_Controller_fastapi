@@ -22,6 +22,7 @@ class ZoneReferenceResponseForCreateIntersection(BaseModel):
     name: str
     class Config:
         orm_mode = True
+        extra = "ignore"
 
 class ZoneReferenceResponseForCreateRoad(ZoneReferenceResponseForCreateIntersection):
     class Config:

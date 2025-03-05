@@ -6,6 +6,8 @@ from modules.intersections.models import Intersection
 from modules.intersections.schemas import IntersectionListResponse
 from modules.zones.models import Zone
 from fastapi import HTTPException
+from modules.intersections.utils import transform_intersection_data
+from utils.query_builder import query_builder
 
 
 async def create_intersection(db: AsyncSession, name: str, zone_id:int):
@@ -26,8 +28,18 @@ async def create_intersection(db: AsyncSession, name: str, zone_id:int):
          "zone": zone
     }
 
-async def get_intersections(db: AsyncSession):
-    result = await db.execute(select(Intersection).options(joinedload(Intersection.zone)))
-    intersections=  result.scalars().all()
-    return intersections
+async def get_intersections(db: AsyncSession, page:int, limit:int, zone_id:int):
+#     result = await db.execute(select(Intersection).options(joinedload(Intersection.zone)))
+#     intersections=  result.scalars().all()
+#     return intersections
+    filters= {"zone_id": zone_id} # Dynamic filters
+    return await query_builder(
+        db=db,
+        model=Intersection,
+        filters=filters,
+        page=page,
+        limit=limit,
+        relationships=[Intersection.zone],  # ✅ Joined load applied
+        transform_fn=transform_intersection_data  # ✅ Transform function applied
+    )
 

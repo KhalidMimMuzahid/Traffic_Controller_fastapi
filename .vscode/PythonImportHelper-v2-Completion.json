@@ -1499,6 +1499,14 @@
         "documentation": {}
     },
     {
+        "label": "Camera",
+        "importPath": "modules.cameras.models",
+        "description": "modules.cameras.models",
+        "isExtraImport": true,
+        "detail": "modules.cameras.models",
+        "documentation": {}
+    },
+    {
         "label": "Zone",
         "importPath": "modules.zones.models",
         "description": "modules.zones.models",
@@ -1704,6 +1712,14 @@
         "description": "responses.handler",
         "isExtraImport": true,
         "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
+        "isExtraImport": true,
+        "detail": "modules.roads.models",
         "documentation": {}
     },
     {

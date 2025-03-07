@@ -12,6 +12,7 @@ from modules.intersections.schemas import IntersectionReferenceResponseForCreate
 from utils.query_builder import query_builder
 from modules.roads.utils import transform_road_data
 from exceptions.models import CustomError
+from modules.cameras.models import Camera
 
 
 async def create_road(db: AsyncSession, name: str, road_no = int, intersection_id = int):
@@ -48,10 +49,28 @@ async def get_roads(db: AsyncSession, page:int, limit:int, intersection_id:int):
     )
 
 
-    # result = await db.execute(select(Road))
-    # cameras=  result.scalars().all() 
-    # return cameras
-    # # result = await db.execute(select(Camera).options(joinedload(Camera.intersection), joinedload(Camera.zone)))
-    # # cameras= result.scalars().all() 
-    # # return cameras
+async def delete_road_service(db: AsyncSession, id: str):
+    # Use `select()` instead of `db.query()`
+    result = await db.execute(select(Road).filter(Road.id == id))
+    road = result.scalars().first()  # Extract the first matching result
+    if not road:
+        raise CustomError(
+            status_code=404, 
+            message="No road found with this ID", 
+            resolution="Please provide a valid road ID"
+        )
+    # Fetch related entity
+    cameras = await db.execute(select(Camera).filter(Camera.road_id == id))
 
+    # Convert scalars to lists
+
+    cameras = cameras.scalars().all()
+
+    # Delete all related entities
+    for entity in cameras:
+        await db.delete(entity)
+
+    # Delete the intersection itself
+    await db.delete(road)
+    await db.commit()
+    return None

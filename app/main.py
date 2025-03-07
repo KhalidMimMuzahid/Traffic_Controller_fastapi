@@ -14,10 +14,10 @@ app.add_middleware(
 )
 
 # # If you want to automatically initialize your DB on startup,
-@app.on_event("startup")
-async def on_startup():
-    # This will run when the application starts and use the existing event loop.
-    await init_db()
+# @app.on_event("startup")
+# async def on_startup():
+#     # This will run when the application starts and use the existing event loop.
+#     await init_db()
 
 
 # we are redirecting all routes to routes to handle easily

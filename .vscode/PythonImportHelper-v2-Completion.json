@@ -1763,6 +1763,14 @@
         "documentation": {}
     },
     {
+        "label": "Camera",
+        "importPath": "modules.cameras.models",
+        "description": "modules.cameras.models",
+        "isExtraImport": true,
+        "detail": "modules.cameras.models",
+        "documentation": {}
+    },
+    {
         "label": "Road",
         "importPath": "modules.roads.models",
         "description": "modules.roads.models",
@@ -1932,6 +1940,14 @@
     },
     {
         "label": "get_roads",
+        "importPath": "modules.roads.service",
+        "description": "modules.roads.service",
+        "isExtraImport": true,
+        "detail": "modules.roads.service",
+        "documentation": {}
+    },
+    {
+        "label": "delete_road_service",
         "importPath": "modules.roads.service",
         "description": "modules.roads.service",
         "isExtraImport": true,
@@ -2568,7 +2584,7 @@
         "kind": 5,
         "importPath": "app.modules.roads.router",
         "description": "app.modules.roads.router",
-        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Road has created successfully\")\n@road_router.get(\"/get-roads\"\n# ,response_model=list[RoadListResponse]\n)",
+        "peekOfCode": "road_router = APIRouter()\n@road_router.post(\"/add-road\"\n, response_model=  Response[RoadCreateResponse]\n)\nasync def add_road(road: RoadCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_road(db=db, name= road.name, road_no=road.road_no, intersection_id= road.intersection_id  )\n    return create_response(result=result, pydantic_model=RoadCreateResponse, message=\"Road has created successfully\")\n@road_router.get(\"/get-roads\"\n,response_model=Response[list[RoadListResponse]]\n)",
         "detail": "app.modules.roads.router",
         "documentation": {}
     },
@@ -3018,7 +3034,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

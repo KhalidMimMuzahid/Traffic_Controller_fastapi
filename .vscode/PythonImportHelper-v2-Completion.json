@@ -931,6 +931,54 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "desc",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -1020,6 +1068,14 @@
     },
     {
         "label": "joinedload",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -1148,6 +1204,14 @@
     },
     {
         "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
         "importPath": "database",
         "description": "database",
         "isExtraImport": true,
@@ -2721,6 +2785,24 @@
         "description": "app.modules.users.schemas",
         "peekOfCode": "class UsersListResponse(BaseModel):\n    id: int\n    email :str\n    role : UserRoleEnum\n    name :str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.users.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "DirectionTypeEnum",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.models",
+        "description": "app.modules.vehicles.models",
+        "peekOfCode": "class DirectionTypeEnum(enum.Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)",
+        "detail": "app.modules.vehicles.models",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicle",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.models",
+        "description": "app.modules.vehicles.models",
+        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    # photo ",
+        "detail": "app.modules.vehicles.models",
         "documentation": {}
     },
     {

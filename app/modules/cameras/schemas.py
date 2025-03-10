@@ -2,6 +2,7 @@ from pydantic import BaseModel
 from enum import Enum
 from modules.zones.schemas import ZoneReferenceResponseForCreateCamera
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateCamera
+from modules.roads.schemas import RoadReferenceResponseForCreateCamera
 
 
 
@@ -11,22 +12,19 @@ class DirectionTypeEnum(str, Enum):
 
 class CameraCreateRequest(BaseModel):
     name : str
-    road_no : int
-    road_name : str
     direction_type: DirectionTypeEnum
-    intersection_id : int
-    zone_id : int
+    road_id : int
 
 class CameraCreateResponse(BaseModel):
     id: int
     name : str
-    road_no : int
-    road_name : str
     direction_type: DirectionTypeEnum
-    zone : ZoneReferenceResponseForCreateCamera
+    road : RoadReferenceResponseForCreateCamera
     intersection : IntersectionReferenceResponseForCreateCamera
+    zone : ZoneReferenceResponseForCreateCamera
     class Config:
         orm_mode = True
+        extra = "ignore"
 
 
 class CameraListResponse(CameraCreateResponse):

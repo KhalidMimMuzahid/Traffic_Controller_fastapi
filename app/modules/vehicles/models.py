@@ -20,7 +20,7 @@ class Vehicle(Base):
     tracker_id= Column(Integer,  unique=False, index=False)
     # photo 
     # license_photo
-    license_number= Column(Integer,  unique=False, index=False)
+    license_number= Column(String,  unique=False, index=False)
 
 
     camera_id= Column(Integer, ForeignKey('cameras.id'), nullable=False)

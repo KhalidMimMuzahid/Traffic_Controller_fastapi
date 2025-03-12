@@ -1,4 +1,6 @@
-from sqlalchemy import Column, Integer, String, Enum, ForeignKey, Boolean
+from sqlalchemy import Column, Integer, String, Enum, ForeignKey, Boolean,  DateTime
+from sqlalchemy.sql import func
+
 import enum
 from sqlalchemy.orm import relationship
 from database import Base
@@ -35,7 +37,9 @@ class Vehicle(Base):
     road = relationship("Road", back_populates="vehicles")
     intersection = relationship("Intersection", back_populates="vehicles")
     zone = relationship("Zone", back_populates="vehicles")
-    # timestamp 
+    # Timestamps
+    created_at = Column(DateTime(timezone=True), server_default=func.now())
+    updated_at = Column(DateTime(timezone=True), server_default=func.now(), onupdate=func.now())
 
 
 

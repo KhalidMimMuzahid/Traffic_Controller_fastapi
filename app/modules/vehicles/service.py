@@ -10,8 +10,8 @@ from modules.vehicles.models import Vehicle
 # from modules.intersections.schemas import IntersectionReferenceResponseForCreateCamera
 # from modules.zones.schemas import ZoneReferenceResponseForCreateCamera
 from exceptions.models import CustomError
-# from utils.query_builder import query_builder
-# from modules.cameras.utils import transform_camera_data
+from utils.query_builder import query_builder
+from modules.vehicles.utils import transform_vehicle_data
 
 
 
@@ -36,4 +36,15 @@ async def create_vehicle(db: AsyncSession, category : str, direction_type: Direc
  
     }
 
+async def get_vehicles(db: AsyncSession, page:int, limit:int):
+    filters= {} # Dynamic filters
+    return await query_builder(
+        db=db,
+        model=Vehicle,
+        filters=filters,
+        page=page,
+        limit=limit,
+        relationships=[Vehicle.camera, Vehicle.road, Vehicle.intersection, Vehicle.zone],  # ✅ Joined load applied
+        transform_fn=transform_vehicle_data  # ✅ Transform function applied
+    )
 

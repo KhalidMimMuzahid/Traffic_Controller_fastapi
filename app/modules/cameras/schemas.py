@@ -32,9 +32,12 @@ class CameraListResponse(CameraCreateResponse):
     pass
 
 
-class IntersectionReferenceResponseForCreateVehicle(BaseModel):
+class CameraReferenceResponseForCreateVehicle(BaseModel):
     id: int
     name : str
-    road_no : int
-    road_name : str
-    direction_type: DirectionTypeEnum
+    class Config:
+        orm_mode = True
+        extra = "ignore"
+    # road_no : int
+    # road_name : str
+    # direction_type: DirectionTypeEnum

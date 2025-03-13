@@ -1,11 +1,14 @@
 from pydantic import BaseModel
 from enum import Enum
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from modules.cameras.schemas import CameraReferenceResponseForCreateVehicle
 from modules.roads.schemas import RoadReferenceResponseForCreateVehicle
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateVehicle
 from modules.zones.schemas import ZoneReferenceResponseForCreateVehicle
+import pytz
 
+
+# BST = timezone(timedelta(hours=6))
 
 class DirectionTypeEnum(str, Enum):
     entry = "entry"
@@ -51,3 +54,7 @@ class VehicleListResponse(BaseModel):
     class Config:
         orm_mode = True
         extra = "ignore"
+   
+    # def from_orm(cls, obj):
+    #     obj.created_at = obj.created_at.replace(tzinfo=timezone.utc).astimezone(BST)
+    #     return super().from_orm(obj)

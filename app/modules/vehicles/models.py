@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Enum, ForeignKey, Boolean,  DateTime, text
+from sqlalchemy import Column, Integer, String, Enum, ForeignKey, Boolean,  DateTime, LargeBinary
 from sqlalchemy.sql import func
 
 import enum
@@ -20,9 +20,11 @@ class Vehicle(Base):
     speed_violation= Column(Boolean,  unique=False, index=False)
     speed= Column(Integer,  unique=False, index=False)
     tracker_id= Column(Integer,  unique=False, index=False)
-    # photo 
-    # license_photo
-    license_number= Column(String,  unique=False, index=False)
+    # photo = Column(LargeBinary, nullable=True)  # Store binary image as BLOB
+    # license_photo= Column(LargeBinary, nullable=True)  # Store binary image as BLOB
+    photo = Column(String, nullable=True)  # Store binary image as BLOB
+    license_photo= Column(String, nullable=True)  #
+    license_number= Column(String,  nullable=True)
 
 
     camera_id= Column(Integer, ForeignKey('cameras.id'), nullable=False)

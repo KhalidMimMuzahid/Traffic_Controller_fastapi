@@ -1,11 +1,13 @@
 from pydantic import BaseModel
+from fastapi import UploadFile, File
 from enum import Enum
+from typing import Optional
 from datetime import datetime, timezone, timedelta
 from modules.cameras.schemas import CameraReferenceResponseForCreateVehicle
 from modules.roads.schemas import RoadReferenceResponseForCreateVehicle
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateVehicle
 from modules.zones.schemas import ZoneReferenceResponseForCreateVehicle
-import pytz
+
 
 
 # BST = timezone(timedelta(hours=6))
@@ -17,15 +19,14 @@ class DirectionTypeEnum(str, Enum):
 class VehicleCreateRequest(BaseModel):
     category : str
     direction_type: DirectionTypeEnum
-    license_number: str
-
     len_violation:bool
     speed_violation: int
     speed:int
     tracker_id:int
-
     camera_id : int
 
+class VehicleUpdateRequest(BaseModel):
+    pass
 
 
 class VehicleCreateResponse(BaseModel):
@@ -45,6 +46,9 @@ class VehicleListResponse(BaseModel):
     speed:int
     tracker_id: int
     license_number : str
+    photo: Optional[str] = None
+    license_photo: Optional[str] = None
+    license_number: Optional[str] = None
 
     camera: CameraReferenceResponseForCreateVehicle
     road : RoadReferenceResponseForCreateVehicle

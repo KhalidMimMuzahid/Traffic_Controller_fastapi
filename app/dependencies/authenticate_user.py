@@ -5,6 +5,7 @@ from pydantic import BaseModel
 import os
 from utils.manage_auth import decode_access_token
 from exceptions.models import CustomError
+from urllib.parse import urlparse
 
 # Define security scheme
 security = HTTPBearer(auto_error=False)
@@ -13,7 +14,9 @@ security = HTTPBearer(auto_error=False)
 PUBLIC_ROUTES = {
     # "/api/v1/users/add-user",
     "/api/v1/users/login"  ,
-    "/api/v1/vehicles/add-vehicle"
+    "/api/v1/vehicles/add-vehicle" , 
+    "/api/v1/vehicles/update-vehicle",
+    "/api/v1/files/get"
 }
 
 # Define the user payload structure
@@ -26,8 +29,10 @@ async def authenticate_user(
     request: Request, credentials: HTTPAuthorizationCredentials = Security(security)
 ):
     """Middleware-style function for authenticating users before hitting the router."""
-    path = request.url.path 
+    # path = request.url.path 
 
+    path = urlparse(request.url.path).path  # Extract path without query parameters
+    print("path: ", path)
     # Skip authentication for public routes
     if path in PUBLIC_ROUTES:
         return

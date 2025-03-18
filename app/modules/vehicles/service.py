@@ -5,16 +5,15 @@ from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
 from modules.vehicles.schemas import DirectionTypeEnum
 from modules.cameras.models import Camera
-# from fastapi import HTTPException
 from modules.vehicles.models import Vehicle
 from modules.files.service import upload_file
-# from modules.roads.schemas import RoadReferenceResponseForCreateCamera
-# from modules.intersections.schemas import IntersectionReferenceResponseForCreateCamera
-# from modules.zones.schemas import ZoneReferenceResponseForCreateCamera
 from exceptions.models import CustomError
 from utils.query_builder import query_builder
 from modules.vehicles.utils import transform_vehicle_data
-
+from websocket import active_connections
+from fastapi.encoders import jsonable_encoder
+import json
+import asyncio
 
 
 async def create_vehicle(db: AsyncSession, category : str, direction_type: DirectionTypeEnum, len_violation:bool, speed_violation: int, speed:int, tracker_id:int, camera_id : int):
@@ -69,6 +68,13 @@ async def update_vehicle_service(
 
     await db.commit()
     await db.refresh(vehicle)
+
+    vehicle_data = jsonable_encoder(vehicle)
+    message= "new vehicle added"
+    event_data = json.dumps({"event": "new-vehicle-added", "data": {"message": message, "data": vehicle_data}})
+
+    if active_connections:
+        await asyncio.gather(*(ws.send_text(event_data) for ws in active_connections))
 
     return None
 

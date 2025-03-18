@@ -20,7 +20,7 @@ class VehicleCreateRequest(BaseModel):
     category : str
     direction_type: DirectionTypeEnum
     len_violation:bool
-    speed_violation: int
+    speed_violation: bool
     speed:int
     tracker_id:int
     camera_id : int

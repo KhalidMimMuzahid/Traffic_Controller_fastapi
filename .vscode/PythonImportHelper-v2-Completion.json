@@ -257,6 +257,22 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -554,6 +570,30 @@
     },
     {
         "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocketDisconnect",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocket",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -2742,6 +2782,48 @@
         "documentation": {}
     },
     {
+        "label": "active_connections",
+        "importPath": "websocket",
+        "description": "websocket",
+        "isExtraImport": true,
+        "detail": "websocket",
+        "documentation": {}
+    },
+    {
+        "label": "active_connections",
+        "importPath": "websocket",
+        "description": "websocket",
+        "isExtraImport": true,
+        "detail": "websocket",
+        "documentation": {}
+    },
+    {
+        "label": "jsonable_encoder",
+        "importPath": "fastapi.encoders",
+        "description": "fastapi.encoders",
+        "isExtraImport": true,
+        "detail": "fastapi.encoders",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -3374,7 +3456,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: int\n    speed:int\n    tracker_id:int",
+        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3383,7 +3465,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: int\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
+        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },

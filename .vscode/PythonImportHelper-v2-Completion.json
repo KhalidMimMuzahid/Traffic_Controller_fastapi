@@ -3118,7 +3118,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class CameraListResponse(CameraCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n    # road_no : int",
+        "peekOfCode": "class CameraListResponse(CameraCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
@@ -3127,7 +3127,7 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n    # road_no : int\n    # road_name : str\n    # direction_type: DirectionTypeEnum",
+        "peekOfCode": "class CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n    # road_no : int\n    # road_name : str\n    # direction_type: DirectionTypeEnum",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },

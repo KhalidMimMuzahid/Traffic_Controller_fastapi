@@ -35,6 +35,7 @@ class CameraListResponse(CameraCreateResponse):
 class CameraReferenceResponseForCreateVehicle(BaseModel):
     id: int
     name : str
+    direction_type: DirectionTypeEnum
     class Config:
         orm_mode = True
         extra = "ignore"

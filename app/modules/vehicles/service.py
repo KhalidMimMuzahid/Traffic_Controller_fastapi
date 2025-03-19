@@ -3,7 +3,6 @@ from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.orm import joinedload
-from modules.vehicles.schemas import DirectionTypeEnum
 from modules.cameras.models import Camera
 from modules.vehicles.models import Vehicle
 from modules.files.service import upload_file
@@ -16,7 +15,7 @@ import json
 import asyncio
 
 
-async def create_vehicle(db: AsyncSession, category : str, direction_type: DirectionTypeEnum, len_violation:bool, speed_violation: int, speed:int, tracker_id:int, camera_id : int):
+async def create_vehicle(db: AsyncSession, category : str, direction: str, len_violation:bool, speed_violation: int, speed:int, tracker_id:int, camera_id : int):
 #      # checking for existence camera with the provided camera_id
     camera_result = await db.execute(select(Camera).where(Camera.id == camera_id).options(joinedload(Camera.road), joinedload(Camera.intersection), joinedload(Camera.zone)))
     camera = camera_result.scalar_one_or_none()
@@ -27,7 +26,7 @@ async def create_vehicle(db: AsyncSession, category : str, direction_type: Direc
     zone_id = camera.zone.id
      
       # making an instance of the Vehicle object that inherits from Vehicle Class (Models class)
-    new_vehicle = Vehicle(category= category, direction_type= direction_type, len_violation=len_violation, speed_violation=speed_violation, speed=speed, tracker_id=tracker_id, camera_id=camera_id, road_id=road_id, intersection_id=intersection_id, zone_id=zone_id  )
+    new_vehicle = Vehicle(category= category, direction= direction, len_violation=len_violation, speed_violation=speed_violation, speed=speed, tracker_id=tracker_id, camera_id=camera_id, road_id=road_id, intersection_id=intersection_id, zone_id=zone_id  )
     db.add(new_vehicle)
     await db.commit()
     await db.refresh(new_vehicle)
@@ -45,7 +44,7 @@ async def update_vehicle_service(
     photos: dict[str, UploadFile]  # Receive dictionary of files
 ):
     # Fetch the vehicle from the database
-    vehicle_result = await db.execute(select(Vehicle).where(Vehicle.id == vehicle_id))
+    vehicle_result = await db.execute(select(Vehicle).where(Vehicle.id == vehicle_id).options( joinedload(Vehicle.camera) ,joinedload(Vehicle.road), joinedload(Vehicle.intersection), joinedload(Vehicle.zone)))
     vehicle = vehicle_result.scalar_one_or_none()
 
     if not vehicle:
@@ -69,9 +68,10 @@ async def update_vehicle_service(
     await db.commit()
     await db.refresh(vehicle)
 
-    vehicle_data = jsonable_encoder(vehicle)
+    vehicle_data= transform_vehicle_data(vehicle)
+    x = jsonable_encoder(vehicle_data)
     message= "new vehicle added"
-    event_data = json.dumps({"event": "new-vehicle-added", "data": {"message": message, "data": vehicle_data}})
+    event_data = json.dumps({"event": "new-vehicle-added", "data": {"message": message, "data": x}})
 
     if active_connections:
         await asyncio.gather(*(ws.send_text(event_data) for ws in active_connections))

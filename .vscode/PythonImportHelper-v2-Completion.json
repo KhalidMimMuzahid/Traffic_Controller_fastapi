@@ -49,14 +49,6 @@
         "documentation": {}
     },
     {
-        "label": "Enum",
-        "importPath": "enum",
-        "description": "enum",
-        "isExtraImport": true,
-        "detail": "enum",
-        "documentation": {}
-    },
-    {
         "label": "List",
         "importPath": "typing",
         "description": "typing",
@@ -482,22 +474,6 @@
     },
     {
         "label": "Form",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "UploadFile",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "File",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -2694,14 +2670,6 @@
         "documentation": {}
     },
     {
-        "label": "DirectionTypeEnum",
-        "importPath": "modules.vehicles.schemas",
-        "description": "modules.vehicles.schemas",
-        "isExtraImport": true,
-        "detail": "modules.vehicles.schemas",
-        "documentation": {}
-    },
-    {
         "label": "create_vehicle",
         "importPath": "modules.vehicles.service",
         "description": "modules.vehicles.service",
@@ -3425,20 +3393,11 @@
         "documentation": {}
     },
     {
-        "label": "DirectionTypeEnum",
-        "kind": 6,
-        "importPath": "app.modules.vehicles.models",
-        "description": "app.modules.vehicles.models",
-        "peekOfCode": "class DirectionTypeEnum(enum.Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)",
-        "detail": "app.modules.vehicles.models",
-        "documentation": {}
-    },
-    {
         "label": "Vehicle",
         "kind": 6,
         "importPath": "app.modules.vehicles.models",
         "description": "app.modules.vehicles.models",
-        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    # photo = Column(LargeBinary, nullable=True)  # Store binary image as BLOB",
+        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
         "detail": "app.modules.vehicles.models",
         "documentation": {}
     },
@@ -3447,17 +3406,8 @@
         "kind": 5,
         "importPath": "app.modules.vehicles.router",
         "description": "app.modules.vehicles.router",
-        "peekOfCode": "vehicle_router = APIRouter()\n@vehicle_router.post(\"/add-vehicle\", response_model=Response[VehicleCreateResponse])\nasync def add_vehicle(vehicle: VehicleCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_vehicle(db=db, category= vehicle.category , direction_type=  vehicle.direction_type, len_violation=vehicle.len_violation, speed_violation=vehicle.speed_violation, speed=vehicle.speed, tracker_id=vehicle.tracker_id, camera_id= vehicle.camera_id)\n    return create_response(result=result, pydantic_model=VehicleCreateResponse, message=\"Vehicle has added successfully\")\n@vehicle_router.put(\"/update-vehicle/{vehicle_id}\"\n                    # , response_model=Response[VehicleCreateResponse]\n                    )\nasync def update_vehicle(\n    vehicle_id: int,",
+        "peekOfCode": "vehicle_router = APIRouter()\n@vehicle_router.post(\"/add-vehicle\", response_model=Response[VehicleCreateResponse])\nasync def add_vehicle(vehicle: VehicleCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_vehicle(db=db, category= vehicle.category , direction=  vehicle.direction, len_violation=vehicle.len_violation, speed_violation=vehicle.speed_violation, speed=vehicle.speed, tracker_id=vehicle.tracker_id, camera_id= vehicle.camera_id)\n    return create_response(result=result, pydantic_model=VehicleCreateResponse, message=\"Vehicle has added successfully\")\n@vehicle_router.put(\"/update-vehicle/{vehicle_id}\"\n                    # , response_model=Response[VehicleCreateResponse]\n                    )\nasync def update_vehicle(\n    vehicle_id: int,",
         "detail": "app.modules.vehicles.router",
-        "documentation": {}
-    },
-    {
-        "label": "DirectionTypeEnum",
-        "kind": 6,
-        "importPath": "app.modules.vehicles.schemas",
-        "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class DirectionTypeEnum(str, Enum):\n    entry = \"entry\"\n    exit = \"exit\"\nclass VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int",
-        "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
     {
@@ -3465,7 +3415,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
+        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3483,7 +3433,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleCreateResponse(BaseModel):\n    id: int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation: bool",
+        "peekOfCode": "class VehicleCreateResponse(BaseModel):\n    id: int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3492,7 +3442,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction_type: DirectionTypeEnum\n    len_violation: bool\n    speed_violation: bool\n    speed:int\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:int\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3501,7 +3451,7 @@
         "kind": 2,
         "importPath": "app.modules.vehicles.utils",
         "description": "app.modules.vehicles.utils",
-        "peekOfCode": "def transform_vehicle_data(vehicle):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": vehicle.id,\n        \"category\": vehicle.category,\n        \"direction_type\": vehicle.direction_type,\n        \"len_violation\": vehicle.len_violation,\n        \"speed_violation\":vehicle.speed_violation,\n        \"speed\":vehicle.speed,\n        \"tracker_id\":vehicle.tracker_id,",
+        "peekOfCode": "def transform_vehicle_data(vehicle):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": vehicle.id,\n        \"category\": vehicle.category,\n        \"direction\": vehicle.direction,\n        \"len_violation\": vehicle.len_violation,\n        \"speed_violation\":vehicle.speed_violation,\n        \"speed\":vehicle.speed,\n        \"tracker_id\":vehicle.tracker_id,",
         "detail": "app.modules.vehicles.utils",
         "documentation": {}
     },
@@ -3807,7 +3757,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

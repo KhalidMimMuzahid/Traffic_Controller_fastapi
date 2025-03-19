@@ -1,27 +1,21 @@
 from sqlalchemy import Column, Integer, String, Enum, ForeignKey, Boolean,  DateTime, LargeBinary
 from sqlalchemy.sql import func
 
-import enum
 from sqlalchemy.orm import relationship
 from database import Base
 
-# Define an enumeration for directionType
-class DirectionTypeEnum(enum.Enum):
-    entry = "entry"
-    exit = "exit"
+
 
 
 class Vehicle(Base):
     __tablename__ = "vehicles"
     id = Column(Integer, primary_key=True, index=True)
     category = Column(String,  unique=False, index=False)
-    direction_type = Column(Enum(DirectionTypeEnum), nullable=False)
+    direction = Column(String,  unique=False, index=False)
     len_violation= Column(Boolean,  unique=False, index=False)
     speed_violation= Column(Boolean,  unique=False, index=False)
     speed= Column(Integer,  unique=False, index=False)
     tracker_id= Column(Integer,  unique=False, index=False)
-    # photo = Column(LargeBinary, nullable=True)  # Store binary image as BLOB
-    # license_photo= Column(LargeBinary, nullable=True)  # Store binary image as BLOB
     photo = Column(String, nullable=True)  # Store binary image as BLOB
     license_photo= Column(String, nullable=True)  #
     license_number= Column(String,  nullable=True)

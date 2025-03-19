@@ -10,7 +10,7 @@ def transform_vehicle_data(vehicle):
     return {
         "id": vehicle.id,
         "category": vehicle.category,
-        "direction_type": vehicle.direction_type,
+        "direction": vehicle.direction,
         "len_violation": vehicle.len_violation,
         "speed_violation":vehicle.speed_violation,
         "speed":vehicle.speed,
@@ -18,9 +18,6 @@ def transform_vehicle_data(vehicle):
         "license_number":vehicle.license_number,
         "photo":vehicle.photo,
         "license_photo": vehicle.license_photo,
-
-
-
 
         "camera": CameraReferenceResponseForCreateVehicle(**vehicle.camera.__dict__)if vehicle.camera else None,
         "road": RoadReferenceResponseForCreateVehicle(**vehicle.road.__dict__)if vehicle.road else None,

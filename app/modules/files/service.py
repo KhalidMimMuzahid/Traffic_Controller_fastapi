@@ -7,6 +7,11 @@ from exceptions.models import CustomError
 import uuid
 import base64
 from fastapi.responses import Response
+import cv2
+import numpy as np
+
+latest_frames = {}
+
 async def upload_file(
     db: AsyncSession,
     file: UploadFile 
@@ -38,3 +43,14 @@ async def get_file_service(
 
 
 
+async def upload_frame_service(
+    camera_id: str,
+    file:UploadFile
+):
+    frame_bytes = await file.read()
+    np_arr = np.frombuffer(frame_bytes, np.uint8)
+    frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+
+    # Store the latest frame for this camera ID
+    latest_frames[camera_id] = frame
+    return None

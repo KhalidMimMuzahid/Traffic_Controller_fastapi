@@ -2396,6 +2396,14 @@
         "documentation": {}
     },
     {
+        "label": "get_video_stream_service",
+        "importPath": "modules.files.service",
+        "description": "modules.files.service",
+        "isExtraImport": true,
+        "detail": "modules.files.service",
+        "documentation": {}
+    },
+    {
         "label": "upload_file",
         "importPath": "modules.files.service",
         "description": "modules.files.service",
@@ -2444,6 +2452,15 @@
         "importPath": "numpy",
         "description": "numpy",
         "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
         "documentation": {}
     },
     {
@@ -2865,15 +2882,6 @@
         "documentation": {}
     },
     {
-        "label": "asyncio",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "asyncio",
-        "description": "asyncio",
-        "detail": "asyncio",
-        "documentation": {}
-    },
-    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -3236,7 +3244,7 @@
         "kind": 5,
         "importPath": "app.modules.files.router",
         "description": "app.modules.files.router",
-        "peekOfCode": "file_router = APIRouter()\n@file_router.get(\"/get\"\n# , response_model=Response[list[IntersectionListResponse]]\n)\nasync def get_file( id:str,db: AsyncSession = Depends(get_db)):\n    result= await get_file_service(db, id=id)\n    return result\n    # return create_response(result=result[\"data\"], pydantic_model=IntersectionListResponse, message=\"intersections have retrieved successfully\", meta_data=result[\"meta_data\"])\n@file_router.post(\"/send-video-stream\"\n# , response_model=Response[list[IntersectionListResponse]]",
+        "peekOfCode": "file_router = APIRouter()\n@file_router.get(\"/get\"\n# , response_model=Response[list[IntersectionListResponse]]\n)\nasync def get_file( id:str,db: AsyncSession = Depends(get_db)):\n    result= await get_file_service(db, id=id)\n    return result\n    # return create_response(result=result[\"data\"], pydantic_model=IntersectionListResponse, message=\"intersections have retrieved successfully\", meta_data=result[\"meta_data\"])\n@file_router.post(\"/send-video-stream\")\nasync def upload_frame(",
         "detail": "app.modules.files.router",
         "documentation": {}
     },
@@ -3254,7 +3262,16 @@
         "kind": 5,
         "importPath": "app.modules.files.service",
         "description": "app.modules.files.service",
-        "peekOfCode": "latest_frames = {}\nasync def upload_file(\n    db: AsyncSession,\n    file: UploadFile \n):  \n    read_file=await file.read()\n    # Extract MIME type dynamically\n    file_type = file.content_type  \n    new_file = File(id=uuid.uuid4(), file=read_file, file_type= file_type)\n    db.add(new_file)",
+        "peekOfCode": "latest_frames = {}\n# An asyncio.Lock ensures thread-safe access to latest_frames.\nlatest_frames_lock = asyncio.Lock()\nasync def upload_file(\n    db: AsyncSession,\n    file: UploadFile \n):  \n    read_file=await file.read()\n    # Extract MIME type dynamically\n    file_type = file.content_type  ",
+        "detail": "app.modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "latest_frames_lock",
+        "kind": 5,
+        "importPath": "app.modules.files.service",
+        "description": "app.modules.files.service",
+        "peekOfCode": "latest_frames_lock = asyncio.Lock()\nasync def upload_file(\n    db: AsyncSession,\n    file: UploadFile \n):  \n    read_file=await file.read()\n    # Extract MIME type dynamically\n    file_type = file.content_type  \n    new_file = File(id=uuid.uuid4(), file=read_file, file_type= file_type)\n    db.add(new_file)",
         "detail": "app.modules.files.service",
         "documentation": {}
     },

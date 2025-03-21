@@ -1,5 +1,6 @@
 
 from fastapi import APIRouter, Depends, File, UploadFile, Form, Response
+from fastapi.responses import StreamingResponse
 from sqlalchemy.ext.asyncio import AsyncSession
 # from modules.intersections.schemas import IntersectionCreateResponse, IntersectionListResponse, IntersectionCreateRequest
 from database import get_db 
@@ -36,7 +37,7 @@ async def upload_frame(
 
 
 
-@file_router.get("/get-video-stream/{camera_id}")
+@file_router.get("/get-video-stream")
 async def get_video_stream(camera_id: str):
     """
     Endpoint to stream the MJPEG video feed for a specific camera.
@@ -45,7 +46,8 @@ async def get_video_stream(camera_id: str):
     # Retrieve the frame generator for the specified camera.
     frame_generator = await get_video_stream_service(camera_id=camera_id)
     # Return the streaming response with the appropriate media type.
-    return Response(frame_generator, media_type="multipart/x-mixed-replace; boundary=frame")
+    # return Response(frame_generator, media_type="multipart/x-mixed-replace; boundary=frame")
+    return StreamingResponse(frame_generator, media_type="multipart/x-mixed-replace; boundary=frame")
 
 
 

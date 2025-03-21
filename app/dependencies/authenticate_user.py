@@ -17,7 +17,8 @@ PUBLIC_ROUTES = {
     "/api/v1/vehicles/add-vehicle" , 
     "/api/v1/vehicles/update-vehicle",
     "/api/v1/files/get",
-    "/api/v1/files/send-video-stream"
+    "/api/v1/files/send-video-stream",
+    "/api/v1/files/get-video-stream"
 }
 
 # Define the user payload structure

@@ -898,6 +898,14 @@
         "documentation": {}
     },
     {
+        "label": "StreamingResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
         "label": "Response",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
@@ -3091,7 +3099,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\"\n}",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\",\n    \"/api/v1/files/get-video-stream\"",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -3100,7 +3108,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "PUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\"\n}\n# Define the user payload structure\nclass TokenData(BaseModel):",
+        "peekOfCode": "PUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\",\n    \"/api/v1/files/get-video-stream\"\n}\n# Define the user payload structure",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },

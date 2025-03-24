@@ -17,7 +17,7 @@ async def add_vehicle(vehicle: VehicleCreateRequest, db: AsyncSession = Depends(
 
 
 
-@vehicle_router.put("/update-vehicle/{vehicle_id}"
+@vehicle_router.put("/update-vehicle"
                     # , response_model=Response[VehicleCreateResponse]
                     )
 async def update_vehicle(

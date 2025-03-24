@@ -12,6 +12,7 @@ class Zone(Base):
     cameras = relationship("Camera", back_populates="zone", cascade="all, delete")
     roads = relationship("Road", back_populates="zone", cascade="all, delete")
     intersections = relationship("Intersection", back_populates="zone", cascade="all, delete")
+    vehicles = relationship("Vehicle", back_populates="zone", cascade="all, delete")
 
 
 

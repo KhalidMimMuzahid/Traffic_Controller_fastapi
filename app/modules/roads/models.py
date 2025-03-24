@@ -14,7 +14,7 @@ class Road(Base):
     intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)
     zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)
 
-    # relationship 
+    # relationship
     # Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship("Model_nama_of_targeted_table", back_populates="field_name_of_another_model_that_refers_to_this_field")
     intersection = relationship("Intersection", back_populates="roads")
     zone = relationship("Zone", back_populates="roads")
@@ -22,6 +22,7 @@ class Road(Base):
     # Reverse relationship
      #Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship("Model_name_of_another", back_populates="field_name_of_another_model_that_refers_to_this_field", cascade="all, delete")
     cameras = relationship("Camera", back_populates="road", cascade="all, delete")
+    vehicles = relationship("Vehicle", back_populates="road", cascade="all, delete")
 
 
 

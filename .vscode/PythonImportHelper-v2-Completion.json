@@ -121,6 +121,14 @@
         "documentation": {}
     },
     {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Type",
         "importPath": "typing",
         "description": "typing",
@@ -241,6 +249,22 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Request",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -337,6 +361,62 @@
         "documentation": {}
     },
     {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "HTTPException",
         "importPath": "fastapi",
         "description": "fastapi",
@@ -394,6 +474,46 @@
     },
     {
         "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -465,6 +585,30 @@
         "documentation": {}
     },
     {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocketDisconnect",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "WebSocket",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "HTTPBearer",
         "importPath": "fastapi.security",
         "description": "fastapi.security",
@@ -478,6 +622,22 @@
         "description": "fastapi.security",
         "isExtraImport": true,
         "detail": "fastapi.security",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
         "documentation": {}
     },
     {
@@ -706,7 +866,47 @@
         "documentation": {}
     },
     {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "CustomError",
+        "importPath": "exceptions.models",
+        "description": "exceptions.models",
+        "isExtraImport": true,
+        "detail": "exceptions.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlparse",
+        "importPath": "urllib.parse",
+        "description": "urllib.parse",
+        "isExtraImport": true,
+        "detail": "urllib.parse",
+        "documentation": {}
+    },
+    {
         "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "StreamingResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
         "importPath": "fastapi.responses",
         "description": "fastapi.responses",
         "isExtraImport": true,
@@ -795,6 +995,46 @@
         "documentation": {}
     },
     {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "LargeBinary",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "String",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -931,6 +1171,70 @@
         "documentation": {}
     },
     {
+        "label": "Enum",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Boolean",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "DateTime",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "LargeBinary",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Column",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "Integer",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "desc",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -1028,6 +1332,22 @@
     },
     {
         "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -1088,6 +1408,38 @@
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
         "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
+        "documentation": {}
+    },
+    {
+        "label": "get_db",
+        "importPath": "database",
+        "description": "database",
+        "isExtraImport": true,
+        "detail": "database",
         "documentation": {}
     },
     {
@@ -1283,6 +1635,38 @@
         "documentation": {}
     },
     {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
         "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
@@ -1316,6 +1700,22 @@
     },
     {
         "label": "DirectionTypeEnum",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraReferenceResponseForCreateVehicle",
+        "importPath": "modules.cameras.schemas",
+        "description": "modules.cameras.schemas",
+        "isExtraImport": true,
+        "detail": "modules.cameras.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "CameraReferenceResponseForCreateVehicle",
         "importPath": "modules.cameras.schemas",
         "description": "modules.cameras.schemas",
         "isExtraImport": true,
@@ -1395,6 +1795,14 @@
         "documentation": {}
     },
     {
+        "label": "Response",
+        "importPath": "responses.models",
+        "description": "responses.models",
+        "isExtraImport": true,
+        "detail": "responses.models",
+        "documentation": {}
+    },
+    {
         "label": "MetaData",
         "importPath": "responses.models",
         "description": "responses.models",
@@ -1467,6 +1875,22 @@
         "documentation": {}
     },
     {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
+        "label": "create_response",
+        "importPath": "responses.handler",
+        "description": "responses.handler",
+        "isExtraImport": true,
+        "detail": "responses.handler",
+        "documentation": {}
+    },
+    {
         "label": "ZoneReferenceResponseForCreateCamera",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
@@ -1532,6 +1956,22 @@
     },
     {
         "label": "ZoneReferenceResponseForCreateRoad",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateVehicle",
+        "importPath": "modules.zones.schemas",
+        "description": "modules.zones.schemas",
+        "isExtraImport": true,
+        "detail": "modules.zones.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ZoneReferenceResponseForCreateVehicle",
         "importPath": "modules.zones.schemas",
         "description": "modules.zones.schemas",
         "isExtraImport": true,
@@ -1643,6 +2083,22 @@
         "documentation": {}
     },
     {
+        "label": "IntersectionReferenceResponseForCreateVehicle",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "IntersectionReferenceResponseForCreateVehicle",
+        "importPath": "modules.intersections.schemas",
+        "description": "modules.intersections.schemas",
+        "isExtraImport": true,
+        "detail": "modules.intersections.schemas",
+        "documentation": {}
+    },
+    {
         "label": "RoadReferenceResponseForCreateCamera",
         "importPath": "modules.roads.schemas",
         "description": "modules.roads.schemas",
@@ -1691,6 +2147,38 @@
         "documentation": {}
     },
     {
+        "label": "RoadReferenceResponseForCreateVehicle",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "RoadReferenceResponseForCreateVehicle",
+        "importPath": "modules.roads.schemas",
+        "description": "modules.roads.schemas",
+        "isExtraImport": true,
+        "detail": "modules.roads.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy.future",
+        "description": "sqlalchemy.future",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.future",
+        "documentation": {}
+    },
+    {
         "label": "select",
         "importPath": "sqlalchemy.future",
         "description": "sqlalchemy.future",
@@ -1771,11 +2259,11 @@
         "documentation": {}
     },
     {
-        "label": "Road",
-        "importPath": "modules.roads.models",
-        "description": "modules.roads.models",
+        "label": "Camera",
+        "importPath": "modules.cameras.models",
+        "description": "modules.cameras.models",
         "isExtraImport": true,
-        "detail": "modules.roads.models",
+        "detail": "modules.cameras.models",
         "documentation": {}
     },
     {
@@ -1800,6 +2288,22 @@
         "description": "modules.roads.models",
         "isExtraImport": true,
         "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
+        "label": "Road",
+        "importPath": "modules.roads.models",
+        "description": "modules.roads.models",
+        "isExtraImport": true,
+        "detail": "modules.roads.models",
+        "documentation": {}
+    },
+    {
+        "label": "query_builder",
+        "importPath": "utils.query_builder",
+        "description": "utils.query_builder",
+        "isExtraImport": true,
+        "detail": "utils.query_builder",
         "documentation": {}
     },
     {
@@ -1848,6 +2352,123 @@
         "description": "modules.cameras.utils",
         "isExtraImport": true,
         "detail": "modules.cameras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
+        "label": "UUID",
+        "importPath": "sqlalchemy.dialects.postgresql",
+        "description": "sqlalchemy.dialects.postgresql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.dialects.postgresql",
+        "documentation": {}
+    },
+    {
+        "label": "get_file_service",
+        "importPath": "modules.files.service",
+        "description": "modules.files.service",
+        "isExtraImport": true,
+        "detail": "modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "upload_frame_service",
+        "importPath": "modules.files.service",
+        "description": "modules.files.service",
+        "isExtraImport": true,
+        "detail": "modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_video_stream_service",
+        "importPath": "modules.files.service",
+        "description": "modules.files.service",
+        "isExtraImport": true,
+        "detail": "modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "upload_file",
+        "importPath": "modules.files.service",
+        "description": "modules.files.service",
+        "isExtraImport": true,
+        "detail": "modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "streamUpdateRequest",
+        "importPath": "modules.files.schemas",
+        "description": "modules.files.schemas",
+        "isExtraImport": true,
+        "detail": "modules.files.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "modules.files.models",
+        "description": "modules.files.models",
+        "isExtraImport": true,
+        "detail": "modules.files.models",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "cv2",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "cv2",
+        "description": "cv2",
+        "detail": "cv2",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
         "documentation": {}
     },
     {
@@ -2124,6 +2745,151 @@
         "documentation": {}
     },
     {
+        "label": "VehicleCreateRequest",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCreateResponse",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleListResponse",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleUpdateRequest",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_vehicle",
+        "importPath": "modules.vehicles.service",
+        "description": "modules.vehicles.service",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.service",
+        "documentation": {}
+    },
+    {
+        "label": "get_vehicles",
+        "importPath": "modules.vehicles.service",
+        "description": "modules.vehicles.service",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.service",
+        "documentation": {}
+    },
+    {
+        "label": "update_vehicle_service",
+        "importPath": "modules.vehicles.service",
+        "description": "modules.vehicles.service",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.service",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Vehicle",
+        "importPath": "modules.vehicles.models",
+        "description": "modules.vehicles.models",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.models",
+        "documentation": {}
+    },
+    {
+        "label": "transform_vehicle_data",
+        "importPath": "modules.vehicles.utils",
+        "description": "modules.vehicles.utils",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.utils",
+        "documentation": {}
+    },
+    {
+        "label": "active_connections",
+        "importPath": "websocket",
+        "description": "websocket",
+        "isExtraImport": true,
+        "detail": "websocket",
+        "documentation": {}
+    },
+    {
+        "label": "active_connections",
+        "importPath": "websocket",
+        "description": "websocket",
+        "isExtraImport": true,
+        "detail": "websocket",
+        "documentation": {}
+    },
+    {
+        "label": "jsonable_encoder",
+        "importPath": "fastapi.encoders",
+        "description": "fastapi.encoders",
+        "isExtraImport": true,
+        "detail": "fastapi.encoders",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
         "label": "create_zone",
         "importPath": "modules.zones.service",
         "description": "modules.zones.service",
@@ -2196,28 +2962,11 @@
         "documentation": {}
     },
     {
-        "label": "uuid",
-        "kind": 6,
+        "label": "file_router",
+        "importPath": "modules.files.router",
+        "description": "modules.files.router",
         "isExtraImport": true,
-        "importPath": "uuid",
-        "description": "uuid",
-        "detail": "uuid",
-        "documentation": {}
-    },
-    {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
-        "documentation": {}
-    },
-    {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
-        "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "modules.files.router",
         "documentation": {}
     },
     {
@@ -2341,7 +3090,7 @@
         "kind": 6,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "class TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(\n    request: Request, credentials: HTTPAuthorizationCredentials = Security(security)\n):\n    \"\"\"Middleware-style function for authenticating users before hitting the router.\"\"\"\n    path = request.url.path \n    # Skip authentication for public routes",
+        "peekOfCode": "class TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(\n    request: Request, credentials: HTTPAuthorizationCredentials = Security(security)\n):\n    \"\"\"Middleware-style function for authenticating users before hitting the router.\"\"\"\n    # path = request.url.path \n    path = urlparse(request.url.path).path  # Extract path without query parameters",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -2350,7 +3099,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str",
+        "peekOfCode": "security = HTTPBearer(auto_error=False)\n# Define excluded routes that don't require authentication\nPUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\",\n    \"/api/v1/files/get-video-stream\"",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -2359,7 +3108,7 @@
         "kind": 5,
         "importPath": "app.dependencies.authenticate_user",
         "description": "app.dependencies.authenticate_user",
-        "peekOfCode": "PUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  \n}\n# Define the user payload structure\nclass TokenData(BaseModel):\n    email: str\n    id: str\n    role: str\nasync def authenticate_user(",
+        "peekOfCode": "PUBLIC_ROUTES = {\n    # \"/api/v1/users/add-user\",\n    \"/api/v1/users/login\"  ,\n    \"/api/v1/vehicles/add-vehicle\" , \n    \"/api/v1/vehicles/update-vehicle\",\n    \"/api/v1/files/get\",\n    \"/api/v1/files/send-video-stream\",\n    \"/api/v1/files/get-video-stream\"\n}\n# Define the user payload structure",
         "detail": "app.dependencies.authenticate_user",
         "documentation": {}
     },
@@ -2467,16 +3216,16 @@
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class CameraListResponse(CameraCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass IntersectionReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum",
+        "peekOfCode": "class CameraListResponse(CameraCreateResponse):\n    # extra_field: str  # Add extra fields if needed\n    pass\nclass CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
     {
-        "label": "IntersectionReferenceResponseForCreateVehicle",
+        "label": "CameraReferenceResponseForCreateVehicle",
         "kind": 6,
         "importPath": "app.modules.cameras.schemas",
         "description": "app.modules.cameras.schemas",
-        "peekOfCode": "class IntersectionReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    road_no : int\n    road_name : str\n    direction_type: DirectionTypeEnum",
+        "peekOfCode": "class CameraReferenceResponseForCreateVehicle(BaseModel):\n    id: int\n    name : str\n    direction_type: DirectionTypeEnum\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\n    # road_no : int\n    # road_name : str\n    # direction_type: DirectionTypeEnum",
         "detail": "app.modules.cameras.schemas",
         "documentation": {}
     },
@@ -2487,6 +3236,51 @@
         "description": "app.modules.cameras.utils",
         "peekOfCode": "def transform_camera_data(camera):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": camera.id,\n        \"name\": camera.name,\n        \"direction_type\": camera.direction_type,\n        \"road\": RoadReferenceResponseForCreateCamera(**camera.road.__dict__)if camera.road else None,\n        \"zone\": ZoneReferenceResponseForCreateCamera(**camera.zone.__dict__) if camera.zone else None,\n        \"intersection\": IntersectionReferenceResponseForCreateCamera(**camera.intersection.__dict__) if camera.intersection else None\n    }",
         "detail": "app.modules.cameras.utils",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "kind": 6,
+        "importPath": "app.modules.files.models",
+        "description": "app.modules.files.models",
+        "peekOfCode": "class File(Base):\n    __tablename__ = \"files\"\n    id = Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4, unique=True, index=True) \n    file_type= Column(String,  nullable=False )\n    file = Column(LargeBinary, nullable=True)  # Store binary image as BLOB\n    # Timestamps\n    created_at = Column(DateTime(timezone=True), server_default=func.now())",
+        "detail": "app.modules.files.models",
+        "documentation": {}
+    },
+    {
+        "label": "file_router",
+        "kind": 5,
+        "importPath": "app.modules.files.router",
+        "description": "app.modules.files.router",
+        "peekOfCode": "file_router = APIRouter()\n@file_router.get(\"/get\"\n# , response_model=Response[list[IntersectionListResponse]]\n)\nasync def get_file( id:str,db: AsyncSession = Depends(get_db)):\n    result= await get_file_service(db, id=id)\n    return result\n    # return create_response(result=result[\"data\"], pydantic_model=IntersectionListResponse, message=\"intersections have retrieved successfully\", meta_data=result[\"meta_data\"])\n@file_router.post(\"/send-video-stream\")\nasync def upload_frame(",
+        "detail": "app.modules.files.router",
+        "documentation": {}
+    },
+    {
+        "label": "streamUpdateRequest",
+        "kind": 6,
+        "importPath": "app.modules.files.schemas",
+        "description": "app.modules.files.schemas",
+        "peekOfCode": "class streamUpdateRequest(BaseModel):\n    pass",
+        "detail": "app.modules.files.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "latest_frames",
+        "kind": 5,
+        "importPath": "app.modules.files.service",
+        "description": "app.modules.files.service",
+        "peekOfCode": "latest_frames = {}\n# An asyncio.Lock ensures thread-safe access to latest_frames.\nlatest_frames_lock = asyncio.Lock()\nasync def upload_file(\n    db: AsyncSession,\n    file: UploadFile \n):  \n    read_file=await file.read()\n    # Extract MIME type dynamically\n    file_type = file.content_type  ",
+        "detail": "app.modules.files.service",
+        "documentation": {}
+    },
+    {
+        "label": "latest_frames_lock",
+        "kind": 5,
+        "importPath": "app.modules.files.service",
+        "description": "app.modules.files.service",
+        "peekOfCode": "latest_frames_lock = asyncio.Lock()\nasync def upload_file(\n    db: AsyncSession,\n    file: UploadFile \n):  \n    read_file=await file.read()\n    # Extract MIME type dynamically\n    file_type = file.content_type  \n    new_file = File(id=uuid.uuid4(), file=read_file, file_type= file_type)\n    db.add(new_file)",
+        "detail": "app.modules.files.service",
         "documentation": {}
     },
     {
@@ -2575,7 +3369,7 @@
         "kind": 6,
         "importPath": "app.modules.roads.models",
         "description": "app.modules.roads.models",
-        "peekOfCode": "class Road(Base):\n    __tablename__ = \"roads\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False, nullable=False)\n    road_no = Column(Integer, nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship \n    # Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_nama_of_targeted_table\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\")\n    intersection = relationship(\"Intersection\", back_populates=\"roads\")",
+        "peekOfCode": "class Road(Base):\n    __tablename__ = \"roads\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=False, nullable=False)\n    road_no = Column(Integer, nullable=False)\n    intersection_id = Column(Integer, ForeignKey('intersections.id'), nullable=False)\n    zone_id = Column(Integer, ForeignKey('zones.id'), nullable=False)\n    # relationship\n    # Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_nama_of_targeted_table\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\")\n    intersection = relationship(\"Intersection\", back_populates=\"roads\")",
         "detail": "app.modules.roads.models",
         "documentation": {}
     },
@@ -2724,12 +3518,66 @@
         "documentation": {}
     },
     {
+        "label": "Vehicle",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.models",
+        "description": "app.modules.vehicles.models",
+        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
+        "detail": "app.modules.vehicles.models",
+        "documentation": {}
+    },
+    {
         "label": "vehicle_router",
         "kind": 5,
         "importPath": "app.modules.vehicles.router",
         "description": "app.modules.vehicles.router",
-        "peekOfCode": "vehicle_router = APIRouter()",
+        "peekOfCode": "vehicle_router = APIRouter()\n@vehicle_router.post(\"/add-vehicle\", response_model=Response[VehicleCreateResponse])\nasync def add_vehicle(vehicle: VehicleCreateRequest, db: AsyncSession = Depends(get_db)):\n    result= await create_vehicle(db=db, category= vehicle.category , direction=  vehicle.direction, len_violation=vehicle.len_violation, speed_violation=vehicle.speed_violation, speed=vehicle.speed, tracker_id=vehicle.tracker_id, camera_id= vehicle.camera_id)\n    return create_response(result=result, pydantic_model=VehicleCreateResponse, message=\"Vehicle has added successfully\")\n@vehicle_router.put(\"/update-vehicle\"\n                    # , response_model=Response[VehicleCreateResponse]\n                    )\nasync def update_vehicle(\n    vehicle_id: int,",
         "detail": "app.modules.vehicles.router",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCreateRequest",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleUpdateRequest",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleUpdateRequest(BaseModel):\n    pass\nclass VehicleCreateResponse(BaseModel):\n    id: int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass VehicleListResponse(BaseModel):\n    id: int\n    category : str",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCreateResponse",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCreateResponse(BaseModel):\n    id: int\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"\nclass VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleListResponse",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:int\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "transform_vehicle_data",
+        "kind": 2,
+        "importPath": "app.modules.vehicles.utils",
+        "description": "app.modules.vehicles.utils",
+        "peekOfCode": "def transform_vehicle_data(vehicle):\n    \"\"\"Transforms a Road ORM object into a dictionary format with nested schema.\"\"\"\n    return {\n        \"id\": vehicle.id,\n        \"category\": vehicle.category,\n        \"direction\": vehicle.direction,\n        \"len_violation\": vehicle.len_violation,\n        \"speed_violation\":vehicle.speed_violation,\n        \"speed\":vehicle.speed,\n        \"tracker_id\":vehicle.tracker_id,",
+        "detail": "app.modules.vehicles.utils",
         "documentation": {}
     },
     {
@@ -2737,7 +3585,7 @@
         "kind": 6,
         "importPath": "app.modules.zones.models",
         "description": "app.modules.zones.models",
-        "peekOfCode": "class Zone(Base):\n    __tablename__ = \"zones\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=True)\n     # Reverse relationship\n     #Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_name_of_another\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\", cascade=\"all, delete\")\n    cameras = relationship(\"Camera\", back_populates=\"zone\", cascade=\"all, delete\")\n    roads = relationship(\"Road\", back_populates=\"zone\", cascade=\"all, delete\")\n    intersections = relationship(\"Intersection\", back_populates=\"zone\", cascade=\"all, delete\")",
+        "peekOfCode": "class Zone(Base):\n    __tablename__ = \"zones\"\n    id = Column(Integer, primary_key=True, index=True)\n    name = Column(String,  unique=False, index=True)\n     # Reverse relationship\n     #Pattern:  field_name_that_mention_as_back_populates_values_in_another_model = relationship(\"Model_name_of_another\", back_populates=\"field_name_of_another_model_that_refers_to_this_field\", cascade=\"all, delete\")\n    cameras = relationship(\"Camera\", back_populates=\"zone\", cascade=\"all, delete\")\n    roads = relationship(\"Road\", back_populates=\"zone\", cascade=\"all, delete\")\n    intersections = relationship(\"Intersection\", back_populates=\"zone\", cascade=\"all, delete\")\n    vehicles = relationship(\"Vehicle\", back_populates=\"zone\", cascade=\"all, delete\")",
         "detail": "app.modules.zones.models",
         "documentation": {}
     },
@@ -2854,7 +3702,7 @@
         "kind": 5,
         "importPath": "app.routes.router",
         "description": "app.routes.router",
-        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"])  \nrouter.include_router(zone_router, prefix=\"/zones\", tags=[\"Zones\"])\nrouter.include_router(intersection_router, prefix=\"/intersections\", tags=[\"Intersections\"])  \nrouter.include_router(road_router, prefix=\"/roads\", tags=[\"Roads\"])\nrouter.include_router(camera_router, prefix=\"/cameras\", tags=[\"Cameras\"])  \nrouter.include_router(vehicle_router, prefix=\"/vehicles\", tags=[\"Vehicles\"])",
+        "peekOfCode": "router = APIRouter()\n# calling a router depends on prefix\nrouter.include_router(user_router, prefix=\"/users\", tags=[\"Users\"])  \nrouter.include_router(zone_router, prefix=\"/zones\", tags=[\"Zones\"])\nrouter.include_router(intersection_router, prefix=\"/intersections\", tags=[\"Intersections\"])  \nrouter.include_router(road_router, prefix=\"/roads\", tags=[\"Roads\"])\nrouter.include_router(camera_router, prefix=\"/cameras\", tags=[\"Cameras\"])  \nrouter.include_router(vehicle_router, prefix=\"/vehicles\", tags=[\"Vehicles\"])  \nrouter.include_router(file_router, prefix=\"/files\", tags=[\"Files\"])",
         "detail": "app.routes.router",
         "documentation": {}
     },
@@ -3034,7 +3882,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

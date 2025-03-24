@@ -24,6 +24,9 @@ class Camera(Base):
     road = relationship("Road", back_populates="cameras")
     intersection = relationship("Intersection", back_populates="cameras")
     zone = relationship("Zone", back_populates="cameras")
+    
+    # Reverse relationship
+    vehicles = relationship("Vehicle", back_populates="camera", cascade="all, delete")
 
 
 

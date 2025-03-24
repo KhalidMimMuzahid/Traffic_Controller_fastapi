@@ -3882,7 +3882,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

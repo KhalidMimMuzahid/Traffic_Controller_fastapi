@@ -16,7 +16,7 @@ class VehicleCreateRequest(BaseModel):
     direction:str
     len_violation:bool
     speed_violation: bool
-    speed:int
+    speed:str
     tracker_id:int
     camera_id : int
 
@@ -38,7 +38,7 @@ class VehicleListResponse(BaseModel):
     direction:str
     len_violation: bool
     speed_violation: bool
-    speed:int
+    speed:str
     tracker_id: int
     license_number : str
     photo: Optional[str] = None

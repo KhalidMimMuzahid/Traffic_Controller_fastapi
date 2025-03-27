@@ -3522,7 +3522,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.models",
         "description": "app.modules.vehicles.models",
-        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
+        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(String,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
         "detail": "app.modules.vehicles.models",
         "documentation": {}
     },
@@ -3540,7 +3540,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
+        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:str\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3567,7 +3567,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:int\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:str\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3882,7 +3882,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

@@ -14,7 +14,7 @@ class Vehicle(Base):
     direction = Column(String,  unique=False, index=False)
     len_violation= Column(Boolean,  unique=False, index=False)
     speed_violation= Column(Boolean,  unique=False, index=False)
-    speed= Column(Integer,  unique=False, index=False)
+    speed= Column(String,  unique=False, index=False)
     tracker_id= Column(Integer,  unique=False, index=False)
     photo = Column(String, nullable=True)  # Store binary image as BLOB
     license_photo= Column(String, nullable=True)  #

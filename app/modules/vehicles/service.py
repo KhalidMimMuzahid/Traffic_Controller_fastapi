@@ -15,7 +15,7 @@ import json
 import asyncio
 
 
-async def create_vehicle(db: AsyncSession, category : str, direction: str, len_violation:bool, speed_violation: int, speed:int, tracker_id:int, camera_id : int):
+async def create_vehicle(db: AsyncSession, category : str, direction: str, len_violation:bool, speed_violation: int, speed:str, tracker_id:int, camera_id : int):
 #      # checking for existence camera with the provided camera_id
     camera_result = await db.execute(select(Camera).where(Camera.id == camera_id).options(joinedload(Camera.road), joinedload(Camera.intersection), joinedload(Camera.zone)))
     camera = camera_result.scalar_one_or_none()

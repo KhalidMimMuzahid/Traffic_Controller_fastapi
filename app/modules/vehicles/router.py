@@ -57,5 +57,5 @@ async def list_vehicles(page:int=1, limit:int=10, db: AsyncSession = Depends(get
 async def list_vehicles(    camera_id: int, db: AsyncSession = Depends(get_db)):
     result= await get_vehicles_count_analysis(db,camera_id=camera_id)
     # return result
-    return create_response(result=result, pydantic_model=VehicleCountAnalysisResponse, message="vehicles have retrieved successfully" )
+    return create_response(result=result, pydantic_model=VehicleCountAnalysisResponse, message="vehicles analysis data have retrieved successfully" )
     

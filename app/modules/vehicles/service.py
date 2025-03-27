@@ -132,7 +132,6 @@ async def get_vehicles_count_analysis(
         }
         for row in vehicles_count
     ]
-    
     return {"totalEntry": totalEntry, "totalExit": totalExit, "data": response}
 
     

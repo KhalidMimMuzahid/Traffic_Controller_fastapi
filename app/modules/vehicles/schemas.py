@@ -5,7 +5,7 @@ from modules.cameras.schemas import CameraReferenceResponseForCreateVehicle
 from modules.roads.schemas import RoadReferenceResponseForCreateVehicle
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateVehicle
 from modules.zones.schemas import ZoneReferenceResponseForCreateVehicle
-
+from typing import List
 
 
 # BST = timezone(timedelta(hours=6))
@@ -54,3 +54,16 @@ class VehicleListResponse(BaseModel):
         orm_mode = True
         extra = "ignore"
    
+
+class VehicleCategoryCount(BaseModel):
+    category: str
+    totalEntry: int
+    totalExit: int
+
+class VehicleCountAnalysisResponse(BaseModel):
+    totalEntry: int
+    totalExit: int
+    data: List[VehicleCategoryCount]
+    class Config:
+        orm_mode = True
+        extra = "ignore"

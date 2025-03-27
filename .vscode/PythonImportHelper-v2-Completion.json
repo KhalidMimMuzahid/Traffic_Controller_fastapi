@@ -129,6 +129,14 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Type",
         "importPath": "typing",
         "description": "typing",
@@ -1347,6 +1355,14 @@
         "documentation": {}
     },
     {
+        "label": "aliased",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -2380,6 +2396,14 @@
         "documentation": {}
     },
     {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
         "label": "UUID",
         "importPath": "sqlalchemy.dialects.postgresql",
         "description": "sqlalchemy.dialects.postgresql",
@@ -2777,6 +2801,14 @@
         "documentation": {}
     },
     {
+        "label": "VehicleCountAnalysisResponse",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
         "label": "create_vehicle",
         "importPath": "modules.vehicles.service",
         "description": "modules.vehicles.service",
@@ -2801,6 +2833,14 @@
         "documentation": {}
     },
     {
+        "label": "get_vehicles_count_analysis",
+        "importPath": "modules.vehicles.service",
+        "description": "modules.vehicles.service",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.service",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -2818,6 +2858,22 @@
     },
     {
         "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -3568,6 +3624,24 @@
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
         "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:str\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCategoryCount",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCategoryCount(BaseModel):\n    category: str\n    totalEntry: int\n    totalExit: int\nclass VehicleCountAnalysisResponse(BaseModel):\n    totalEntry: int\n    totalExit: int\n    data: List[VehicleCategoryCount]\n    class Config:\n        orm_mode = True",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCountAnalysisResponse",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCountAnalysisResponse(BaseModel):\n    totalEntry: int\n    totalExit: int\n    data: List[VehicleCategoryCount]\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },

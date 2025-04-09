@@ -5,7 +5,7 @@ from modules.cameras.schemas import CameraReferenceResponseForCreateVehicle
 from modules.roads.schemas import RoadReferenceResponseForCreateVehicle
 from modules.intersections.schemas import IntersectionReferenceResponseForCreateVehicle
 from modules.zones.schemas import ZoneReferenceResponseForCreateVehicle
-
+from typing import List
 
 
 # BST = timezone(timedelta(hours=6))
@@ -16,7 +16,7 @@ class VehicleCreateRequest(BaseModel):
     direction:str
     len_violation:bool
     speed_violation: bool
-    speed:int
+    speed:str
     tracker_id:int
     camera_id : int
 
@@ -38,7 +38,7 @@ class VehicleListResponse(BaseModel):
     direction:str
     len_violation: bool
     speed_violation: bool
-    speed:int
+    speed:str
     tracker_id: int
     license_number : str
     photo: Optional[str] = None
@@ -54,3 +54,16 @@ class VehicleListResponse(BaseModel):
         orm_mode = True
         extra = "ignore"
    
+
+class VehicleCategoryCount(BaseModel):
+    category: str
+    totalEntry: int
+    totalExit: int
+
+class VehicleCountAnalysisResponse(BaseModel):
+    totalEntry: int
+    totalExit: int
+    data: List[VehicleCategoryCount]
+    class Config:
+        orm_mode = True
+        extra = "ignore"

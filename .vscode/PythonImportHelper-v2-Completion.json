@@ -129,6 +129,14 @@
         "documentation": {}
     },
     {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
         "label": "Type",
         "importPath": "typing",
         "description": "typing",
@@ -1347,6 +1355,14 @@
         "documentation": {}
     },
     {
+        "label": "aliased",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
         "label": "joinedload",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
@@ -2380,6 +2396,14 @@
         "documentation": {}
     },
     {
+        "label": "func",
+        "importPath": "sqlalchemy.sql",
+        "description": "sqlalchemy.sql",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.sql",
+        "documentation": {}
+    },
+    {
         "label": "UUID",
         "importPath": "sqlalchemy.dialects.postgresql",
         "description": "sqlalchemy.dialects.postgresql",
@@ -2777,6 +2801,14 @@
         "documentation": {}
     },
     {
+        "label": "VehicleCountAnalysisResponse",
+        "importPath": "modules.vehicles.schemas",
+        "description": "modules.vehicles.schemas",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
         "label": "create_vehicle",
         "importPath": "modules.vehicles.service",
         "description": "modules.vehicles.service",
@@ -2801,6 +2833,14 @@
         "documentation": {}
     },
     {
+        "label": "get_vehicles_count_analysis",
+        "importPath": "modules.vehicles.service",
+        "description": "modules.vehicles.service",
+        "isExtraImport": true,
+        "detail": "modules.vehicles.service",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -2818,6 +2858,22 @@
     },
     {
         "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timezone",
         "importPath": "datetime",
         "description": "datetime",
         "isExtraImport": true,
@@ -3522,7 +3578,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.models",
         "description": "app.modules.vehicles.models",
-        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(Integer,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
+        "peekOfCode": "class Vehicle(Base):\n    __tablename__ = \"vehicles\"\n    id = Column(Integer, primary_key=True, index=True)\n    category = Column(String,  unique=False, index=False)\n    direction = Column(String,  unique=False, index=False)\n    len_violation= Column(Boolean,  unique=False, index=False)\n    speed_violation= Column(Boolean,  unique=False, index=False)\n    speed= Column(String,  unique=False, index=False)\n    tracker_id= Column(Integer,  unique=False, index=False)\n    photo = Column(String, nullable=True)  # Store binary image as BLOB",
         "detail": "app.modules.vehicles.models",
         "documentation": {}
     },
@@ -3540,7 +3596,7 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:int\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
+        "peekOfCode": "class VehicleCreateRequest(BaseModel):\n    category : str\n    direction:str\n    len_violation:bool\n    speed_violation: bool\n    speed:str\n    tracker_id:int\n    camera_id : int\nclass VehicleUpdateRequest(BaseModel):\n    pass",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3567,7 +3623,25 @@
         "kind": 6,
         "importPath": "app.modules.vehicles.schemas",
         "description": "app.modules.vehicles.schemas",
-        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:int\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "peekOfCode": "class VehicleListResponse(BaseModel):\n    id: int\n    category : str\n    direction:str\n    len_violation: bool\n    speed_violation: bool\n    speed:str\n    tracker_id: int\n    license_number : str\n    photo: Optional[str] = None",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCategoryCount",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCategoryCount(BaseModel):\n    category: str\n    totalEntry: int\n    totalExit: int\nclass VehicleCountAnalysisResponse(BaseModel):\n    totalEntry: int\n    totalExit: int\n    data: List[VehicleCategoryCount]\n    class Config:\n        orm_mode = True",
+        "detail": "app.modules.vehicles.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "VehicleCountAnalysisResponse",
+        "kind": 6,
+        "importPath": "app.modules.vehicles.schemas",
+        "description": "app.modules.vehicles.schemas",
+        "peekOfCode": "class VehicleCountAnalysisResponse(BaseModel):\n    totalEntry: int\n    totalExit: int\n    data: List[VehicleCategoryCount]\n    class Config:\n        orm_mode = True\n        extra = \"ignore\"",
         "detail": "app.modules.vehicles.schemas",
         "documentation": {}
     },
@@ -3882,7 +3956,7 @@
         "kind": 5,
         "importPath": "app.main",
         "description": "app.main",
-        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n# @app.on_event(\"startup\")",
+        "peekOfCode": "app = FastAPI()\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=[\"http://localhost:5173\", \"http://localhost:3000\"],  # Replace with your frontend URL\n    allow_credentials=True,\n    allow_methods=[\"*\"],  # Allow all methods (GET, POST, etc.)\n    allow_headers=[\"*\"],  # Allow all headers\n)\n# # If you want to automatically initialize your DB on startup,\n@app.on_event(\"startup\")",
         "detail": "app.main",
         "documentation": {}
     }

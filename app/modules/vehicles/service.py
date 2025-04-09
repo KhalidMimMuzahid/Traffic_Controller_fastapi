@@ -2,6 +2,8 @@
 from fastapi import UploadFile
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
+from sqlalchemy.orm import aliased
+from sqlalchemy.sql import func
 from sqlalchemy.orm import joinedload
 from modules.cameras.models import Camera
 from modules.vehicles.models import Vehicle
@@ -11,11 +13,12 @@ from utils.query_builder import query_builder
 from modules.vehicles.utils import transform_vehicle_data
 from websocket import active_connections
 from fastapi.encoders import jsonable_encoder
+from datetime import datetime, timezone
 import json
 import asyncio
 
 
-async def create_vehicle(db: AsyncSession, category : str, direction: str, len_violation:bool, speed_violation: int, speed:int, tracker_id:int, camera_id : int):
+async def create_vehicle(db: AsyncSession, category : str, direction: str, len_violation:bool, speed_violation: int, speed:str, tracker_id:int, camera_id : int):
 #      # checking for existence camera with the provided camera_id
     camera_result = await db.execute(select(Camera).where(Camera.id == camera_id).options(joinedload(Camera.road), joinedload(Camera.intersection), joinedload(Camera.zone)))
     camera = camera_result.scalar_one_or_none()
@@ -91,3 +94,44 @@ async def get_vehicles(db: AsyncSession, page:int, limit:int):
         transform_fn=transform_vehicle_data  # ✅ Transform function applied
     )
 
+
+
+async def get_vehicles_count_analysis(
+    db: AsyncSession,
+    camera_id: int
+):
+    # Get today's date range
+    today_start = datetime.now(timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
+    today_end = datetime.now(timezone.utc).replace(hour=23, minute=59, second=59, microsecond=999999)
+
+    # Query to get category-wise count for today's entries and exits
+    stmt = (
+        select(
+            Vehicle.category,
+            func.count().filter(Vehicle.direction == "Entry").label("totalEntry"),
+            func.count().filter(Vehicle.direction == "Exit").label("totalExit")
+        )
+        .where(Vehicle.camera_id == camera_id, Vehicle.created_at >= today_start, Vehicle.created_at <= today_end)
+        .group_by(Vehicle.category)
+    )
+
+    result = await db.execute(stmt)
+    vehicles_count = result.fetchall()
+    # Calculate totalEntry and totalExit across all categories
+    totalEntry = sum(row.totalEntry for row in vehicles_count)
+    totalExit = sum(row.totalExit for row in vehicles_count)
+
+
+
+    # Format the result
+    response = [
+        {
+            "category": row.category,
+            "totalEntry": row.totalEntry,
+            "totalExit": row.totalExit
+        }
+        for row in vehicles_count
+    ]
+    return {"totalEntry": totalEntry, "totalExit": totalExit, "data": response}
+
+    
